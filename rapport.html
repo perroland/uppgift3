@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="sv">
 
+TODO: 1.prioritera kraven. 2. varför krav? kolla Garrett 3. Struktor. interactive design, conceptuell model?? Information architecture. Structuring content. top-down. meta-data?
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -51,7 +53,7 @@
             <h2>1. Syfte och målgrupp</h2>
             <p>
                 <!-- Ange vad det är för företag eller annan organisation. -->
-                I uppgiften skapades en webbplats för en påhittad förening med namn "Gyas vänner" som är en förening för historie/arkeologiintresserade i Stehags omnejd. (Valet av namnet "Gya" behöver kanske mer förklaring, det finns en lokal myt om ett troll vid namn Gya.)
+                I uppgiften skapades en webbplats för en påhittad förening med namn "Gyas vänner" som är en förening för historie/arkeologiintresserade i Skåne. Föreningen är baserad i Stehag därav namnet "Gyas vänner". Gya är ett troll som enligt myten har bott i Stehag.
             </p>
             <p>Syfte med webbplatsen är ... </p>
             <!-- Fyll på med kort beskrivning som anger syftet med webbplatsen. -->
@@ -105,7 +107,7 @@
                     För alla, dvs alla historie/arkelogiintresserade
                     <ul>
                         <li>
-                            Att kunna hitta information om sin hemtrakt och dess historia
+                            Att kunna hitta information om Skåne och dess historia
                         </li>
                         <li>
                             Att hitta vänskap i en gemensam hobby
@@ -174,7 +176,7 @@
                     </ul>
                 </li>
                 <li>
-                    En historisk översikt över Stehag med omnejd (Stehag, Stehags kyrkby, Bosarp och Sjöholmen), från 1600-talet fram till nu.
+                    En historisk översikt Skånes större städer, från 1600-talet fram till nu. Dvs Malmö, Lund, Helsingborg, Kristianstad, Ystad.
                 </li>
 
                 <li>
@@ -185,6 +187,12 @@
                 </li>
                 <li>
                     Artiklar som beskriver aktiviteter som föreningar har genomfört tidigare.
+                </li>
+                <li>
+                    Information om hur föreningen planerar och genomför aktiviteter. 
+                </li>
+                <li>
+                    Information om hur medlemmar kan bidra till aktiviteter. 
                 </li>
                 <li>
                     Startsidan ska innehålla en bild och länk till något intressant och aktuellt tex en aktuell aktivitet eller en uppdatering av hemsidan.
@@ -199,7 +207,7 @@
                     Det ska finnas en feedback-funktion på varje sida på varje sida.
                 </li>
                 <li>
-                    Det ska finnas en länk till hur man blir medelem  på varje sida på varje sida.
+                    Det ska finnas en länk till hur man blir medelem på varje sida på varje sida.
                 </li>
 
             </ul>
@@ -221,6 +229,7 @@
             <p>Jag kollade på element-planen, repeterade lite översiktligt och skrev ner vad som är input och output till/från de olika planen.</p>
 
             <p>Jag försöker strukturerat följa elementen-planen, men kommer jag på saker som har med senare plan försöker skriva ner på rätt ställe så jag inte glömmer det</p>
+            
 
             <h3>Strategy-Strategi</h3>
 
@@ -249,53 +258,70 @@
                     Startsida
                     <ul>
                         <li>
-                            Stehag med omnejd historia. Jag tänker mig en slags "matrix"-struktur som beskrivs på Garrett, 2nd revision, sida 93-94 som passar historiskt material som spänner både över geografin och tiden. Så följande struktur är alltså "3-dimensionell", lite svårt att beskriva det med HTML dock, men den geografiska struktur är x och y axel medans tid strukturen är z axeln i en tänkt 3d-diagram.
+                            Skånes historia, de större städerna. Jag tänker mig en slags "matrix"-struktur som beskrivs på Garrett, 2nd revision, sida 93-94 som passar historiskt material som spänner både över geografin och tiden. Så följande struktur är alltså "3-dimensionell", lite svårt att beskriva det med HTML dock, men den geografiska struktur är x och y axel medans tid strukturen är z axeln i en tänkt 3d-diagram.
                             <ul>
                                 <li>Geografisk struktur:
                                     <table>
                                         <tr>
+                                            <td>Helsingborg</td>
                                             <td></td>
-                                            <td>Stockamöllan</td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Bosarp</td>
-                                            <td>Stehag</td>
-                                            <td>Sjöholmen</td>
+                                            <td>Kristianstad</td>
                                         </tr>
                                         <tr>
                                             <td></td>
-                                            <td>Stehags kyrkby</td>
+                                            <td>Stehag med omnejd</td>
                                             <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Lund</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Malmö</td>
+                                            <td></td>
+                                            <td>Ystad</td>
                                         </tr>
                                     </table>
                                 </li>
-                                  
+
                                 <li>
-                                    Tid-struktur, århundrade:
+                                    Epok struktur, århundrade:
                                     <ul>
                                         <li>
-                                            1600
+                                            Tidig medeltid
                                         </li>
                                         <li>
-                                            1700
+                                            Sen medeltid
                                         </li>
                                         <li>
-                                            1800
+                                            Renässansen
                                         </li>
                                         <li>
-                                            1900
+                                            Upplysningtiden
                                         </li>
                                         <li>
-                                            2000
+                                            Romantiken
+                                        </li>
+                                        <li>
+                                            Modern tid
                                         </li>
                                     </ul>
                                 </li>
                             </ul>
                         </li>
-                        
+
                         <li>
-                            Aktiviteter
+                            Aktiviteter, de närmaste aktiviteterna i framtid
+                            <ul>
+                                <li>
+                                    Gamla aktiviteter, sökfunktion
+                                </li>
+                                <li>
+                                    Information om hur föreningen jobbar med aktiveter, hur kan medlemmar bidra?
+                                </li>
+                            </ul>
+
                         </li>
                         <li>
                             Medlemsforum
@@ -313,7 +339,7 @@
                                     Kontaktuppgifter
                                 </li>
                                 <li>
-                                    Medlemskap, kostnad och hur man blir medlem. 
+                                    Medlemskap, kostnad och hur man blir medlem.
                                 </li>
                             </ul>
                         </li>
@@ -351,7 +377,7 @@
         </section>
         <section>
             <h2>Källförteckning</h2>
-            <!-- Endast för VG. Har du inte utfört användartest, tar du bort detta avsnitt (hela section-elementet). -->
+            <!-- Endast för VG. Tar bort detta avsnitt för bara G(hela section-elementet). -->
             <!-- Skriv en källförteckning enligt Harvardsystemet för de källor du refererat till i din text. Det ska åtminstone vara Garretts bok. -->
             <p>...</p>
         </section>
