@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gyas vänner - Startsidan</title>
+    <title>Aktiviteter</title>
 </head>
 
 <body>
@@ -75,17 +75,17 @@
                     <p>Föreläsning om Lunds medeltid, Lunds stadsbibliotek.</p>
                 </li>
                 <li>
-                    <p><em>10/5-25  13:00 Glimmingehus</em></p>
+                    <p><em>10/5-25 13:00 Glimmingehus</em></p>
 
                     <p>Rundtur på Glimmingehus, vi samlas på gården 10 minuter innan.</p>
                 </li>
                 <li>
-                    <p><em>4/6-25  12:00</em></p>
+                    <p><em>4/6-25 12:00</em></p>
 
                     <p>Samling vid Ales stenar. Sten Markusson föreläser om Ale stenar. Tänk på vädret och välj bra kläder.</p>
                 </li>
                 <li>
-                    <p><em>20/7-25  08:00 Parkinering vid Höörs mitt</em></p>
+                    <p><em>20/7-25 08:00 Parkinering vid Höörs mitt</em></p>
 
                     <p>Föreningens årliga utflykt. Detta året går turen till österlen. Turen går till Kungagraven, Kikvik och Simrishamn. Närmare beskrivningen kommer när det närmar sig</p>
                 </li>
@@ -109,7 +109,7 @@
                     <legend>Ange kategorier du är intresserad av:</legend>
                     <label><input type="checkbox" value="forelasningar" checked>Föreläsningar</label>
                     <label><input type="checkbox" value="guidningar">Guidningar</label>
-                    <label><input type="checkbox" value="utflykter">Utflykter</label>                    
+                    <label><input type="checkbox" value="utflykter">Utflykter</label>
                 </fieldset>
 
                 <fieldset>
@@ -117,9 +117,9 @@
                     <label><input type="checkbox" value="skansk_historia">Allmän skånsk historia</label>
                     <label><input type="checkbox" value="stadshistoria" checked>Stadshistoria</label>
                     <label><input type="checkbox" value="lokal_historia">Lokal historia</label>
-                    <label><input type="checkbox" value="militär_historia">Militär historia</label>                    
-                    <label><input type="checkbox">Teknik och industri-historia</label>       
-                    <label><input type="checkbox">Arkeologi</label>                    
+                    <label><input type="checkbox" value="militär_historia">Militär historia</label>
+                    <label><input type="checkbox">Teknik och industri-historia</label>
+                    <label><input type="checkbox">Arkeologi</label>
                 </fieldset>
 
                 <button type="button" onclick="document.getElementById('myDialog').showModal()">Filtrera</button>
@@ -136,10 +136,10 @@
 
             <section id="valda aktiviteter">
                 <h2>Valda aktiviteter</h2>
-                <ul>                  
+                <ul>
                     <li>
                         <p><em>3/4 12:00 Lunchföreläsning på Lunds stadsbibliotek</em></p>
-    
+
                         <p>Föreläsning om Lunds medeltid, Lunds stadsbibliotek.</p>
                     </li>
                 </ul>
@@ -153,10 +153,44 @@
     </main>
 
     <footer>
-        <p>Kontaktuppgifter</p>
-        <p>Hur blir man medlem</p>
-        <p>Lämna feedback</p>
-        <a href="rapport.html">Rapporten</a>
+        <p><a href="mailto:info@gyasvänner.se">kontakta oss</a></p>
+        <p><a href="föreningen.html#medlemskap>">bli medlem</a></p>
+        <p><a href="#" onclick="document.getElementById('feedbackDialog').showModal()">feedback/frågor</a></p>
+
+
+        <dialog id="feedbackDialog">
+            <form method="dialog">
+                <p>Fyll i frågor eller feedback om denna sida:</p>
+
+                <label>
+                    feedback eller fråga:
+                    <input type="text" id="feedback_text">                    
+                </label>
+                
+                <label>
+                    mailaddress som vi kan nå dig:
+                    <input type="email" id="mail_feedback">
+                </label>
+
+                <label>
+                    telefonnummer som vi kan nå dig:
+                    <input type="text" id="telefonnummer">
+                </label>
+
+                <button onclick="document.getElementById('myDialog').showModal()"> Skicka </button>
+                <button onclick="closeDialog()"> Avbryt </button>
+
+            </form>
+
+        </dialog>
+
+        <dialog id="myDialog">
+            <form method="dialog">
+                <p>fyll i frågor eller feedback om denna sida:</p>
+                <button type="submit">skicka</button>
+            </form>
+        </dialog>
+
     </footer>
 
 </body>
