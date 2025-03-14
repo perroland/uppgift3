@@ -30,10 +30,10 @@
             </li>
         </ul>
 
-
         <ul>
             <li><a href="föreningen.html#syfte">Föreningens syfte</a></li>
             <li><a href="föreningen.html#policy">Föreningens policy</a></li>
+            <li><a href="föreningen.html#medlemskap">Att bli medlem</a></li>
             <li><a href="föreningen.html#styrelse">Föreningens styrelse</a></li>
             <li><a href="föreningen.html#kontaktuppgifter">Föreningens kontaktuppgifter</a></li>
 
@@ -80,25 +80,30 @@
 
         </section>
 
-        <section id="#medlemskap">
+        <section id="medlemskap">
             <h2>Medlemskap:</h2>
 
-            <p>Att bli medlem kostar 200 kronor per år.</p>
+            <p>Att bli medlem kostar 200 kronor per år. Fyll i nedanstående uppgifter och tryck "betala" så kommer du till en betalsida.</p>
 
-            <p>Skriv ett mail till info@gyasvanner.se och ange:</p>
+            <form>
+                Namn:<input type="text"> 
+                Födelsedatum:<input type="date">
+                Adress:<input type="text">
+                Postnummer:<input type="text">
+                Telefonnummer:<input type="text">
+                Mailaddress:<input type="email">      
+                
+                <button type="button" onclick="document.getElementById('myDialog').showModal()">Gå till betalning</button>
 
-            <ul>
-                <li>Namn</li>
-                <li>Födelseår</li>
-                <li>Address</li>
-                <li>Telefonnummer</li>
-                <li>Mailaddress</li>
-            </ul>
+            </form>
 
-            <p>Betala sedan 200 SEK till postgiro 333-3443, ange namn och mailaddress<p>
-
-            <p>Alternativ swisha till 123-333-444-555, ange namn och mailaddress</p>    
-            
+        <!-- Detta är bara för visa att längre så här kan jag inte gå i uppgift 3 -->
+        <dialog id="myDialog">
+            <form method="dialog">
+                <p>Kan ej betala då vi inte kommit till javascript ännu :) </p>
+                <button type="submit">Stäng</button>
+            </form>
+        </dialog>
 
             
         </section>
