@@ -95,24 +95,19 @@
                 <legend>
                     Fyll i kunduppgifter
                 </legend>
-                Namn:<input type="text" id="namn">
-                Address:<input type="text" id="address">
-                Postnummer:<input type="text" maxlength="6" id="postnummer">
-                Postort:<input type="text" id="postort">                               
+                *Namn:<input type="text" id="namn" required>
+                *Address:<input type="text" id="address" required>
+                *Postnummer:<input type="text" maxlength="6" id="postnummer" required>
+                *Postort:<input type="text" id="postort" required>                               
                 
             </fieldset>
 
-            <button type="button" onclick="document.getElementById('myDialog').showModal()">Gå till betalning</button>
+            <button type="submit">Skicka</button>
+            
             
         </form>
 
-        <!-- Detta är bara för visa att längre så här kan jag inte gå i uppgift 3 -->
-        <dialog id="myDialog">
-            <form method="dialog">
-                <p>Kan ej betala då vi inte kommit till javascript ännu :) </p>
-                <button type="submit">Stäng</button>
-            </form>
-        </dialog>
+        
 
     </main>
 
