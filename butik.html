@@ -10,27 +10,27 @@
 <body>
     <nav>
         <ul>
-            <li> 
+            <li>
                 <a id="vald_sida" href="index.html">Startsida - Gyas vänner</a>
             </li>
-            <li>            
+            <li>
                 <a href="historia.html">Skånes historia</a>
             </li>
-            <li>            
+            <li>
                 <a href="aktiviteter.html">Aktiviteter</a>
             </li>
-            <li>           
+            <li>
                 <a href="medlemsforum.html">Medlemsforum</a>
             </li>
-            <li>          
-                <a id="vald_sida" href="butik.html">Föreningens butik</a>                
-            </li>            
+            <li>
+                <a id="vald_sida" href="butik.html">Föreningens butik</a>
+            </li>
             <li>
                 <a href="föreningen.html">Föreningsinformation</a>
             </li>
         </ul>
     </nav>
-    
+
     <header>
         <h1>
             Butik
@@ -39,16 +39,88 @@
     </header>
 
     <main>
-     
 
-        <p> </p>
+        <p>
+            Välkommen till föreningens butik,hjälp butiken genom att köpa någon eller några av dessa fina fantastiska produkter!
+        </p>
+
+        <form>
+
+            <fieldset>
+                <legend>Välj produkt</legend>
+
+                <div id="tshirt_produkt">
+
+                    <img id="tshirt_img" src="img/tshirt.webp" alt="tshirt">
+
+                    <label>
+                        Tshirt 650 SEK
+                        <input id="tshirt_checkbox" type="number"  min="0" value="tshirt">
+                    </label>
+                </div>
+
+                <div id="kopp_produkt">
+
+                    <img id="kopp_img" src="img/kopp.webp" alt="kopp">
+
+                    <label>
+                        Kopp 250 SEK
+                        <input id="kopp_checkbox" type="number"  min="0" value="kopp">
+                    </label>
+                </div>
+
+                <div id="badhandduk_produkt">
+
+                    <img id="badhandduk_img" src="img/badhandduk.webp" alt="badhandduk">
+
+                    <label>
+                        Badhandduk 800 SEK
+                        <input id="badhandduk_checkbox" type="number"  min="0" value="badhandduk">
+                    </label>
+                </div>
+
+                <div id="mössa_produkt">
+
+                    <img id="mössa_img" src="img/mössa.webp" alt="mössa">
+
+                    <label>
+                        Mössa 400 SEK
+                        <input id="mössa_checkbox" type="number"  min="0" value="mössa">
+                    </label>
+                </div>
+                
+            </fieldset>
+
+            <fieldset>
+                <legend>
+                    Fyll i kunduppgifter
+                </legend>
+                Namn:<input type="text" id="namn">
+                Address:<input type="text" id="address">
+                Postnummer:<input type="text" maxlength="6" id="postnummer">
+                Postort:<input type="text" id="postort">                               
+            </fieldset>
+
+            <button type="button" onclick="document.getElementById('myDialog').showModal()">Gå till betalning</button>
+            
+        </form>
+
+        <!-- Detta är bara för visa att längre så här kan jag inte gå i uppgift 3 -->
+        <dialog id="myDialog">
+            <form method="dialog">
+                <p>Kan ej betala då vi inte kommit till javascript ännu :) </p>
+                <button type="submit">Stäng</button>
+            </form>
+        </dialog>
+
     </main>
+
 
     <footer>
         <p>Kontaktuppgifter</p>
         <p>Hur blir man medlem</p>
         <p>Lämna feedback</p>
-       <a href="rapport.html">Rapporten</a>
+        <a href="rapport.html">Rapporten</a>
     </footer>
 
 </body>

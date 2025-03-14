@@ -10,27 +10,27 @@
 <body>
     <nav>
         <ul>
-            <li> 
-                <a  href="index.html">Startsida - Gyas vänner</a>
+            <li>
+                <a href="index.html">Startsida - Gyas vänner</a>
             </li>
-            <li>            
-                <a  href="historia.html">Skånes historia</a>
+            <li>
+                <a href="historia.html">Skånes historia</a>
             </li>
-            <li>            
+            <li>
                 <a id="vald_sida" href="aktiviteter.html">Aktiviteter</a>
             </li>
-            <li>           
+            <li>
                 <a href="medlemsforum.html">Medlemsforum</a>
             </li>
-            <li>          
-                <a href="butik.html">Föreningens butik</a>                
-            </li>            
+            <li>
+                <a href="butik.html">Föreningens butik</a>
+            </li>
             <li>
                 <a href="föreningen.html">Föreningsinformation</a>
             </li>
         </ul>
     </nav>
-    
+
     <header>
         <h1>
             Aktiviteter
@@ -38,15 +38,125 @@
 
     </header>
 
-    <main>    
-        <p> </p>
+    <main>
+        <p>
+            På denna sida presenterar vi olika aktiviteter som görs i föreningens regi, men även ibland ifall vi vill tipsa om intressanta aktiveter utanför föreningens regi.
+        </p>
+        <p>
+            Aktiviterna planeras av olika arbetsgrupper inom föreningen. Alla är välkommna att gå med i en arbetsgrupp och bidra till föreningens arbete!
+        </p>
+
+        <p> För tillfället finns det följande aktiva arbetsgrupper:</p>
+
+        <ul>
+            <li>
+                Allmän skånsk historia, planerar och genomför aktiviteter om Skånes historia i allmänhet. Träffas varannan onsdag kl 19 i Höör, hybridmöte så det man kan ansluta online.
+            </li>
+            <li>
+                Malmö-gruppen. Om specifikt Malmö stads historia genom tiden. Träffas i Malmö varje tisdag kl 19.
+            </li>
+            <li>
+                Snapphane-gruppen. Om Göinges och snapphanehistoria. Träffas varje torsdag på Hässleholms stadsbibliotek kl 19.00.
+            </li>
+        </ul>
+
+        <section id="aktuella_aktiviteter">
+            <h2>Aktuella aktiviteter</h2>
+
+            <ul>
+                <li>
+                    <p><em>20/3-25 16:00 på Malmöhus slott, Malmö</em></p>
+
+                    <p>Rundtur på Malmöhus slott. Vi träffas ute i foajen 10 minuter innan det börjar.</p>
+                </li>
+                <li>
+                    <p><em>3/4-25 12:00 Lunchföreläsning på Lunds stadsbibliotek</em></p>
+
+                    <p>Föreläsning om Lunds medeltid, Lunds stadsbibliotek.</p>
+                </li>
+                <li>
+                    <p><em>10/5-25  13:00 Glimmingehus</em></p>
+
+                    <p>Rundtur på Glimmingehus, vi samlas på gården 10 minuter innan.</p>
+                </li>
+                <li>
+                    <p><em>4/6-25  12:00</em></p>
+
+                    <p>Samling vid Ales stenar. Sten Markusson föreläser om Ale stenar. Tänk på vädret och välj bra kläder.</p>
+                </li>
+                <li>
+                    <p><em>20/7-25  08:00 Parkinering vid Höörs mitt</em></p>
+
+                    <p>Föreningens årliga utflykt. Detta året går turen till österlen. Turen går till Kungagraven, Kikvik och Simrishamn. Närmare beskrivningen kommer när det närmar sig</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="sök_aktiviter">
+            <h2>Sök på aktiviteter</h2>
+
+            <form>
+                <fieldset>
+                    <legend>Start och slut datum</legend>
+                    <label for="start_datum">Start datum</label>
+                    <input type="date" id="start_datum" name="start_datum" value="2024-01-01">
+
+                    <label for="slut_datum">Slut datum</label>
+                    <input type="date" id="slut_datum" name="slut_datum" value="2025-04-01">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Ange kategorier du är intresserad av:</legend>
+                    <label><input type="checkbox" value="forelasningar" checked>Föreläsningar</label>
+                    <label><input type="checkbox" value="guidningar">Guidningar</label>
+                    <label><input type="checkbox" value="utflykter">Utflykter</label>                    
+                </fieldset>
+
+                <fieldset>
+                    <legend>Historiska kategorier</legend>
+                    <label><input type="checkbox" value="skansk_historia">Allmän skånsk historia</label>
+                    <label><input type="checkbox" value="stadshistoria" checked>Stadshistoria</label>
+                    <label><input type="checkbox" value="lokal_historia">Lokal historia</label>
+                    <label><input type="checkbox" value="militär_historia">Militär historia</label>                    
+                    <label><input type="checkbox">Teknik och industri-historia</label>       
+                    <label><input type="checkbox">Arkeologi</label>                    
+                </fieldset>
+
+                <button type="button" onclick="document.getElementById('myDialog').showModal()">Sortera</button>
+
+            </form>
+
+            <!-- Detta är bara för visa att längre så här kan jag inte gå i uppgift 3 -->
+            <dialog id="myDialog">
+                <form method="dialog">
+                    <p>Kan ej sortera då vi inte kommit till javascript ännu :) </p>
+                    <button type="submit">Stäng</button>
+                </form>
+            </dialog>
+
+            <section id="valda aktiviteter">
+                <h2>Valda aktiviteter</h2>
+                <ul>                  
+                    <li>
+                        <p><em>3/4 12:00 Lunchföreläsning på Lunds stadsbibliotek</em></p>
+    
+                        <p>Föreläsning om Lunds medeltid, Lunds stadsbibliotek.</p>
+                    </li>
+                </ul>
+
+            </section>
+
+
+        </section>
+
+
     </main>
 
     <footer>
         <p>Kontaktuppgifter</p>
         <p>Hur blir man medlem</p>
         <p>Lämna feedback</p>
-       <a href="rapport.html">Rapporten</a>
+        <a href="rapport.html">Rapporten</a>
     </footer>
 
 </body>
