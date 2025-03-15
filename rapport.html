@@ -2,9 +2,6 @@
 <html lang="sv">
 
 <head>
-
-
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -208,7 +205,7 @@
                                 <li>Renässans och tidig modern tid</li>
                                 <li>Stormaktstid och barock</li>
                                 <li>Upplysningstid och industraliseringen</li>
-                                <li>Modern tid och globaliseringen</li>                                 
+                                <li>Modern tid och globaliseringen</li>
                             </ul>
                         </li>
                         <li>Olika härader i skåne</li>
@@ -273,7 +270,7 @@
 
 
 
-            <h3>3.1 Strategy-Strategi</h3>
+            <h3>3.1 Strategy</h3>
 
             <p>Vi behöver bestämma en strategi för vår "produkt", dvs webbplatsen som stöd för senare beslut tex scope osv (<a href="rapport.html#the_elements">Jesse James Garret, 2011, sida 36</a>).</p>
 
@@ -292,7 +289,7 @@
 
             <p>Se <a href="rapport.html#syfte_och_målgrupp">1. Syfte och målgrupp</a> för detaljerad lista. </p>
 
-            <h3>3.2 Scope/omfång</h3>
+            <h3>3.2 Scope</h3>
 
             <p>Nu behöver vi få ner strategin och syftet med webbplatsen till mer konkreta krav av flera skäl (<a href="rapport.html#the_elements">Jesse James Garret, 2011, sidorna 57-61</a>): </p>
 
@@ -306,7 +303,7 @@
 
             <p>Se <a href="rapport.html#krav_specifikation">2. Kravspecifikation</a> för detaljerad lista. </p>
 
-            <h3>3.3 Structure/Struktur</h3>
+            <h3>3.3 Structure</h3>
 
             <p> Min struktur på hemsidan tänker jag mig så här: </p>
 
@@ -314,7 +311,7 @@
                 <li>
                     Startsida
                     <ul>
-                        <li>
+                        <li id="matrix_structure">
                             Skånes historia, de större städerna. Jag tänker mig en slags "matrix"-struktur (<a href="rapport.html#the_elements">Jesse James Garret, 2011, sida 93-94</a>) som passar historiskt material som spänner både över geografin och tiden. Så följande struktur är alltså "3-dimensionell", lite svårt att beskriva det med HTML dock, men den geografiska struktur är x och y axel medans tid strukturen är z axeln i en tänkt 3d-diagram. Notera att jag begränsat mig lite i epok-strukturen, kände att det blev för stort projekt för uppgiften denna gång. Jag har också begränsat mig till de 4 större städerna.
                             <ul>
                                 <li>Geografisk struktur:
@@ -397,15 +394,80 @@
                 </li>
             </ul>
 
-            <h3>3.3.1 Implemation av innehåll och struktur</h3>
+            <h3>3.3 Skeleton</h3>
 
-            <p>Ungefär här började jag koda, ungefär så här:</p>
-            <ol>
-                <li>Skapade de katalogstrukturer och filer jag behövde.</li>
-                <li>Skapade en HTML struktur i varje fil inkl. navigering.</li>
-                <li>Skapade en hel del innehåll, mycket med chatgtp, dvs texter och bilder. Eftersom själva innehållet i sig inte var en del av uppgiften så var det ok enligt läraren.</li>
-                <li>Skapade en del funktionalitet, dvs mest formulär där det behövdes. Det blir ju lite begränsade då jag inte kan använda javascript</li>
-            </ol>
+            <h4>3.3.1 Navigation Design</h4>
+            Navigation design handlar om hur användaren hittar genom informationen på en webbplats, dvs hur själv vägen till slutmålet via länkar är designad. Den ska uppfylla 3 stycken mål (<a href="rapport.html#the_elements">Jesse James Garret, 2011, sidorna 118-119</a>)
+
+            <ul>
+                <li>
+                    Den måste ge användarna ett sätt att ta sig från en punkt till en annan på webbplatsen.
+                </li>
+                <li>
+                    Den måste kommunicera en logik i vilka vägar/länkar man presenterar. Vad har de med varandra att göra? Är det någon som är viktigare än någon annan. Dvs försök undvik att bara lista en massa slumpmässiga länkar utan ordning och logik.
+                </li>
+                <li>
+                    Den måste kommunicera förhållandet mellan kontexten och vägar/länkar. Dvs finns det något förhållande mellan sidan användaren befinner sig och vart länken pekar?
+                </li>
+
+            </ul>
+
+            <p>
+                Navigerings-designen på Gyas Vänner webbplats kan delas in lite olika punkter:
+            </p>
+
+            <ul>
+                <li>
+                    <p>
+                        Den globala navigeringen, dvs länkarna till huvud-kategorierna på webbplatsen, är med på varje sida (dvs "persistant"), dvs som pekar på tex startsidan och föreningsinformation osv.
+                    </p>
+
+                    <p>
+                        2 scenarior ser jag framför mig: antingen har man via en google-sökning hamnat lite snett i hiearkin eller så behöver man "börja om" från någon sub-sida på webbplatsen, dvs man har kanske hittat (eller inte) vad man sökt efter men vill börja om med en ny sökning på webbplatsen (<a href="rapport.html#the_elements">Jesse James Garret, 2011, sidorna 120-121</a>)
+                    </p>
+                </li>
+
+
+                <li>
+                    <p>
+                        På historiesidan, dvs "Skånes historia" har jag använt mig av en lokal navigering. Dvs jag har lokala länkar som pekar på de "närmaste" sidorna under kategorin "Skånes historia" (<a href="rapport.html#the_elements">Jesse James Garret, 2011, sida 121</a>).
+                    </p>
+
+                    <p>
+                        När det gäller städernas historia navigerar jag mig igenom en matris-struktur, dvs de olika städerna i ena "axeln" och i andra "axeln" tidsepok, se <a href="rapport.html#matrix_structure">under Structure 3.3</a>.
+                    </p>
+                </li>
+
+                <li>
+                    Jag länkar också i text där jag finner det logiskt. Användaren får en logisk väg till att finna djupare information till där de befinner sig, s.k. kontextuell navigation <a href="rapport.html#the_elements">Jesse James Garret, 2011, sidan 122</a>
+                    <ul>
+                        <li>till "hur man blir medlem" från footern på varje sida och från startsidan </li>
+                        <li>till aktiviteter i texten från startsidan</li>
+                    </ul>
+
+                </li>
+
+                <li>
+                    <p>
+                        Jag har länkar också i footern sk. courtesy navigation <a href="rapport.html#the_elements">Jesse James Garret, 2011, sidan 122</a>. Dvs länkar som "är bra att ha" under hela färden, dvs kontaktinformation, hur man blir medlem, men också en feedback funktion. Det senare är tänkt att fånga feedback/frågar där man befinner sig. Eftersom vi inte kan använda javascript i denna uppgiften så funkar inte detta fullt ut.
+                    </p>
+                </li>
+
+                <h3>3.3.1.1 Implemation av innehåll och struktur</h3>
+
+                <p>Ungefär här började jag koda, ungefär så här:</p>
+                <ol>
+                    <li>Skapade de katalogstrukturer och filer jag behövde.</li>
+                    <li>Skapade en HTML struktur i varje fil inkl. menyer (vilket jag senare insåg kanske var en del av "skeleton-planet", dvs navigation design. ). </li>
+                    <li>Skapade en hel del innehåll, mycket med chatgtp, dvs texter och bilder. Eftersom själva innehållet i sig inte var en del av uppgiften så var det ok enligt läraren.</li>
+                    <li>Skapade en del funktionalitet, dvs mest formulär där det behövdes. Det blir ju lite begränsade då jag inte kan använda javascript</li>
+                </ol>
+
+                <h4>3.3.2 Interface Design</h4>
+
+                <h4>3.3.3 Information Design</h4>
+
+
 
         </section>
 
@@ -450,10 +512,11 @@
     <ul>
         <li>Fyll på med mer referenser till Garrett, samtidigt gå igenom arbetsbeskrivningen och kolla ifall jag glömt något</li>
         <li>gå igenom kraven * Struktor. interactive design, conceptuell model?? Information architecture.</li>
-        <li>-Lägg till en bättre meny i historia.html. Behövs någon form av funktionalitet </li>
+        <li>Lägg till en bättre meny i historia.html. Behövs någon form av funktionalitet </li>
         <li>-Något ord om prioriteringar om att jag fick tänka om. Dvs hela skåne istället för stehag tex. </li>
-        <li>- Fyll aktiviteterna med bilder också? </li>
+        <li>Fyll aktiviteterna med bilder också? </li>
         <li>Ska jag ta bort de målgrupperna som är mindre eller mer internetvana?</li>
+
     </ul>
 </body>
 
