@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+/* Layout */
+
+
+body {
+    display: grid;
+    grid-template-columns: min-content auto;
+    grid-template-rows:    min-content auto min-content;
+    grid-template-areas:  "header header"
+                          "nav    main"
+                          "footer footer";                          
+}
+
+body#start_sida {
+    grid-template-columns: min-content auto min-content;
+    grid-template-areas:  "header header header"
+                          "nav    main   aside"
+                          "footer footer aside"; 
+}
+
+nav {
+    grid-area: nav;
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+aside {
+    grid-area: aside;
+}
