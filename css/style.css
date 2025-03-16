@@ -13,12 +13,7 @@ body {
     
 }
 
-body#start_sida {
-    grid-template-columns: auto auto minmax(auto, 20vw);
-    grid-template-areas:  "header header header"
-                          "nav    main   aside"
-                          "footer footer footer"; 
-}
+
 
 nav {
     grid-area: nav;
@@ -50,31 +45,93 @@ footer {
     text-align: center;
 }
 
+/* startsidan */
+
+body#start_sida {
+    grid-template-columns: auto auto minmax(auto, 20vw);
+    grid-template-areas:  "header header header"
+                          "nav    main   aside"
+                          "footer footer footer"; 
+}
+
 aside {
     grid-area: aside;
 }
 
-/* float etc */
+#utflykten {
+    display: grid;
+    
+    
+    grid-template-columns:30vw 30vw;
+    
+    grid-template-areas: "start_text start_text"
+                         "kulturen_text kulturen_bild"
+                         "historiska_museet_bild historiska_museet_text"
+                         "domkyrkan_text domkyrkan_bild"
+                         "lundagård_bild lundagård_bild"
+                         "lundagård_text lundagård_text"
+                         "efter_text efter_text";
 
-#kulturen_img, #domkyrkan_img {
+        
+    gap: 20px;
+}
+
+#start_text {
+    grid-area: start_text;
+}
+
+#kulturen_text {
+    grid-area: kulturen_text;
+}
+#kulturen_bild {
+    grid-area: kulturen_bild;
+}
+#historiska_museet_text {
+    grid-area: historiska_museet_text;    
+}
+
+#historiska_museet_bild {
+    grid-area: historiska_museet_bild;    
+}
+
+#domkyrkan_text {
+    grid-area: domkyrkan_text;    
+}
+
+#domkyrkan_bild {
+    grid-area: domkyrkan_bild;    
+}
+
+
+#lundagård_text {
+    grid-area: lundagård_text;    
+}
+
+#lundagård_bild {
+    grid-area: lundagård_bild;    
+}
+
+#efter_text {
+    grid-area: efter_text;
+}
+
+
+#utflykten>img {
+    width: 20vw;               
+    margin: auto;
+}
+
+#utflykten>#lundagård_img {
+    width: 40vw;               
+}
+
+
+#erik_img {
     float: right;
+    width: 20vw;
+    margin: 10px;
 }
 
-#historiska_museet_img, #lundagård_img {
-    float: left;
-}
-
-#historiska_museet_text, #lundagård_text {
-    clear: right;
-}
-
-#domkyrkan_text, #efter_text {
-    clear: left;
-}
-
-#utflykten img{
-    margin:10px;
-}
 
 /* navigation */
 nav {
@@ -102,8 +159,6 @@ li>a {
     margin-top: 20px;
 }
 
-
-
 /* colors */
 body, #vald_sida {
     background-color: black;
@@ -122,9 +177,5 @@ body {
 }
 
 
-img {
-    height: 200px;
-    width: 600px;
-    
-}
+
 
