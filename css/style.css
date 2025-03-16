@@ -56,17 +56,24 @@ aside {
 
 /* float etc */
 
-
-.img_vänster>img {
+#kulturen_img, #domkyrkan_img {
     float: right;
 }
 
-.img_höger>img {
+#historiska_museet_img, #lundagård_img {
     float: left;
 }
 
-.clear_fix {
-    clear : both;
+#historiska_museet_text, #lundagård_text {
+    clear: right;
+}
+
+#domkyrkan_text, #efter_text {
+    clear: left;
+}
+
+#utflykten img{
+    margin:10px;
 }
 
 /* navigation */
