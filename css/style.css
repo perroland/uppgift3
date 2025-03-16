@@ -1,22 +1,23 @@
 @charset "UTF-8";
 
 /* Layout */
-
-
 body {
     display: grid;
-    grid-template-columns: min-content auto;
+    grid-template-columns: minmax(auto, 10vw) auto;
     grid-template-rows:    min-content auto min-content;
     grid-template-areas:  "header header"
                           "nav    main"
-                          "footer footer";                          
+                          "footer footer";     
+    
+    margin: 5%;    
+    
 }
 
 body#start_sida {
-    grid-template-columns: min-content auto min-content;
+    grid-template-columns: auto auto minmax(auto, 20vw);
     grid-template-areas:  "header header header"
                           "nav    main   aside"
-                          "footer footer aside"; 
+                          "footer footer footer"; 
 }
 
 nav {
@@ -25,16 +26,98 @@ nav {
 
 header {
     grid-area: header;
+    text-align: center;
+                
 }
 
 main {
     grid-area: main;
+    padding: 10px;         
 }
 
 footer {
     grid-area: footer;
 }
 
+#courtesy {    
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+    justify-content: center;
+}
+
+#chatgtp_info {
+    text-align: center;
+}
+
 aside {
     grid-area: aside;
 }
+
+/* float etc */
+
+
+.img_vänster>img {
+    float: right;
+}
+
+.img_höger>img {
+    float: left;
+}
+
+.clear_fix {
+    clear : both;
+}
+
+/* navigation */
+nav {
+    font-size: large;
+}
+
+#menucheckbox {
+    visibility: hidden;
+    display: none;
+}
+
+nav > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+li>a {
+    display: block;
+    text-decoration: none;
+}
+
+#föreningsmeny {
+    margin-top: 20px;
+}
+
+
+
+/* colors */
+body, #vald_sida {
+    background-color: black;
+    color: white;
+}
+
+header, nav, footer {
+    background-color: white;
+    color: black;
+}
+
+/* fonts */
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+}
+
+
+img {
+    height: 200px;
+    width: 600px;
+    
+}
+

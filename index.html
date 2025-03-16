@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 
 <head>
     <meta charset="UTF-8">
@@ -12,10 +12,17 @@
 <body id="start_sida">
 
     <a href="rapport.html">Länk till rapporten</a>
+
+
     <nav>
+
+        <!-- This is for mobile version, add a checkbox that is hidden in desktop version-->
+        <label for="menucheckbox" id="menuicon"></label>
+        <input type="checkbox" id="menucheckbox">
+
         <ul>
             <li>
-                <a id="vald_sida" href="index.html">Startsida - Gyas vänner</a>
+                <a id="vald_sida" href="index.html"><em>Startsida - Gyas vänner</em></a>
             </li>
             <li>
                 <a href="historia.html">Skånes historia</a>
@@ -52,64 +59,102 @@
 
             <p>Välkommen och utforska vårt material och våra aktiviteter och bli gärna <a href=föreningen.html#medlemskap>medlem</a>!</p>
 
+            <p>Vi anordnar flera aktiviteter i föreningens regi, tex föreläsningar, studiecirklar och utflykter, se <a href="aktiviteter.html">aktiviteter</a> för mer info!</p>
+
+            <p>Ett exempel på utflykt är den vi hade i somras i Lund. Det var en vandring runt Lundagård i centrala Lund med många stopp på historiskt intressanta platser, här följer en beskrivning:
+
+
+
         </section>
 
 
         <div id="utvald_aktivitet">
-            <h2>
-                Aktiviteter
-            </h2>
-            <p>Vi har många aktiviteter för oss, bland annat har vi tex föreläsninger eller utflykter, se <a href="aktiviteter.html">aktiviteter</a> för mer info!</p>
 
-            <div id="utflykten">
-                <p>
-                    Ett exampel på utflykt är den vi hade i somras i Lund:
-                </p>
+            <section id="utflykten">
 
-                <p> Först en sväng på kulturen: </p>
-                <img src="img/kulturen.webp" alt="historiska nördar på utflykt till kulturen i Lund">
+                <h2>Utflykt till historiska Lund med Gyas vänner</h2>
 
-                <p>Sedan en sväng i domkyrkan</p>
-                <img src="img/domkrykan.webp" alt="historiska nördar på utflykt till Lunds domkyrka">
 
-                <p>Och till sist ett besök på historiska museet</p>
-                <img src="img/historiska_museet.webp" alt="historiska nördar på besök på historiska museet i Lund">
+                <p>Lördagen den 20/7 2024 samlades föreningen Gyas vänner i hjärtat av Lund för en dag fylld av historiska upptäckter. Lund, en av Sveriges äldsta städer, bjöd på en fascinerande resa genom tidens gång – från medeltida domkyrkobyggen till 1800-talets akademiska traditioner.</p>
 
-            </div>
+                <div class="img_höger">
+                    <img src="img/kulturen.webp" alt="historiska nördar på utflykt till kulturen i Lund">
 
-            <div id="intervjun">
-                <p>
-                    Här är en intervju med en av deltagarna:
-                <p>
+                    <p>
+                        Vi inledde vår utflykt med ett besök på Kulturen i Lund, ett friluftsmuseum där vi fick en unik inblick i hur människor har levt genom århundradena. Vi vandrade genom historiska stadskvarter, tittade in i välbevarade hus och diskuterade hur olika epoker har påverkat Skånes utveckling.
+                    </p>
 
-                <figure>
-                    <img src="img/erik.webp" alt="bild på historienörden Erik">
-                </figure>
-                <p>
-                    Intervju med Erik, historieentusiast och medlem i "Gyas vänner"
-                    <em>Reporter:</em> Hej Erik! Du var med på utflykten till Kulturen, Domkyrkan och Historiska museet i Lund. Hur var upplevelsen?
-                </p>
+                    <div class="clear_fix"></div>
 
-                <p><em>Erik:</em> Hej! Ja, det var helt fantastiskt! Det är något speciellt med att vandra genom historiska miljöer och få känna historiens vingslag på nära håll. Jag har varit på alla dessa platser tidigare, men att uppleva dem tillsammans med andra historieintresserade gör att man ser saker ur nya perspektiv. Jag vill verkligen rikta ett stort tack till Gyas vänner för att de anordnade den här utflykten!</p>
+                </div>
 
-                <p><em>Reporter:</em>Vad var det mest minnesvärda för dig under dagen?</p>
+                <div class="img_vänster">
+                    <img id=" historiska_museet_img" src="img/historiska_museet.webp" alt="historiska nördar på besök på historiska museet i Lund">
 
-                <p><em>Erik: </em>Oj, svårt att välja! Men jag måste nog säga att besöket i Lunds domkyrka var höjdpunkten. Kryptan där nere med de mystiska stenpelarna och Jätten Finns mytologi fascinerar mig alltid. Vi fick dessutom en riktigt engagerad guide som berättade detaljer jag aldrig hört förut!</p>
+                    <p>Därefter begav vi oss till Historiska museet vid Lunds universitet, där vi imponerades av de rika fynden från Skånes forntid. En av höjdpunkterna var det berömda skattkammaren, där vi fick se medeltida kyrkliga skatter och föremål från vikingatiden. Dessutom fascinerades vi av Bäckaskogskvinnan, ett av Sveriges mest kända stenåldersskelett, som gav oss en konkret koppling till regionens förhistoriska befolkning.</p>
 
-                <p><em>Reporter: </em>Historiska museet har ju en hel del spännande utställningar. Hittade du något där som fångade ditt intresse?</p>
+                    <div class="clear_fix"></div>
 
-                <p><em>Erik:</em> Absolut! Jag fastnade vid deras samling av vikingafynd, särskilt de runstenar och smycken de har där. Jag tycker det är otroligt häftigt att se så välbevarade föremål från den tiden – det känns nästan som att de berättar sina egna historier.</p>
+                </div>
 
-                <p><em>Reporter: </em>Vad betyder historia för dig personligen?</p>
+                <div class="img_höger">
 
-                <p><em>Erik: </em>För mig är historia inte bara något som hände förr, det är en levande del av vår identitet. Genom att förstå var vi kommer ifrån kan vi också förstå oss själva och vår samtid bättre. Och så är det ju också riktigt roligt att grotta ner sig i gamla berättelser, upptäcka detaljer och fundera över hur människor levde förr.</p>
+                    <img class="img_höger" id="domkyrkan_img" src="img/domkyrkan.webp" alt="historiska nördar på besök i domkyrkan i Lund">
 
-                <p><em>Reporter: </em>Avslutningsvis, har du något du vill säga till andra historieintresserade?</p>
+                    <p>Efter en lunchpaus på ett av stadens anrika kaféer fortsatte vi mot Lunds domkyrka, en ikonisk symbol för både staden och den nordiska medeltiden. Vi beundrade den magnifika arkitekturen, studerade den mytomspunna Jätten Finn och följde det fascinerande astronomiska uret, som fortfarande slår sina timmar med anor från 1400-talet.</p>
 
-                <p><em>Erik: </em>Ja! Om du är det minsta intresserad av historia – gå med i Gyas vänner! Det är en fantastisk förening med likasinnade entusiaster, och de anordnar både spännande föreläsningar och utflykter som den vi var på idag. Man lär sig massor, träffar härliga människor och har riktigt kul samtidigt. Jag kan verkligen rekommendera det!</p>
+                    <div class="clear_fix"></div>
+                </div>
 
-            </div>
+                <div class="img_vänster">
+                    <img id="lundagård_img" src="img/lundagård.webp" alt="historiska nördar på guidning på lundagård">
+
+                    <p>Dagen avslutades med en guidad tur i Lundagård, det gamla stadskvarteret där universitetets äldsta byggnader ligger. Vår guide berättade engagerat om universitetets historia, från dess grundande på 1600-talet till studentuppror och akademiska traditioner genom seklerna. Vi fick även höra spännande historier om de gamla byggnaderna, såsom Kungshuset och Universitetshuset.</p>
+
+                
+                    <div class="clear_fix"></div>
+
+                </div>
+
+                <p>Efter en dag fylld av historiska insikter och nya upptäckter skildes vi åt, nöjda och inspirerade av Lunds rika kulturarv. Vi ser redan fram emot nästa historiska utflykt!</p>
+
+
+            </section>
         </div>
+
+        <div id="intervjun">
+            <p>
+                Här är en intervju med en av deltagarna:
+            <p>
+
+            <figure>
+                <img src="img/erik.webp" alt="bild på historienörden Erik">
+            </figure>
+            <p>
+                Intervju med Erik, historieentusiast och medlem i "Gyas vänner"
+                <em>Reporter:</em> Hej Erik! Du var med på utflykten till Kulturen, Domkyrkan och Historiska museet i Lund. Hur var upplevelsen?
+            </p>
+
+            <p><em>Erik:</em> Hej! Ja, det var helt fantastiskt! Det är något speciellt med att vandra genom historiska miljöer och få känna historiens vingslag på nära håll. Jag har varit på alla dessa platser tidigare, men att uppleva dem tillsammans med andra historieintresserade gör att man ser saker ur nya perspektiv. Jag vill verkligen rikta ett stort tack till Gyas vänner för att de anordnade den här utflykten!</p>
+
+            <p><em>Reporter:</em>Vad var det mest minnesvärda för dig under dagen?</p>
+
+            <p><em>Erik: </em>Oj, svårt att välja! Men jag måste nog säga att besöket i Lunds domkyrka var höjdpunkten. Kryptan där nere med de mystiska stenpelarna och Jätten Finns mytologi fascinerar mig alltid. Vi fick dessutom en riktigt engagerad guide som berättade detaljer jag aldrig hört förut!</p>
+
+            <p><em>Reporter: </em>Historiska museet har ju en hel del spännande utställningar. Hittade du något där som fångade ditt intresse?</p>
+
+            <p><em>Erik:</em> Absolut! Jag fastnade vid deras samling av vikingafynd, särskilt de runstenar och smycken de har där. Jag tycker det är otroligt häftigt att se så välbevarade föremål från den tiden – det känns nästan som att de berättar sina egna historier.</p>
+
+            <p><em>Reporter: </em>Vad betyder historia för dig personligen?</p>
+
+            <p><em>Erik: </em>För mig är historia inte bara något som hände förr, det är en levande del av vår identitet. Genom att förstå var vi kommer ifrån kan vi också förstå oss själva och vår samtid bättre. Och så är det ju också riktigt roligt att grotta ner sig i gamla berättelser, upptäcka detaljer och fundera över hur människor levde förr.</p>
+
+            <p><em>Reporter: </em>Avslutningsvis, har du något du vill säga till andra historieintresserade?</p>
+
+            <p><em>Erik: </em>Ja! Om du är det minsta intresserad av historia – gå med i Gyas vänner! Det är en fantastisk förening med likasinnade entusiaster, och de anordnar både spännande föreläsningar och utflykter som den vi var på idag. Man lär sig massor, träffar härliga människor och har riktigt kul samtidigt. Jag kan verkligen rekommendera det!</p>
+
+        </div>
+
 
     </main>
 
