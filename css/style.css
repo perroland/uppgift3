@@ -10,7 +10,6 @@ body {
         "footer footer";
 
     margin: 5%;
-
 }
 
 nav {
@@ -25,7 +24,6 @@ nav {
 header {
     grid-area: header;
     text-align: center;
-
 }
 
 main {
@@ -49,7 +47,6 @@ footer {
 }
 
 /* startsidan */
-
 body#start_sida {
     grid-template-columns: minmax(10vw, auto) auto minmax(auto, 20vw);
     grid-template-areas: "header header header"
@@ -73,7 +70,6 @@ aside {
         "lundagård_bild lundagård_bild"
         "lundagård_text lundagård_text"
         "efter_text efter_text";
-
 
     gap: 20px;
 }
@@ -158,30 +154,38 @@ img {
         "footer     footer";
 }
 
-#skane_area_nav,
-#stad_details {
+#skane_area_nav {
     grid-area: area_nav;
     color: white;
 }
 
-#skane_tid_nav,
-.tids_details {
+#skane_tid_nav {
     grid-area: tid_nav;
     color: white;
 }
 
 #skane_area_nav,
 #skane_tid_nav,
-#stad_details,
-.tid_details {
+#förenings_nav {
     display: flex;
     flex-direction: row;
+    gap: 10px;
+    border: solid;
+}
+
+#skane_oversikt_vald, #skane_oversikt {
+    text-align: center; 
+}
+
+#skane_area_nav, #skane_tid_nav, #förenings_nav {
+    justify-content: center;
+
 }
 
 #föreningsinformation {
     grid-template-areas: "header     header"
         "global_nav förenings_nav"
-        "global_env main"
+        "global_nav main"
         "footer     footer";
 
 }
@@ -208,11 +212,6 @@ li>a, #skane_oversikt, #skane_oversikt_vald {
     display: block;
     text-decoration: none;
 }
-
-#föreningsmeny {
-    margin-top: 20px;
-}
-
 
 /* colors */
 body,
