@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 
 <head>
     <meta charset="UTF-8">
@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body id="föreningsinformation">
     <nav>
-        <ul>
+        <ul id="global_nav">
             <li>
                 <a href="index.html">Startsida - Gyas vänner</a>
             </li>
@@ -31,12 +31,22 @@
             </li>
         </ul>
 
-        <ul>
-            <li><a href="föreningen.html#syfte">Föreningens syfte</a></li>
-            <li><a href="föreningen.html#policy">Föreningens policy</a></li>
-            <li><a href="föreningen.html#medlemskap">Att bli medlem</a></li>
-            <li><a href="föreningen.html#styrelse">Föreningens styrelse</a></li>
-            <li><a href="föreningen.html#kontaktuppgifter">Föreningens kontaktuppgifter</a></li>
+        <ul id="förenings_nav">
+            <li>
+                <a href="föreningen.html#syfte">Föreningens syfte</a>
+            </li>
+            <li>
+                <a href="föreningen.html#policy">Föreningens policy</a>
+            </li>
+            <li>
+                <a href="föreningen.html#medlemskap">Att bli medlem</a>
+            </li>
+            <li>
+                <a href="föreningen.html#styrelse">Föreningens styrelse</a>
+            </li>
+            <li>
+                <a href="föreningen.html#kontaktuppgifter">Föreningens kontaktuppgifter</a>
+            </li>
 
         </ul>
     </nav>
@@ -49,6 +59,10 @@
     </header>
 
     <main>
+
+
+        <p></p>
+
         <section id="syfte">
 
             <h2>Förenings syfte:</h2>
@@ -87,26 +101,26 @@
             <p>Att bli medlem kostar 200 kronor per år. Fyll i nedanstående uppgifter och tryck "betala" så kommer du till en betalsida.</p>
 
             <form>
-                Namn:<input type="text"> 
+                Namn:<input type="text">
                 Födelsedatum:<input type="date">
                 Adress:<input type="text">
                 Postnummer:<input type="text">
                 Telefonnummer:<input type="text">
-                Mailaddress:<input type="email">      
-                
-                <button type="button" onclick="document.getElementById('myDialog').showModal()">Gå till betalning</button>
+                Mailaddress:<input type="email">
+
+                <button type="button" onclick="document.getElementById('nojavscriptDialog').showModal()">Gå till betalning</button>
 
             </form>
 
-        <!-- Detta är bara för visa att längre så här kan jag inte gå i uppgift 3 -->
-        <dialog id="myDialog">
-            <form method="dialog">
-                <p>Kan ej betala då vi inte kommit till javascript ännu :) </p>
-                <button type="submit">Stäng</button>
-            </form>
-        </dialog>
+            <!-- Detta är bara för visa att längre så här kan jag inte gå i uppgift 3 -->
+            <dialog id="nojavascriptDialog">
+                <form method="dialog">
+                    <p>Kan ej betala då vi inte kommit till javascript ännu :) </p>
+                    <button type="submit">Stäng</button>
+                </form>
+            </dialog>
 
-            
+
         </section>
 
         <section id="styrelse">

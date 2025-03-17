@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,7 @@
 
 <body>
     <nav>
-        <ul>
+        <ul id="global_nav">
             <li>
                 <a href="index.html">Startsida - Gyas vänner</a>
             </li>
@@ -135,7 +135,7 @@
                 </form>
             </dialog>
 
-            <section id="valda aktiviteter">
+            <section id="valda_aktiviteter">
                 <h2>Valda aktiviteter</h2>
                 <ul>
                     <li>
@@ -147,18 +147,23 @@
 
             </section>
 
-
+        
         </section>
 
 
     </main>
 
     <footer>
-        <p><a href="mailto:info@gyasvänner.se">kontakta oss</a></p>
-        <p><a href="föreningen.html#medlemskap>">bli medlem</a></p>
-        <p><a href="#" onclick="document.getElementById('feedbackDialog').showModal()">feedback/frågor</a></p>
-        <p>Notera att den mesta av texterna och bilderna är generarade av chat-GTP. Framförallt de historiska texterna och bilderna samt utflykten och intervjun på startsidan.</p>
 
+        <div id="courtesy">
+            <p><a href="mailto:info@gyasvänner.se">kontakta oss</a></p>
+            <p><a href="föreningen.html#medlemskap">bli medlem</a></p>
+            <p><a href="#" onclick="document.getElementById('feedbackDialog').showModal()">feedback/frågor</a></p>
+        </div>
+
+        <div id="chatgtp_info">
+            <p>Notera att den mesta av texterna och bilderna är generarade av chat-GTP. Framförallt de historiska texterna och bilderna samt utflykten och intervjun på startsidan.</p>
+        </div>
 
         <dialog id="feedbackDialog">
             <form method="dialog">
@@ -166,9 +171,9 @@
 
                 <label>
                     feedback eller fråga:
-                    <input type="text" id="feedback_text">                    
+                    <input type="text" id="feedback_text">
                 </label>
-                
+
                 <label>
                     mailaddress som vi kan nå dig:
                     <input type="email" id="mail_feedback">
@@ -179,17 +184,18 @@
                     <input type="text" id="telefonnummer">
                 </label>
 
-                <button onclick="document.getElementById('myDialog').showModal()"> Skicka </button>
+                <button onclick="document.getElementById('nojavascriptDialog').showModal()"> Skicka </button>
                 <button onclick="closeDialog()"> Avbryt </button>
 
             </form>
 
         </dialog>
 
-        <dialog id="myDialog">
+        <dialog id="nojavascriptDialog">
             <form method="dialog">
-                <p>fyll i frågor eller feedback om denna sida:</p>
-                <button type="submit">skicka</button>
+                <p>Kan ej skicka då vi inte kommit till javascript ännu :) </p>
+                <button type="submit">Stäng</button>
+
             </form>
         </dialog>
 

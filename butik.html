@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 
 <head>
     <meta charset="UTF-8">
@@ -10,9 +10,9 @@
 
 <body>
     <nav>
-        <ul>
+        <ul id="global_nav">
             <li>
-                <a id="vald_sida" href="index.html">Startsida - Gyas vänner</a>
+                <a href="index.html">Startsida - Gyas vänner</a>
             </li>
             <li>
                 <a href="historia.html">Skånes historia</a>
@@ -45,7 +45,7 @@
             Välkommen till föreningens butik,hjälp butiken genom att köpa någon eller några av dessa fina fantastiska produkter!
         </p>
 
-        <form>
+        <form id="butik_form">
 
             <fieldset>
                 <legend>Välj produkt</legend>
@@ -56,7 +56,7 @@
 
                     <label>
                         Tshirt 650 SEK
-                        <input id="tshirt_checkbox" type="number"  min="0" value="tshirt">
+                        <input id="tshirt_checkbox" type="number" min="0" value="0">
                     </label>
                 </div>
 
@@ -66,7 +66,7 @@
 
                     <label>
                         Kopp 250 SEK
-                        <input id="kopp_checkbox" type="number"  min="0" value="kopp">
+                        <input id="kopp_checkbox" type="number" min="0" value="0">
                     </label>
                 </div>
 
@@ -76,7 +76,7 @@
 
                     <label>
                         Badhandduk 800 SEK
-                        <input id="badhandduk_checkbox" type="number"  min="0" value="badhandduk">
+                        <input id="badhandduk_checkbox" type="number" min="0" value="0">
                     </label>
                 </div>
 
@@ -86,10 +86,10 @@
 
                     <label>
                         Mössa 400 SEK
-                        <input id="mössa_checkbox" type="number"  min="0" value="mössa">
+                        <input id="mössa_checkbox" type="number" min="0" value="0">
                     </label>
                 </div>
-                
+
             </fieldset>
 
             <fieldset>
@@ -99,13 +99,23 @@
                 *Namn:<input type="text" id="namn" required>
                 *Address:<input type="text" id="address" required>
                 *Postnummer:<input type="text" maxlength="6" id="postnummer" required>
-                *Postort:<input type="text" id="postort" required>                               
-                
+                *Postort:<input type="text" id="postort" required>
+
             </fieldset>
 
-            <button type="submit">Skicka</button>
-                        
+
+            <button type="submit">Betala</button>
+            
         </form>
+
+        <dialog id="nojavascriptDialog">
+            <form method="dialog">
+                <p>Kan ej betala då vi inte kommit till javascript ännu :) </p>
+                <button type="submit">Stäng</button>
+            </form>
+        </dialog>
+
+        
 
     </main>
 
