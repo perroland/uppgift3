@@ -151,6 +151,7 @@ img {
 /* historiesidor */
 #historie_sida {
     grid-template-areas: "header header"
+        "global_nav skane_oversikt"
         "global_nav area_nav"
         "global_nav tid_nav"
         "global_nav main"
