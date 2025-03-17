@@ -150,7 +150,7 @@ img {
 
 /* historiesidor */
 #historie_sida {
-    grid-template-areas: "header     header"
+    grid-template-areas: "header header"
         "global_nav area_nav"
         "global_nav tid_nav"
         "global_nav main"
@@ -177,7 +177,6 @@ img {
     flex-direction: row;
 }
 
-
 #föreningsinformation {
     grid-template-areas: "header     header"
         "global_nav förenings_nav"
@@ -197,30 +196,11 @@ nav {
     display: none;
 }
 
-nav>ul,
-details>ul {
+nav>ul  {
     list-style-type: none;
     margin: 0;
     padding: 0;
 
-}
-
-details>summary {
-    list-style: none;
-}
-
-details:open{
-    background-color:white;
-    color: black;
-}
-
-#stad_details {
-   position: relative;
-}
-
-details>ul {
-    position: absolute;
-    left: 0;
 }
 
 li>a {
@@ -253,10 +233,14 @@ li>a {
 
 /* colors */
 body,
-#vald_sida,
 a {
     background-color: black;
     color: white;
+}
+
+#vald_sida, #vald_stad, #vald_stad, #vald_tid {
+    color: black;
+    background-color: white;
 }
 
 header,
