@@ -10,26 +10,30 @@
 
 <body>
     <nav>
-        <ul id="global_nav">
-            <li>
-                <a href="index.html">Startsida</a>
-            </li>
-            <li>
-                <a href="historia.html">Historia</a>
-            </li>
-            <li>
-                <a href="aktiviteter.html">Aktiviteter</a>
-            </li>
-            <li>
-                <a href="medlemsforum.html">Medlemsforum</a>
-            </li>
-            <li>
-                <a id="vald_sida" href="butik.html">Butiken</a>
-            </li>
-            <li>
-                <a href="föreningen.html">Föreningen</a>
-            </li>
-        </ul>
+        <div id="global_nav">
+            <label for="menucheckbox" id="menuicon"></label>
+            <input type="checkbox" id="menucheckbox">
+            <ul>
+                <li>
+                    <a href="index.html">Startsida</a>
+                </li>
+                <li>
+                    <a href="historia.html">Historia</a>
+                </li>
+                <li>
+                    <a href="aktiviteter.html">Aktiviteter</a>
+                </li>
+                <li>
+                    <a href="medlemsforum.html">Medlemsforum</a>
+                </li>
+                <li>
+                    <a id="vald_sida" href="butik.html">Butiken</a>
+                </li>
+                <li>
+                    <a href="föreningen.html">Föreningen</a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
     <header>
@@ -42,7 +46,7 @@
     <main>
 
         <p>
-            Välkommen till föreningens butik,hjälp butiken genom att köpa någon eller några av dessa fina fantastiska produkter!
+            Välkommen till föreningens butik, hjälp föreningen genom att köpa någon eller några av dessa fina fantastiska produkter!
         </p>
 
         <form id="butik_form">
@@ -105,7 +109,7 @@
 
 
             <button type="submit">Betala</button>
-            
+
         </form>
 
         <dialog id="nojavascriptDialog">
@@ -115,7 +119,7 @@
             </form>
         </dialog>
 
-        
+
 
     </main>
 

@@ -118,16 +118,13 @@ aside {
     grid-area: efter_text;
 }
 
-img {
-    width: 20vw;
-}
 
-#utflykten>img {
+img {
     width: 20vw;
     margin: auto;
 }
 
-#utflykten>#lundagård_img {
+#lundagård_img {
     width: 40vw;
 }
 
@@ -137,6 +134,15 @@ img {
     margin: 10px;
 }
 
+#kalendariet>ul {
+    list-style: none;
+}
+
+#kalendiariet_lista li {
+    border: solid;
+}
+
+/* butiken */
 #butik_form fieldset {
     display: flex;
     flex-direction: row;
@@ -181,11 +187,10 @@ img {
 #skane_tid_nav,
 #förenings_nav {
     justify-content: center;
-
 }
 
 #föreningsinformation {
-    grid-template-areas: "header header"
+    grid-template-areas: "header     header"
         "global_nav förenings_nav"
         "global_nav main"
         "footer     footer";
@@ -203,10 +208,14 @@ nav {
     display: none;
 }
 
-nav>ul {
+#global_nav>ul, #förenings_nav, #skane_area_nav, #skane_tid_nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
 }
 
 li>a,
@@ -220,7 +229,7 @@ li>a,
 /* colors */
 body,
 a {
-    background-color: black;
+    background-color: gray;
     color: white;
 }
 
@@ -251,41 +260,102 @@ body {
 }
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1000px) {
+
+    #menuicon {
+        background-image: url(../img/menuicon.png);
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    #menucheckbox~ul {
+        display: none;
+    }
+
+    #menucheckbox:checked~ul {
+        display: flex;
+    }
+
     body {
         grid-template-rows: min-content auto auto min-content;
         grid-template-areas:
-            "global_nav"
             "header"
+            "global_nav"
             "main"
             "footer";
     }
 
     body#start_sida {
-    
+
         grid-template-areas: "header"
             "global_nav"
             "main"
             "aside"
             "footer";
     }
-    
-    #utflytken {
-        grid-template-areas: 
+
+    #utflykten {
+        grid-template-columns: auto;
+        grid-template-areas:
             "start_text"
-            "kulturen_text" 
             "kulturen_bild"
-            "historiska_museet_bild" 
+            "kulturen_text"
+            "historiska_museet_bild"
             "historiska_museet_text"
-            "domkyrkan_text" 
             "domkyrkan_bild"
-            "lundagård_bild" 
+            "domkyrkan_text"
             "lundagård_bild"
             "lundagård_text"
-            "lundagård_text"
-            "efter_text" 
             "efter_text";
     }
+
+    #ordförande_img {
+        float: none;
+    }
+    
+    img,
+    #lundagård_img {
+        width: 80vw;
+    }
+    
+
+    #historie_sida {
+        grid-template-columns: auto;
+        grid-template-areas:
+            "header"
+            "global_nav"
+            "skane_oversikt"
+            "area_nav"
+            "tid_nav"
+            "main"
+            "footer";
+    }
+
+    #skane_area_nav,
+    #skane_tid_nav,
+    #förenings_nav {
+        flex-direction: column;
+    }
+
+    #föreningsinformation {
+        grid-template-columns: auto;
+        grid-template-areas: "header"
+            "global_nav"
+            "förenings_nav"
+            "main"
+            "footer";
+
+    }
+
+    /* butiken */
+    #butik_form fieldset {        
+        flex-direction: column;        
+    }
+
+
+
 
 
 }
