@@ -3,7 +3,7 @@
 /* Layout */
 body {
     display: grid;
-    grid-template-columns: 10vw auto;
+    grid-template-columns: minamx(10vw, auto) auto;
     grid-template-rows: min-content auto min-content;
     grid-template-areas: "header header"
         "global_nav    main"
@@ -15,6 +15,7 @@ body {
 
 nav {
     display: contents;
+    margin: 10px;
 }
 
 #global_nav {
@@ -50,7 +51,7 @@ footer {
 /* startsidan */
 
 body#start_sida {
-    grid-template-columns: 10vw  auto minmax(auto, 20vw);
+    grid-template-columns: minmax(10vw, auto) auto minmax(auto, 20vw);
     grid-template-areas: "header header header"
         "global_nav    main   aside"
         "footer footer footer";
@@ -80,6 +81,7 @@ aside {
 #ordförande_img {
     float: right;
 }
+
 #start_text {
     grid-area: start_text;
 }
@@ -124,6 +126,7 @@ aside {
 img {
     width: 20vw;
 }
+
 #utflykten>img {
     width: 20vw;
     margin: auto;
@@ -147,37 +150,46 @@ img {
 
 /* historiesidor */
 #historie_sida {
-    grid-template-columns: auto auto minmax(auto, 20vw);
-    grid-template-areas: "header      header header"
-                         "global_nav  skane_area_nav skane_tid_nav"
-                         "global_nav  main main"
-                         "footer     footer footer";
+    grid-template-areas: "header     header"
+        "global_nav area_nav"
+        "global_nav tid_nav"
+        "global_nav main"
+        "footer     footer";
 }
 
-#skane_area_nav {
-    grid-area: skane_area_nav;
+#skane_area_nav,
+#stad_details {
+    grid-area: area_nav;
     color: white;
 }
 
-#skane_tid_nav {
-    grid-area: skane_tid_nav;
+#skane_tid_nav,
+.tids_details {
+    grid-area: tid_nav;
+    color: white;
 }
+
+#skane_area_nav,
+#skane_tid_nav,
+#stad_details,
+.tid_details {
+    display: flex;
+    flex-direction: row;
+}
+
 
 #föreningsinformation {
     grid-template-areas: "header     header"
-                         "global_nav förenings_nav" 
-                         "global_env main"
-                         "footer     footer";
+        "global_nav förenings_nav"
+        "global_env main"
+        "footer     footer";
 
-}
 }
 
 /* navigation */
 nav {
     font-size: large;
     white-space: nowrap;
-
-    
 }
 
 #menucheckbox {
@@ -185,11 +197,30 @@ nav {
     display: none;
 }
 
-nav>ul, #skane_nav>ul {
+nav>ul,
+details>ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 
+}
+
+details>summary {
+    list-style: none;
+}
+
+details:open{
+    background-color:white;
+    color: black;
+}
+
+#stad_details {
+   position: relative;
+}
+
+details>ul {
+    position: absolute;
+    left: 0;
 }
 
 li>a {
@@ -206,12 +237,14 @@ li>a {
     list-style: none;
 }
 
-.stads_details > summary:first-of-type {
+.stads_details>summary:first-of-type {
     list-style-type: none;
 }
+
 .stads_details>summary::marker {
     display: none;
 }
+
 .stads_details ul {
     list-style-type: none;
     margin: 0;
@@ -220,7 +253,8 @@ li>a {
 
 /* colors */
 body,
-#vald_sida {
+#vald_sida,
+a {
     background-color: black;
     color: white;
 }
@@ -241,4 +275,3 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: larger;
 }
-
