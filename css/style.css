@@ -3,7 +3,7 @@
 /* Layout */
 body {
     display: grid;
-    grid-template-columns: minamx(10vw, auto) auto;
+    grid-template-columns: minmax(10vw, auto) auto;
     grid-template-rows: min-content auto min-content;
     grid-template-areas: "header header"
         "global_nav    main"
@@ -60,7 +60,6 @@ aside {
 
 #utflykten {
     display: grid;
-
     grid-template-columns: 30vw 30vw;
 
     grid-template-areas: "start_text start_text"
@@ -173,17 +172,20 @@ img {
     border: solid;
 }
 
-#skane_oversikt_vald, #skane_oversikt {
-    text-align: center; 
+#skane_oversikt_vald,
+#skane_oversikt {
+    text-align: center;
 }
 
-#skane_area_nav, #skane_tid_nav, #förenings_nav {
+#skane_area_nav,
+#skane_tid_nav,
+#förenings_nav {
     justify-content: center;
 
 }
 
 #föreningsinformation {
-    grid-template-areas: "header     header"
+    grid-template-areas: "header header"
         "global_nav förenings_nav"
         "global_nav main"
         "footer     footer";
@@ -201,13 +203,15 @@ nav {
     display: none;
 }
 
-nav>ul  {
+nav>ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-li>a, #skane_oversikt, #skane_oversikt_vald {
+li>a,
+#skane_oversikt,
+#skane_oversikt_vald {
     /*to get backrounds color the whole way on the line? */
     display: block;
     text-decoration: none;
@@ -220,7 +224,11 @@ a {
     color: white;
 }
 
-#vald_sida, #vald_stad, #vald_stad, #vald_tid, #skane_oversikt_vald {
+#vald_sida,
+#vald_stad,
+#vald_stad,
+#vald_tid,
+#skane_oversikt_vald {
     color: black;
     background-color: white;
 }
@@ -240,4 +248,44 @@ footer {
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: larger;
+}
+
+
+@media screen and (max-width: 500px) {
+    body {
+        grid-template-rows: min-content auto auto min-content;
+        grid-template-areas:
+            "global_nav"
+            "header"
+            "main"
+            "footer";
+    }
+
+    body#start_sida {
+    
+        grid-template-areas: "header"
+            "global_nav"
+            "main"
+            "aside"
+            "footer";
+    }
+    
+    #utflytken {
+        grid-template-areas: 
+            "start_text"
+            "kulturen_text" 
+            "kulturen_bild"
+            "historiska_museet_bild" 
+            "historiska_museet_text"
+            "domkyrkan_text" 
+            "domkyrkan_bild"
+            "lundagård_bild" 
+            "lundagård_bild"
+            "lundagård_text"
+            "lundagård_text"
+            "efter_text" 
+            "efter_text";
+    }
+
+
 }
