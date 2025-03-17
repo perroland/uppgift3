@@ -201,10 +201,9 @@ nav>ul  {
     list-style-type: none;
     margin: 0;
     padding: 0;
-
 }
 
-li>a {
+li>a, #skane_oversikt, #skane_oversikt_vald {
     /*to get backrounds color the whole way on the line? */
     display: block;
     text-decoration: none;
@@ -214,23 +213,6 @@ li>a {
     margin-top: 20px;
 }
 
-#stads_details {
-    list-style: none;
-}
-
-.stads_details>summary:first-of-type {
-    list-style-type: none;
-}
-
-.stads_details>summary::marker {
-    display: none;
-}
-
-.stads_details ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
 
 /* colors */
 body,
@@ -239,7 +221,7 @@ a {
     color: white;
 }
 
-#vald_sida, #vald_stad, #vald_stad, #vald_tid {
+#vald_sida, #vald_stad, #vald_stad, #vald_tid, #skane_oversikt_vald {
     color: black;
     background-color: white;
 }
