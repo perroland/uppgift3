@@ -118,7 +118,6 @@ aside {
     grid-area: efter_text;
 }
 
-
 img {
     width: 20vw;
     margin: auto;
@@ -161,21 +160,51 @@ img {
 
 #skane_area_nav {
     grid-area: area_nav;
-    color: white;
 }
 
 #skane_tid_nav {
     grid-area: tid_nav;
-    color: white;
+}
+
+#föreningsinformation {
+    /*grid-template-rows: min-content min-content auto min-content;*/
+    grid-template-rows: min-content min-content auto min-content;
+
+    grid-template-areas: "header header"
+        "global_nav förenings_nav"
+        "global_nav main"
+        "footer     footer";
+}
+
+
+/* navigation */
+nav {
+    font-size: large;
+}
+
+#menucheckbox {
+    visibility: hidden;
+    display: none;
 }
 
 #skane_area_nav,
 #skane_tid_nav,
-#förenings_nav {
+#förenings_nav>ul {
     display: flex;
     flex-direction: row;
-    gap: 10px;
     border: solid;
+}
+
+#global_nav>ul,#förenings_nav>ul, #skane_area_nav, #skane_tid_nav  {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap:0 10px;
+}
+
+#global_nav>ul {
+    flex-direction: column;    
 }
 
 #skane_oversikt_vald,
@@ -184,38 +213,13 @@ img {
 }
 
 #skane_area_nav,
-#skane_tid_nav,
-#förenings_nav {
+#skane_tid_nav {
     justify-content: center;
 }
 
-#föreningsinformation {
-    grid-template-areas: "header     header"
-        "global_nav förenings_nav"
-        "global_nav main"
-        "footer     footer";
 
-}
-
-/* navigation */
-nav {
-    font-size: large;
-    white-space: nowrap;
-}
-
-#menucheckbox {
-    visibility: hidden;
-    display: none;
-}
-
-#global_nav>ul, #förenings_nav, #skane_area_nav, #skane_tid_nav {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
+#skane_area_nav, #skane_tid_nav {
+    flex-direction: row;
 }
 
 li>a,
@@ -252,6 +256,11 @@ footer {
 #skåne_area_nav {
     background-color: white;
 }
+
+#skane_area_nav, #skane_tid_nav, #förenings_nav>ul {
+    color: white;
+}
+
 
 /* fonts */
 body {
