@@ -155,52 +155,49 @@
         </section>
 
     </main>
-
     <footer>
 
-        <div id="courtesy">
-            <p><a href="mailto:info@gyasvänner.se">kontakta oss</a></p>
-            <p><a href="föreningen.html#medlemskap">bli medlem</a></p>
-            <p><a href="#" onclick="document.getElementById('feedbackDialog').showModal()">feedback/frågor</a></p>
-        </div>
-
-        <div id="chatgtp_info">
-            <p>Notera att den mesta av texterna och bilderna är generarade av chat-GTP. Framförallt de historiska texterna och bilderna samt utflykten och intervjun på startsidan.</p>
+        <div id="courtesy_nav">
+            <p id="footer_gyas_vänner">Gyas Vänner - en förening för historienördar</p>
+            <p id="footer_mail">kontakta oss via mail: <a href="mailto:info@gyasvänner.se">info@gyasvänner.se</a></p>
+            <p id="footer_medlemskap"><a href="föreningen.html#medlemskap">bli medlem</a></p>
+            <p id="footer_feedback"><a href="#" onclick="document.getElementById('feedbackDialog').showModal()">feedback/frågor</a></p>
         </div>
 
         <dialog id="feedbackDialog">
             <form method="dialog">
                 <p>Fyll i frågor eller feedback om denna sida:</p>
 
-                <label>
+                <label id="feedback_label">
                     feedback eller fråga:
-                    <input type="text" id="feedback_text">
+                    <textarea rows="10" id="feedback_text"></textarea>
                 </label>
 
-                <label>
+                <label id="mailaddress_label">
                     mailaddress som vi kan nå dig:
                     <input type="email" id="mail_feedback">
                 </label>
 
-                <label>
+                <label id="telefonnummer_label">
                     telefonnummer som vi kan nå dig:
                     <input type="text" id="telefonnummer">
                 </label>
 
-                <button onclick="document.getElementById('nojavascriptDialog').showModal()"> Skicka </button>
-                <button onclick="closeDialog()"> Avbryt </button>
+                <button id="skicka_button" onclick="document.getElementById('nojavascriptDialog').showModal()"> Skicka </button>
+                <button id="avbryt_button" onclick="closeDialog()"> Avbryt </button>
 
             </form>
 
         </dialog>
-
+        
         <dialog id="nojavascriptDialog">
             <form method="dialog">
                 <p>Kan ej skicka då vi inte kommit till javascript ännu :) </p>
                 <button type="submit">Stäng</button>
-
+        
             </form>
         </dialog>
+     
 
     </footer>
 

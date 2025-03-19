@@ -123,10 +123,48 @@
     </main>
 
     <footer>
-        <p>Kontaktuppgifter</p>
-        <p>Hur blir man medlem</p>
-        <p>Lämna feedback</p>
-        <a href="rapport.html">Rapporten</a>
+
+        <div id="courtesy_nav">
+            <p id="footer_gyas_vänner">Gyas Vänner - en förening för historienördar</p>
+            <p id="footer_mail">kontakta oss via mail: <a href="mailto:info@gyasvänner.se">info@gyasvänner.se</a></p>
+            <p id="footer_medlemskap"><a href="föreningen.html#medlemskap">bli medlem</a></p>
+            <p id="footer_feedback"><a href="#" onclick="document.getElementById('feedbackDialog').showModal()">feedback/frågor</a></p>
+        </div>
+
+        <dialog id="feedbackDialog">
+            <form method="dialog">
+                <p>Fyll i frågor eller feedback om denna sida:</p>
+
+                <label id="feedback_label">
+                    feedback eller fråga:
+                    <textarea rows="10" id="feedback_text"></textarea>
+                </label>
+
+                <label id="mailaddress_label">
+                    mailaddress som vi kan nå dig:
+                    <input type="email" id="mail_feedback">
+                </label>
+
+                <label id="telefonnummer_label">
+                    telefonnummer som vi kan nå dig:
+                    <input type="text" id="telefonnummer">
+                </label>
+
+                <button id="skicka_button" onclick="document.getElementById('nojavascriptDialog').showModal()"> Skicka </button>
+                <button id="avbryt_button" onclick="closeDialog()"> Avbryt </button>
+
+            </form>
+
+        </dialog>
+
+        <dialog id="nojavascriptDialog">
+            <form method="dialog">
+                <p>Kan ej skicka då vi inte kommit till javascript ännu :) </p>
+                <button type="submit">Stäng</button>
+
+            </form>
+        </dialog>
+
     </footer>
 
 </body>
