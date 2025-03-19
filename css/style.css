@@ -244,43 +244,10 @@ img {
 
 #förenings_form {
     display: flex;
-    flex-direction: column;
-    /*TODO to be removed
-    grid-template-areas: "namn_förenings_form födelsedatum_förenings_form"
-    "address_förenings_form ."
-    "postnummer_förenings_form postort_förenings_form" 
-    "telefonnummer_förenings_form ." 
-    "mailaddress_förenings_form ." 
-    "button_förenings_form ."; */
+    flex-direction: column;   
 }
 
-/*
-#namn_förenings_form {
-    grid-area: namn_förenings_form;    
-}
-#födelsedatum_förenings_form {
-    grid-area: födelsedatum_förenings_form;
-}
-#address_förenings_form {
-    grid-area: address_förenings_form;    
-}
-#postnummer_förenings_form {
-    grid-area: postnummer_förenings_form;    
-}
-#postor_förenings_form {
-    grid-area: postort_förenings_form;    
-}
-#telefonnummer_förenings_form {
-    grid-area: telefonnummer_förenings_form;    
-}
-#mailaddress_förenings_form {
-    grid-area: mailaddress_förenings_form;    
-}
-
-*/
-#button_förenings_form {
-  /* TODO to be removed
-  )  grid-area: button_förenings_form;    */
+#button_förenings_form { 
     width: 100px;
 }
 
