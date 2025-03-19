@@ -60,7 +60,7 @@
 
     <header>
         <h1>
-            Föreningsinformation
+            Föreningen
         </h1>
 
     </header>
@@ -104,15 +104,17 @@
 
             <p>Att bli medlem kostar 200 kronor per år. Fyll i nedanstående uppgifter och tryck "betala" så kommer du till en betalsida.</p>
 
-            <form>
-                Namn:<input type="text">
-                Födelsedatum:<input type="date">
-                Adress:<input type="text">
-                Postnummer:<input type="text">
-                Telefonnummer:<input type="text">
-                Mailaddress:<input type="email">
+            <form id="förenings_form">
 
-                <button type="button" onclick="document.getElementById('nojavscriptDialog').showModal()">Gå till betalning</button>
+                <div id="namn_förenings_form">Namn:<input type="text"></div>
+                <div id="födelsedatum_förenings_form">Födelsedatum:<input type="date"></div>
+                <div id="address_förenings_form">Adress:<input type="text"></div>
+                <div id="postnummer_förenings_form">Postnummer:<input type="text"></div>
+                <div id="postort_förenings_form">Postort:<input type="text"></div>
+                <div id="telefonnummer_förenings_form">Telefonnummer:<input type="text"></div>
+                <div id="mailaddress_förenings_form">Mailaddress:<input type="email"></div>
+
+                <button id="button_förenings_form" type="button" onclick="document.getElementById('nojavscriptDialog').showModal()">Gå till betalning</button>
 
             </form>
 

@@ -51,12 +51,20 @@
 
         <form id="butik_form">
 
-            <fieldset>
-                <legend>Välj produkt</legend>
+            <fieldset id="produkter_fieldset">
 
-                <div id="tshirt_produkt">
+                <legend id="produkt_legend">Välj produkt</legend>
 
-                    <img id="tshirt_img" src="img/tshirt.webp" alt="tshirt">
+                <div id="tshirt_produkt" class="produkt">
+
+                    <picture>
+                        <source media="(min-width:1900px)" srcset="img/600x600/tshirt.webp">
+                        <source media="(min-width:1200px)" srcset="img/500x500/tshirt.webp">
+                        <source media="(min-width:1000px)" srcset="img/400x400/tshirt.webp">
+                        <source media="(min-width:800px)" srcset="img/300x300/tshirt.webp">
+                        <source media="(min-width:600px)" srcset="img/200x200/tshirt.webp">
+                        <img id="tshirt_img" src="img/400x400/tshirt.webp" alt="tshirt">
+                    </picture>
 
                     <label>
                         Tshirt 650 SEK
@@ -64,9 +72,16 @@
                     </label>
                 </div>
 
-                <div id="kopp_produkt">
+                <div id="kopp_produkt" class="produkt">
 
-                    <img id="kopp_img" src="img/kopp.webp" alt="kopp">
+                    <picture>
+                        <source media="(min-width:1900px)" srcset="img/600x600/kopp.webp">
+                        <source media="(min-width:1200px)" srcset="img/500x500/kopp.webp">
+                        <source media="(min-width:1000px)" srcset="img/400x400/kopp.webp">
+                        <source media="(min-width:800px)" srcset="img/300x300/kopp.webp">
+                        <source media="(min-width:600px)" srcset="img/200x200/kopp.webp">
+                        <img id="kopp_img" src="img/400x400/kopp.webp" alt="kopp">
+                    </picture>
 
                     <label>
                         Kopp 250 SEK
@@ -74,9 +89,16 @@
                     </label>
                 </div>
 
-                <div id="badhandduk_produkt">
+                <div id="badhandduk_produkt" class="produkt">
 
-                    <img id="badhandduk_img" src="img/badhandduk.webp" alt="badhandduk">
+                    <picture>
+                        <source media="(min-width:1900px)" srcset="img/600x600/badhandduk.webp">
+                        <source media="(min-width:1200px)" srcset="img/500x500/badhandduk.webp">
+                        <source media="(min-width:1000px)" srcset="img/400x400/badhandduk.webp">
+                        <source media="(min-width:800px)" srcset="img/300x300/badhandduk.webp">
+                        <source media="(min-width:600px)" srcset="img/200x200/badhandduk.webp">
+                        <img id="badhandduk_img" src="img/400x400/badhandduk.webp" alt="badhandduk">
+                    </picture>
 
                     <label>
                         Badhandduk 800 SEK
@@ -84,9 +106,16 @@
                     </label>
                 </div>
 
-                <div id="mössa_produkt">
+                <div id="mössa_produkt" class="produkt">
 
-                    <img id="mössa_img" src="img/mössa.webp" alt="mössa">
+                    <picture>
+                        <source media="(min-width:1900px)" srcset="img/600x600/mössa.webp">
+                        <source media="(min-width:1200px)" srcset="img/500x500/mössa.webp">
+                        <source media="(min-width:1000px)" srcset="img/400x400/mössa.webp">
+                        <source media="(min-width:800px)" srcset="img/300x300/mössa.webp">  
+                        <source media="(min-width:600px)" srcset="img/200x200/mössa.webp">
+                        <img id="mössa_img" src="img/400x400/mössa.webp" alt="mössa">
+                    </picture>
 
                     <label>
                         Mössa 400 SEK
@@ -96,19 +125,21 @@
 
             </fieldset>
 
-            <fieldset>
+            <fieldset id="kunduppgifter_fieldset">
                 <legend>
                     Fyll i kunduppgifter
                 </legend>
-                *Namn:<input type="text" id="namn" required>
-                *Address:<input type="text" id="address" required>
-                *Postnummer:<input type="text" maxlength="6" id="postnummer" required>
-                *Postort:<input type="text" id="postort" required>
+
+                <div id="fields">
+                    <div id="input">*Namn:<input type="text" id="namn" required></div>
+                    <div id="address">*Address:<input type="text" id="address" required></div>
+                    <div id="postnummer"> *Postnummer:<input type="text" maxlength="6" id="postnummer" required> </div>
+                    <div id="postort">*Postort:<input type="text" id="postort" required></div>
+                </div>
 
             </fieldset>
 
-
-            <button type="submit">Betala</button>
+            <button id="kunduppgifter_button" type="submit">Betala</button>
 
         </form>
 
@@ -118,8 +149,6 @@
                 <button type="submit">Stäng</button>
             </form>
         </dialog>
-
-
 
     </main>
 

@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 /* Layout */
+
 body {
     display: grid;
     grid-template-columns: minmax(10vw, auto) auto;
@@ -61,16 +62,20 @@ aside {
 #utflykten {
     display: grid;
     grid-template-columns: 30vw 30vw;
+   
 
     grid-template-areas: "start_text start_text"
-        "kulturen_text kulturen_bild"
-        "historiska_museet_bild historiska_museet_text"
-        "domkyrkan_text domkyrkan_bild"
-        "lundagård_bild lundagård_bild"
-        "lundagård_text lundagård_text"
+        "kulturen_bild historiska_museet_bild"
+        "kulturen_text historiska_museet_text"
+        "domkyrkan_bild lundagård_bild"
+        "domkyrkan_text lundagård_text"
         "efter_text efter_text";
 
     gap: 20px;
+
+    align-items: baseline;
+
+    
 }
 
 #ordförande_img {
@@ -119,13 +124,10 @@ aside {
 }
 
 img {
-    width: 20vw;
+    /* width: 20vw; */
     margin: auto;
 }
 
-#lundagård_img {
-    width: 40vw;
-}
 
 #erik_img {
     float: right;
@@ -142,10 +144,73 @@ img {
 }
 
 /* butiken */
-#butik_form fieldset {
-    display: flex;
-    flex-direction: row;
+#butik_form {
+    display: grid;
+    grid-template-areas: "legend_produkt legend_produkt"
+        "tshirt_produkt kopp_produkt"
+        "badhandduk_produkt mössa_produkt"
+        "kunduppgifter_fieldset kunduppgifter_fieldset"
+        "kunduppgifter_button .";
+
+}
+
+#legend_produkt {
+    grid-area: legend_produkt;
+}
+
+#tshirt_produkt {
+    grid-area: tshirt_produkt;
+}
+
+#kopp_produkt {
+    grid-area: kopp_produkt;
+}
+
+#badhandduk_produkt {
+    grid-area: badhandduk_produkt;
+}
+
+#mössa_produkt {
+    grid-area: mössa_produkt;
+}
+
+#produkter_fieldset {
+    display: contents;
+}
+
+#kunduppgifter_fieldset {
+    grid-area: kunduppgifter_fieldset;
+}
+
+#kunduppgifter_button {
+    grid-area: kunduppgifter_button;
     width: 100px;
+}
+
+.produkt {
+    display: flex;
+    flex-direction: column;
+}
+
+#fields {
+    display: grid;
+    grid-template-areas: "namn address postnummer postort";
+}
+
+#namn {
+    grid-area: namn;
+}
+
+#address {
+    grid-area: address;
+}
+
+#postnummer {
+    grid-area: postnummer;
+}
+
+#postort {
+    grid-area: postort;
 }
 
 /* historiesidor */
@@ -177,6 +242,49 @@ img {
 }
 
 
+#förenings_form {
+    display: flex;
+    flex-direction: column;
+    /*TODO to be removed
+    grid-template-areas: "namn_förenings_form födelsedatum_förenings_form"
+    "address_förenings_form ."
+    "postnummer_förenings_form postort_förenings_form" 
+    "telefonnummer_förenings_form ." 
+    "mailaddress_förenings_form ." 
+    "button_förenings_form ."; */
+}
+
+/*
+#namn_förenings_form {
+    grid-area: namn_förenings_form;    
+}
+#födelsedatum_förenings_form {
+    grid-area: födelsedatum_förenings_form;
+}
+#address_förenings_form {
+    grid-area: address_förenings_form;    
+}
+#postnummer_förenings_form {
+    grid-area: postnummer_förenings_form;    
+}
+#postor_förenings_form {
+    grid-area: postort_förenings_form;    
+}
+#telefonnummer_förenings_form {
+    grid-area: telefonnummer_förenings_form;    
+}
+#mailaddress_förenings_form {
+    grid-area: mailaddress_förenings_form;    
+}
+
+*/
+#button_förenings_form {
+  /* TODO to be removed
+  )  grid-area: button_förenings_form;    */
+    width: 100px;
+}
+
+
 /* navigation */
 nav {
     font-size: large;
@@ -195,16 +303,19 @@ nav {
     border: solid;
 }
 
-#global_nav>ul,#förenings_nav>ul, #skane_area_nav, #skane_tid_nav  {
+#global_nav>ul,
+#förenings_nav>ul,
+#skane_area_nav,
+#skane_tid_nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
-    gap:0 10px;
+    gap: 0 10px;
 }
 
 #global_nav>ul {
-    flex-direction: column;    
+    flex-direction: column;
 }
 
 #skane_oversikt_vald,
@@ -218,7 +329,8 @@ nav {
 }
 
 
-#skane_area_nav, #skane_tid_nav {
+#skane_area_nav,
+#skane_tid_nav {
     flex-direction: row;
 }
 
@@ -257,7 +369,9 @@ footer {
     background-color: white;
 }
 
-#skane_area_nav, #skane_tid_nav, #förenings_nav>ul {
+#skane_area_nav,
+#skane_tid_nav,
+#förenings_nav>ul {
     color: white;
 }
 
@@ -269,7 +383,35 @@ body {
 }
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
+
+    /* butiken */
+    #butik_fieldset,
+    #kunduppgifter_fieldset {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #fields {
+        display: grid;
+        grid-template-areas: "namn address"
+            "postnummer postort";
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    body#start_sida {
+        grid-template-columns: minmax(10vw, auto) auto minmax(auto, 20vw);
+        grid-template-areas: "header header"
+            "global_nav    main"
+            "aside aside"
+            "footer footer";
+    }
+}
+
+@media screen and (max-width: 600px) {
 
     #menuicon {
         background-image: url(../img/menuicon.png);
@@ -297,7 +439,6 @@ body {
     }
 
     body#start_sida {
-
         grid-template-areas: "header"
             "global_nav"
             "main"
@@ -323,12 +464,11 @@ body {
     #ordförande_img {
         float: none;
     }
-    
+
     img,
     #lundagård_img {
         width: 80vw;
     }
-    
 
     #historie_sida {
         grid-template-columns: auto;
@@ -344,7 +484,7 @@ body {
 
     #skane_area_nav,
     #skane_tid_nav,
-    #förenings_nav {
+    #förenings_nav>ul {
         flex-direction: column;
     }
 
@@ -359,12 +499,29 @@ body {
     }
 
     /* butiken */
-    #butik_form fieldset {        
-        flex-direction: column;        
+    #butik_form fieldset,
+    #kunduppgifter,
+    fieldset {
+        flex-direction: column;
     }
 
+    #butik_form {
+        grid-template-areas: "legend_produkt"
+            "tshirt_produkt"
+            "kopp_produkt"
+            "badhandduk_produkt"
+            "mössa_produkt"
+            "kunduppgifter_fieldset"
+            "kunduppgifter_button";
 
+    }
 
-
+    #fields {
+        display: grid;
+        grid-template-areas: "namn"
+            "address"
+            "postnummer"
+            "postort";
+    }
 
 }
