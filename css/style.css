@@ -119,12 +119,6 @@ aside {
     grid-area: efter_text;
 }
 
-img {
-    /* width: 20vw; */
-    margin: auto;
-}
-
-
 #erik_img {
     float: right;
     width: 20vw;
@@ -316,12 +310,17 @@ li>a,
 
 /* borders */
 
+html {
+    background-image:  url("../img/raps.jpg");
+}
 
 /* colors */
 body,
 a {
-    background-color: gray;
-    color: white;
+
+    background-color: rgb(239, 243, 0, 0.7);
+                    
+    color: red;
 }
 
 #vald_sida,
