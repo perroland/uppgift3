@@ -4,13 +4,13 @@
 
 body {
     display: grid;
-    grid-template-columns: 10vw auto;
+    grid-template-columns: 15vw auto;
     grid-template-rows: min-content auto min-content;
     grid-template-areas: "header header"
         "global_nav    main"
         "footer footer";
 
-    margin: 5%;
+    margin: 5% 10% 5% 10%;
 }
 
 nav {
@@ -29,7 +29,6 @@ header {
 
 main {
     grid-area: main;
-    padding: 10px;
 }
 
 footer {
@@ -43,22 +42,27 @@ footer {
     justify-content: center;
 }
 
+img {
+    width: 20vw;
+}
+
 /* startsidan */
 body#start_sida {
-    grid-template-columns: 10vw auto minmax(auto, 20vw);
+    grid-template-columns: 15vw auto 20vw;
     grid-template-areas: "header header header"
         "global_nav    main   aside"
         "footer footer footer";
 }
 
 aside {
-    grid-area: aside;
+    grid-area: aside;    
 }
+
+
 
 #utflykten {
     display: grid;
-    grid-template-columns: 30vw 30vw;
-   
+    grid-template-columns: auto auto;
 
     grid-template-areas: "start_text start_text"
         "kulturen_bild historiska_museet_bild"
@@ -71,7 +75,6 @@ aside {
 
     align-items: baseline;
 
-    
 }
 
 #ordförande_img {
@@ -127,10 +130,8 @@ aside {
 
 #kalendariet>ul {
     list-style: none;
-}
-
-#kalendiariet_lista li {
-    border: solid;
+    margin:0;
+    padding: 0;
 }
 
 /* butiken */
@@ -234,10 +235,10 @@ aside {
 
 #förenings_form {
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
 }
 
-#button_förenings_form { 
+#button_förenings_form {
     width: 100px;
 }
 
@@ -259,12 +260,10 @@ nav {
     display: none;
 }
 
-#skane_area_nav,
-#skane_tid_nav,
 #förenings_nav>ul {
     display: flex;
     flex-direction: row;
-    border: solid;
+   
 }
 
 #global_nav>ul,
@@ -292,7 +291,6 @@ nav {
     justify-content: center;
 }
 
-
 #skane_area_nav,
 #skane_tid_nav {
     flex-direction: row;
@@ -306,58 +304,115 @@ li>a,
     text-decoration: none;
 }
 
-
-
 /* borders */
+#välkomst_info, #utflykten {
+    border-bottom-style: solid;   
+}
 
 
 /* colors */
-body,
-a {
-
-    background-color: rgb(239, 243, 0, 0.7);
-                    
-    color: red;
+header {
+    background-image: url("../img/raps.jpg");
+    background-size: 100% 100%;
+    color: #F2D399;
 }
 
+header>h1 {
+    color: #F2D399;
+    font-size: 100% 200%;
+    mix-blend-mode: exclusion;
+}
+
+
+
+#utflykten {
+    clear: both;
+}
+
+html {
+
+    /*    background-image: url("../img/raps.jpg");
+        background-size: cover; */
+    /*background-color: #2484BF;*/
+    background-color: #2484BF;
+    /*background-image: linear-gradient(to bottom, #1a78b8 10vh, #55B3D9 20vh 100vh);*/
+    background-image: linear-gradient(to right, #2484BF 1%, #55B3D9 10%);
+
+}
+
+
+body {
+    background-image: linear-gradient(to bottom, #F2D399 10%,#BFA450 40%, #F2D399)
+}
+aside {
+    background-image: linear-gradient(to right, #F2D399 10%,#BFA450 40%)
+}
+
+
+body#start_sida,
 #vald_sida,
-#vald_stad,
+#skane_oversikt_vald,
 #vald_stad,
 #vald_tid,
-#skane_oversikt_vald {
-    color: black;
-    background-color: white;
-}
-
-header,
-nav,
 footer {
-    background-color: white;
-    color: black;
+
+    /*#55B3D9 ljusare blå*/
+    /*  color: #2484BF lite mörkare blå; 
+    /* #BFA450 lite mörkare "brunt */
+    /* #593B02 ännu mörkare brunt */
+    background-color: #F2D399;
+    background-image: none;
+    color: #593B02;
 }
 
-#skåne_area_nav {
-    background-color: white;
-}
-
+a,
+#global_nav>ul,
+#local_nav,
+#förenings_nav>ul,
+#skane_oversikt,
 #skane_area_nav,
-#skane_tid_nav,
-#förenings_nav>ul {
-    color: white;
+#skane_tid_nav
+ {
+    background-color: #55B3D9;
+    color: #F2D399;
 }
-
-
 
 
 /* fonts */
-body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+@font-face {
+
+    font-family: "Aladin";
+    src: url("../fonts/Aladin/Aladin-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+
+    font-family: "Ballet";
+    src: url("../fonts/Ballet/Ballet-Regular-VariableFont_opsz.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+header {
+    font-family: "Ballet";
     font-size: larger;
+}
+
+body {
+    font-family: "Aladint";
+
+    
+    font-style: normal;
+    font-size: 130%;
+}
+
+nav {
+    font-size: 150%;
 }
 
 #courtesy_nav {
     font-style: italic;
-} 
+}
 
 #footer_gyas_vänner {
     font-weight: bold;
@@ -373,9 +428,9 @@ body {
 }
 
 @media screen and (max-width: 1000px) {
-   
-      /* footer */
-      #courtesy_nav {
+
+    /* footer */
+    #courtesy_nav {
         flex-direction: column;
         gap: 0;
     }
@@ -511,7 +566,5 @@ body {
             "postnummer"
             "postort";
     }
-
-  
 
 }
