@@ -180,10 +180,8 @@ aside #kalendariet>ul {
 }
 
 /********************* föreningssidan *********************************************/
-#föreningsinformation {
-    /*grid-template-rows: min-content min-content auto min-content;*/
+#föreningsinformation {    
     grid-template-rows: min-content min-content auto min-content;
-
     grid-template-areas: "header header"
         "global_nav förenings_nav"
         "global_nav main"
@@ -191,15 +189,67 @@ aside #kalendariet>ul {
 }
 #förenings_nav { grid-area: förenings_nav; }
 
+#styrelse, #ledamöter {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    gap: 10px;
+}
+
+.styrelseledamot figure {
+    margin:0; padding:0;
+    text-align: left;
+    
+}
 
 #förenings_form {
+    width: 30vw;
+}
+
+#förenings_form_fieldset {
+    display: grid;
+    grid-template-columns: 10vw min-content;
+    grid-template-areas: "namn_field namn_field"
+                         "födelsedatum_field födelsedatum_field"
+                         "address_field address_field"
+                         "postnummer_field postort_field"
+                         "telefonnummer_field telefonnummer_field"
+                         "mailaddress_field mailaddress_field";
+    gap: 10px;
+                      
+}
+
+#namn_field { grid-area: namn_field} #födelsedatum_field { grid-area: födelsedatum_field } #address_field { grid-area: address_field }
+#postnummer_field { grid-area: postnummer_field } #telefonnummer_field { grid-area: telefonnummer_field } #mailaddress_field { grid-area: telefonnummer_field}
+#mailaddress_field { grid-area: mailaddress_field } 
+
+
+#förenings_form_buttons {
+    display: flex;
+    flex-direction: column;        
+}
+
+#förenings_form_buttons>button {
+    width: 100%;
+}
+
+#förenings_form_button {
+    height: 5vh;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+
+}
+
+/********************* feedback *********************************************/
+#feedback_dialog>form {
     display: flex;
     flex-direction: column;
 }
 
-#button_förenings_form {
-    width: 100px;
-}
+
 
 /*******************************************************************************/
 /*                          NAVIGATION LAYOUT                                  */
@@ -286,14 +336,9 @@ img {
 /*                          COLORS/IMAGES                                      */
 /*******************************************************************************/
 
-html {
-    /*    background-image: url("../img/raps.jpg");
-        background-size: cover; */
-    /*background-color: #2484BF;*/
-    background-color: #2484BF;
-    /*background-image: linear-gradient(to bottom, #1a78b8 10vh, #55B3D9 20vh 100vh);*/
+html {        
+    background-color: #2484BF;    
     background-image: linear-gradient(to right, #2484BF 1%, #55B3D9 10%);
-
 }
 
 body {
@@ -303,8 +348,7 @@ body {
 header {
     color: #F2D399;
     background-image: url("../img/raps.jpg");
-    background-size: 100% 100%;
-    
+    background-size: 100% 100%;        
 } 
 
 header>h1 {
@@ -312,6 +356,7 @@ header>h1 {
     font-size: 100% 200%;
     mix-blend-mode: exclusion;
 }
+
 
 #vald_sida,
 #skane_oversikt_vald,
@@ -339,6 +384,14 @@ ul>a,
     color: #F2D399;
 }
 
+#medlemskap_dialog, #feedback_dialog {
+    background-color: #BFA450;
+    color: #593B02;
+}
+
+#förenings_form, #feedback_dialog>form {
+    background-color: #F2D399; 
+}
 
 /*******************************************************************************/
 /*                          FONTS                                              */
@@ -355,7 +408,13 @@ ul>a,
     src: url("../fonts/Ballet/Ballet-Regular-VariableFont_opsz.ttf");
     font-weight: normal;
     font-style: normal;
+
+    font-family: "Fleur De Leaht";
+    src: url("../fonts/Fleur_De_Leah/FleurDeLeah-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
 }
+
 
 header {
     font-family: "Ballet";
@@ -380,6 +439,11 @@ nav {
     font-weight: bold;
 }
 
+.cursive {
+    font-family: "Fleur De Leaht";
+    text-align: center;
+    font-size: 200%;    
+}
 
 /*******************************************************************************/
 /*                          RESPONSIVE DESIGN                                  */

@@ -126,43 +126,35 @@
             <p id="footer_gyas_vänner">Gyas Vänner - en förening för historienördar</p>
             <p id="footer_mail">kontakta oss via mail: <a href="mailto:info@gyasvänner.se">info@gyasvänner.se</a></p>
             <p id="footer_medlemskap"><a href="föreningen.html#medlemskap">bli medlem</a></p>
-            <p id="footer_feedback"><a href="#" onclick="document.getElementById('feedbackDialog').showModal()">feedback/frågor</a></p>
+            <p id="footer_feedback"><a href="#" onclick="document.getElementById('feedback_dialog').showModal()">feedback/frågor</a></p>
         </div>
 
-        <dialog id="feedbackDialog">
+        <dialog id="feedback_dialog">
             <form method="dialog">
-                <p>Fyll i frågor eller feedback om denna sida:</p>
+                <p>Ange mailaddress/telefonnummer där vi kan nå dig samt feedback/fråga:</p>
 
-                <label id="feedback_label">
-                    feedback eller fråga:
-                    <textarea rows="10" id="feedback_text"></textarea>
-                </label>
+                <fieldset>
+                    <div id="feedback_mailaddress_field" class="field">Mailaddress:<input type="email" id="mail_feedback" value="namn@domän"> </div>
+                    <div id="feedback_telefonnummer_field" class="field">Telefonnummer:<input type="text" id="telefonnummer" value="telefonnummer"> </div>
+                    <div id="feedback_text_area" class="field">Feedback eller fråga:<textarea rows="10" id="feedback_text"></textarea></div>
+                </fieldset>
 
-                <label id="mailaddress_label">
-                    mailaddress som vi kan nå dig:
-                    <input type="email" id="mail_feedback">
-                </label>
-
-                <label id="telefonnummer_label">
-                    telefonnummer som vi kan nå dig:
-                    <input type="text" id="telefonnummer">
-                </label>
-
-                <button id="skicka_button" onclick="document.getElementById('nojavascriptDialog').showModal()"> Skicka </button>
-                <button id="avbryt_button" onclick="closeDialog()"> Avbryt </button>
+                <div id="feedback_buttons">
+                    <button id="skicka_button" onclick="document.getElementById('no_feedback_dialog').showModal()"> Skicka </button>
+                    <button id="avbryt_button" onclick="closeDialog()"> Avbryt </button>
+                </div>
 
             </form>
 
         </dialog>
 
-        <dialog id="nojavascriptDialog">
+        <dialog id="no_feedback_dialog">
             <form method="dialog">
                 <p>Kan ej skicka då vi inte kommit till javascript ännu :) </p>
                 <button type="submit">Stäng</button>
 
             </form>
         </dialog>
-
 
     </footer>
 

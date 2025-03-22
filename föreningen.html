@@ -35,37 +35,29 @@
             </ul>
         </div>
 
-        <div id="förenings_nav">
-            <ul>
-                <li>
-                    <a href="föreningen.html#syfte">Föreningens syfte</a>
-                </li>
-                <li>
-                    <a href="föreningen.html#policy">Föreningens policy</a>
-                </li>
-                <li>
-                    <a href="föreningen.html#medlemskap">Att bli medlem</a>
-                </li>
-                <li>
-                    <a href="föreningen.html#styrelse">Föreningens styrelse</a>
-                </li>
-                <li>
-                    <a href="föreningen.html#kontaktuppgifter">Föreningens kontaktuppgifter</a>
-                </li>
-
-            </ul>
-
-        </div>
     </nav>
 
     <header>
         <h1>
-            Gyas Vänner - Historienördarnas förening 
+            Gyas Vänner - Historienördarnas förening
         </h1>
 
     </header>
 
     <main>
+
+        <p>
+            Gyas Vänner bildades av Jesper Blomdahl och några vänner den 10/7-2021 och har vuxit från några få medlemmar upp till ungefär 3000 medlemmer över hela Skåne. Det finns medlemmar utanför Skåne, i Danmark och ända upp till Kiruna!
+        </p>
+
+        <p> Hela poängen var att samla alla historienördar i en förening för att binda vänskapsband och att tillsammans förkovra i det vi älskar - historia!</p>
+
+        <p>Därför är också vårt motto:</p>
+
+        <p><span class="cursive">In amicitia discimus ex historia et invicem.</span> </p>
+
+        <p>Som betyder "I vänskap lär vi av historien - och av varandra"</p>
+
 
         <section id="syfte">
 
@@ -99,51 +91,139 @@
 
         </section>
 
+        <h2>
+            Föreningens styrelse
+        </h2>
+        <div id="styrelse">
+
+            <div class="styrelseledamot">
+                <p><em>Ordförande:</em></p>
+
+                <figure>
+                    <img src="img/ordförande.webp" alt="Ordförande Jesper Blomdahl">
+                    <figcaption>
+                        Jesper Blomdahl
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="styrelseledamot">
+                <p><em>Vice Ordförande:</em></p>
+
+                <figure>
+                    <img src="img/katrin_johansson.webp" alt="Vice Ordförande Katrin Johansson">
+                    <figcaption>
+                        Katrin Johansson
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="styrelseledamot">
+                <p><em>Sekreterare</em></p>
+
+                <figure>
+                    <img src="img/gertrud_martinsson.webp" alt="Sekreterare Gertrud Martinsson">
+                    <figcaption>
+                        Gertrud Martinsson
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="styrelseledamot">
+                <p><em>Kassör</em></p>
+
+                <figure>
+                    <img src="img/kurt_nordin.webp" alt="Kassör Kurt Nordin">
+                    <figcaption>
+                        Kurt Nordin
+                    </figcaption>
+                </figure>
+            </div>
+
+        </div>
+
+        <div id="ledamöter">
+            <div class="styrelseledamot">
+                <p><em>Ledamot</em></p>
+
+                <figure>
+                    <img src="img/susanne_nilsson.webp" alt="Ledamot Susanne Nilsson">
+                    <figcaption>
+                        Susanne Nilsson
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="styrelseledamot">
+                <p><em>Ledamot</em></p>
+
+                <figure>
+                    <img src="img/my_lind.webp" alt="Ledamot My Lind">
+                    <figcaption>
+                        My Lind
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="styrelseledamot">
+                <p><em>Ledamot</em></p>
+
+                <figure>
+                    <img src="img/gregor_smith.webp" alt="Ledamot Gregor Smith">
+                    <figcaption>
+                        Gregor Smith
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="styrelseledamot">
+                <p><em>Ledamot</em></p>
+
+                <figure>
+                    <img src="img/leornad_svantesson.webp" alt="Ledamot Leonard Svantesson">
+                    <figcaption>
+                        Leonard Svantesson
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+
         <section id="medlemskap">
             <h2>Medlemskap:</h2>
 
-            <p>Att bli medlem kostar 200 kronor per år. Fyll i nedanstående uppgifter och tryck "betala" så kommer du till en betalsida.</p>
+            <p>Att bli medlem kostar 200 kronor per år, det är lätt bara gå vidare till vårt <a href="#" onclick="document.getElementById('medlemskap_dialog').showModal()">medlemsformulär</a></p>
 
-            <form id="förenings_form">
+            <dialog id="medlemskap_dialog">
+                <form method="dialog" id="förenings_form">
 
-                <div id="namn_förenings_form">Namn:<input type="text"></div>
-                <div id="födelsedatum_förenings_form">Födelsedatum:<input type="date"></div>
-                <div id="address_förenings_form">Adress:<input type="text"></div>
-                <div id="postnummer_förenings_form">Postnummer:<input type="text"></div>
-                <div id="postort_förenings_form">Postort:<input type="text"></div>
-                <div id="telefonnummer_förenings_form">Telefonnummer:<input type="text"></div>
-                <div id="mailaddress_förenings_form">Mailaddress:<input type="email"></div>
+                    <p>Fyll i din personliga information tillsammans med leveransaddress och kontaktinformation:</p>
 
-                <button id="button_förenings_form" type="button" onclick="document.getElementById('nojavscriptDialog').showModal()">Gå till betalning</button>
+                    <fieldset id="förenings_form_fieldset">
+                        <div id="namn_field" class="field">Namn:<input type="text" value="Namn"></div>
+                        <div id="födelsedatum_field" class="field">Födelsedatum:<input type="date"></div>
+                        <div id="address_field" class="field">Adress:<input type="text" value="address"></div>
+                        <div id="postnummer_field" class="field"> Postnummer:<input type="text" value="postnummer"> </div>
+                        <div id="postort_field" class="field">Postort:<input type="text" value="postort"> </div>
+                        <div id="telefonnummer_field" class="field">Telefonnummer:<input type="text" value="telefonnummer"></div>
+                        <div id="mailaddress_field" class="field">Mailaddress:<input type="email" value="mailaddress"></div>
+                    </fieldset>
 
-            </form>
+                    <div id="förenings_form_buttons">
+                        <button id="förenings_form_button" type="button" onclick="document.getElementById('betalaMedlemskapDialog').showModal()">Gå till betalning</button>
+                        <button type="submit">Avbryt</button>
+                    </div>
+
+                </form>
+            </dialog>
 
             <!-- Detta är bara för visa att längre så här kan jag inte gå i uppgift 3 -->
-            <dialog id="nojavascriptDialog">
+            <dialog id="betalaMedlemskapDialog">
                 <form method="dialog">
                     <p>Kan ej betala då vi inte kommit till javascript ännu :) </p>
                     <button type="submit">Stäng</button>
                 </form>
             </dialog>
 
-
-        </section>
-
-        <section id="styrelse">
-            <h2>
-                Föreningens styrelse
-            </h2>
-
-            <ul>
-                <li> <em>Ordförande: </em>Jesper Blomdahl </li>
-                <li> <em>Vice ordförande: </em>Katrin Johansson</li>
-                <li> <em>Sekreterare: </em>Gertrud Martinsson</li>
-                <li> <em>Ledamot:</em>Susanne Nilsson</li>
-                <li> <em>Ledamot:</em>My Lind</li>
-                <li> <em>Ledamot:</em>Gregor Smith</li>
-                <li> <em>Ledamot:</em>Leonard Svantesson</li>
-
-            </ul>
 
         </section>
 
@@ -157,52 +237,44 @@
         </section>
 
     </main>
-
     <footer>
 
         <div id="courtesy_nav">
             <p id="footer_gyas_vänner">Gyas Vänner - en förening för historienördar</p>
             <p id="footer_mail">kontakta oss via mail: <a href="mailto:info@gyasvänner.se">info@gyasvänner.se</a></p>
             <p id="footer_medlemskap"><a href="föreningen.html#medlemskap">bli medlem</a></p>
-            <p id="footer_feedback"><a href="#" onclick="document.getElementById('feedbackDialog').showModal()">feedback/frågor</a></p>
+            <p id="footer_feedback"><a href="#" onclick="document.getElementById('feedback_dialog').showModal()">feedback/frågor</a></p>
         </div>
 
-        <dialog id="feedbackDialog">
+        <dialog id="feedback_dialog">
             <form method="dialog">
-                <p>Fyll i frågor eller feedback om denna sida:</p>
+                <p>Ange mailaddress/telefonnummer där vi kan nå dig samt feedback/fråga:</p>
 
-                <label id="feedback_label">
-                    feedback eller fråga:
-                    <textarea rows="10" id="feedback_text"></textarea>
-                </label>
+                <fieldset>
+                    <div id="feedback_mailaddress_field" class="field">Mailaddress:<input type="email" id="mail_feedback" value="namn@domän"> </div>
+                    <div id="feedback_telefonnummer_field" class="field">Telefonnummer:<input type="text" id="telefonnummer" value="telefonnummer"> </div>
+                    <div id="feedback_text_area" class="field">Feedback eller fråga:<textarea rows="10" id="feedback_text"></textarea></div>
+                </fieldset>
 
-                <label id="mailaddress_label">
-                    mailaddress som vi kan nå dig:
-                    <input type="email" id="mail_feedback">
-                </label>
-
-                <label id="telefonnummer_label">
-                    telefonnummer som vi kan nå dig:
-                    <input type="text" id="telefonnummer">
-                </label>
-
-                <button id="skicka_button" onclick="document.getElementById('nojavascriptDialog').showModal()"> Skicka </button>
-                <button id="avbryt_button" onclick="closeDialog()"> Avbryt </button>
+                <div id="feedback_buttons">
+                    <button id="skicka_button" onclick="document.getElementById('no_feedback_dialog').showModal()"> Skicka </button>
+                    <button id="avbryt_button" onclick="closeDialog()"> Avbryt </button>
+                </div>
 
             </form>
 
         </dialog>
-        
-        <dialog id="nojavascriptDialog">
+
+        <dialog id="no_feedback_dialog">
             <form method="dialog">
                 <p>Kan ej skicka då vi inte kommit till javascript ännu :) </p>
                 <button type="submit">Stäng</button>
-        
+
             </form>
         </dialog>
-     
 
     </footer>
+
 
 
 </body>
