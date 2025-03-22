@@ -1,7 +1,15 @@
 @charset "UTF-8";
 
-/* Layout */
+/*******************************************************************************/
+/*                          LAYOUT                                             */
+/*******************************************************************************/
 
+/* default storlek på bilder */
+img {
+    width: 10vw;
+}
+
+/********************* BODY layout *********************************************/
 body {
     display: grid;
     grid-template-columns: 15vw auto;
@@ -9,57 +17,49 @@ body {
     grid-template-areas: "header header"
         "global_nav    main"
         "footer footer";
-
     margin: 5% 10% 5% 10%;
 }
-
+main { grid-area: main; } footer { grid-area: footer; } header { grid-area: header; } #global_nav { grid-area: global_nav; } footer { grid-area: footer; }
+                                                                                      
+header {
+    text-align: center;
+}
 nav {
     display: contents;
     margin: 10px;
 }
 
-#global_nav {
-    grid-area: global_nav;
-}
-
-header {
-    grid-area: header;
-    text-align: center;
-}
-
-main {
-    grid-area: main;
-}
-
-footer {
-    grid-area: footer;
-}
-
-#courtesy {
+footer #courtesy {
     display: flex;
     flex-direction: row;
     gap: 10px;
     justify-content: center;
 }
 
-img {
-    width: 20vw;
+
+#courtesy_nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
 }
 
-/* startsidan */
+/********************* startsidan *********************************************/
 body#start_sida {
     grid-template-columns: 15vw auto 20vw;
     grid-template-areas: "header header header"
         "global_nav    main   aside"
         "footer footer footer";
 }
+aside { grid-area: aside; }
 
-aside {
-    grid-area: aside;    
+/* ordförande välkomnar */
+#ordförande_img {
+    float: right;
+    width: 20vw;    
 }
 
-
-
+/* utflykten */
 #utflykten {
     display: grid;
     grid-template-columns: auto auto;
@@ -77,64 +77,33 @@ aside {
 
 }
 
-#ordförande_img {
-    float: right;
-}
-
-#start_text {
-    grid-area: start_text;
-}
-
-#kulturen_text {
-    grid-area: kulturen_text;
-}
-
-#kulturen_bild {
-    grid-area: kulturen_bild;
-}
-
-#historiska_museet_text {
-    grid-area: historiska_museet_text;
-}
-
-#historiska_museet_bild {
-    grid-area: historiska_museet_bild;
-}
-
-#domkyrkan_text {
-    grid-area: domkyrkan_text;
-}
-
-#domkyrkan_bild {
-    grid-area: domkyrkan_bild;
-}
+#start_text { grid-area: start_text; } #kulturen_text { grid-area: kulturen_text; } #kulturen_bild { grid-area: kulturen_bild; }
+#historiska_museet_text { grid-area: historiska_museet_text; } #historiska_museet_bild { grid-area: historiska_museet_bild; }
+#domkyrkan_text { grid-area: domkyrkan_text; } #domkyrkan_bild { grid-area: domkyrkan_bild; } #lundagård_text { grid-area: lundagård_text; }
+#lundagård_bild { grid-area: lundagård_bild; } #efter_text { grid-area: efter_text;}
 
 
-#lundagård_text {
-    grid-area: lundagård_text;
+#utflykten img {
+    width: 20vw;        
+    clear: both;
 }
 
-#lundagård_bild {
-    grid-area: lundagård_bild;
-}
-
-#efter_text {
-    grid-area: efter_text;
-}
+/* intervjun */
 
 #erik_img {
     float: right;
-    width: 20vw;
     margin: 10px;
 }
 
-#kalendariet>ul {
+/* kalendariet */
+aside #kalendariet>ul {
     list-style: none;
     margin:0;
     padding: 0;
 }
 
-/* butiken */
+/********************* butiken *********************************************/
+
 #butik_form {
     display: grid;
     grid-template-areas: "legend_produkt legend_produkt"
@@ -144,38 +113,17 @@ aside {
         "kunduppgifter_button .";
 
 }
+#legend_produkt { grid-area: legend_produkt; } #tshirt_produkt { grid-area: tshirt_produkt; } #kopp_produkt {    grid-area: kopp_produkt;}
+#badhandduk_produkt { grid-area: badhandduk_produkt; } #mössa_produkt { grid-area: mössa_produkt; } 
+#kunduppgifter_fieldset { grid-area: kunduppgifter_fieldset;} #kunduppgifter_button { grid-area: kunduppgifter_button; }
 
-#legend_produkt {
-    grid-area: legend_produkt;
+#butik_form img {
+    width: 20vw;
 }
 
-#tshirt_produkt {
-    grid-area: tshirt_produkt;
-}
-
-#kopp_produkt {
-    grid-area: kopp_produkt;
-}
-
-#badhandduk_produkt {
-    grid-area: badhandduk_produkt;
-}
-
-#mössa_produkt {
-    grid-area: mössa_produkt;
-}
-
+/* produkter */
 #produkter_fieldset {
     display: contents;
-}
-
-#kunduppgifter_fieldset {
-    grid-area: kunduppgifter_fieldset;
-}
-
-#kunduppgifter_button {
-    grid-area: kunduppgifter_button;
-    width: 100px;
 }
 
 .produkt {
@@ -183,28 +131,19 @@ aside {
     flex-direction: column;
 }
 
+/* betala */
+#kunduppgifter_button {
+    width: 100px;
+}
+
+/* betala formulär */
 #fields {
     display: grid;
     grid-template-areas: "namn address postnummer postort";
 }
+#namn { grid-area: namn; } #address { grid-area: address;} #postnummer { grid-area: postnummer; } #postort { grid-area: postort; }
 
-#namn {
-    grid-area: namn;
-}
-
-#address {
-    grid-area: address;
-}
-
-#postnummer {
-    grid-area: postnummer;
-}
-
-#postort {
-    grid-area: postort;
-}
-
-/* historiesidor */
+/********************* historiesidan *********************************************/
 #historie_sida {
     grid-template-areas: "header header"
         "global_nav skane_oversikt"
@@ -213,15 +152,10 @@ aside {
         "global_nav main"
         "footer     footer";
 }
+#skane_oversikt { grid-area: skane_oversikt; } #skane_area_nav { grid-area: area_nav; } #skane_tid_nav { grid-area: tid_nav; }
 
-#skane_area_nav {
-    grid-area: area_nav;
-}
 
-#skane_tid_nav {
-    grid-area: tid_nav;
-}
-
+/********************* föreningssidan *********************************************/
 #föreningsinformation {
     /*grid-template-rows: min-content min-content auto min-content;*/
     grid-template-rows: min-content min-content auto min-content;
@@ -231,6 +165,7 @@ aside {
         "global_nav main"
         "footer     footer";
 }
+#förenings_nav { grid-area: förenings_nav; }
 
 
 #förenings_form {
@@ -242,30 +177,17 @@ aside {
     width: 100px;
 }
 
-#courtesy_nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 10px;
-}
+/*******************************************************************************/
+/*                          NAVIGATION LAYOUT                                  */
+/*******************************************************************************/
 
-
-/* navigation */
-nav {
-    font-size: large;
-}
-
+/* mobil  global nav*/
 #menucheckbox {
     visibility: hidden;
     display: none;
 }
 
-#förenings_nav>ul {
-    display: flex;
-    flex-direction: row;
-   
-}
-
+/* alla navigerings-listor */
 #global_nav>ul,
 #förenings_nav>ul,
 #skane_area_nav,
@@ -277,10 +199,12 @@ nav {
     gap: 0 10px;
 }
 
+/* global nav */
 #global_nav>ul {
     flex-direction: column;
 }
 
+/* historie lokal navigering */
 #skane_oversikt_vald,
 #skane_oversikt {
     text-align: center;
@@ -304,33 +228,36 @@ li>a,
     text-decoration: none;
 }
 
-/* borders */
+/* förenings nav */
+#förenings_nav>ul {
+    display: flex;
+    flex-direction: row;
+}
+
+/*******************************************************************************/
+/*                          BORDERS                                            */
+/*******************************************************************************/
+/* startsidan */
 #välkomst_info, #utflykten {
     border-bottom-style: solid;   
 }
-
-
-/* colors */
-header {
-    background-image: url("../img/raps.jpg");
-    background-size: 100% 100%;
-    color: #F2D399;
+aside {
+    border-left-style: solid;
 }
 
-header>h1 {
-    color: #F2D399;
-    font-size: 100% 200%;
-    mix-blend-mode: exclusion;
+#ordförande_img {
+   border-radius: 50%;
+}
+img {
+    border-radius: 5%;
 }
 
 
-
-#utflykten {
-    clear: both;
-}
+/*******************************************************************************/
+/*                          COLORS/IMAGES                                      */
+/*******************************************************************************/
 
 html {
-
     /*    background-image: url("../img/raps.jpg");
         background-size: cover; */
     /*background-color: #2484BF;*/
@@ -340,22 +267,28 @@ html {
 
 }
 
-
 body {
-    background-image: linear-gradient(to bottom, #F2D399 10%,#BFA450 40%, #F2D399)
-}
-aside {
-    background-image: linear-gradient(to right, #F2D399 10%,#BFA450 40%)
+    background-image: linear-gradient(to bottom, #F2D399 20%,#BFA450 60%, #F2D399 80%)
 }
 
+header {
+    color: #F2D399;
+    background-image: url("../img/raps.jpg");
+    background-size: 100% 100%;
+    
+} 
 
-body#start_sida,
+header>h1 {
+    color: #F2D399;
+    font-size: 100% 200%;
+    mix-blend-mode: exclusion;
+}
+
 #vald_sida,
 #skane_oversikt_vald,
 #vald_stad,
 #vald_tid,
 footer {
-
     /*#55B3D9 ljusare blå*/
     /*  color: #2484BF lite mörkare blå; 
     /* #BFA450 lite mörkare "brunt */
@@ -378,7 +311,9 @@ a,
 }
 
 
-/* fonts */
+/*******************************************************************************/
+/*                          FONTS                                              */
+/*******************************************************************************/
 
 @font-face {
 
@@ -400,14 +335,12 @@ header {
 
 body {
     font-family: "Aladint";
-
-    
     font-style: normal;
     font-size: 130%;
 }
 
 nav {
-    font-size: 150%;
+    font-size: 150%;    
 }
 
 #courtesy_nav {
@@ -417,6 +350,12 @@ nav {
 #footer_gyas_vänner {
     font-weight: bold;
 }
+
+
+/*******************************************************************************/
+/*                          RESPONSIVE DESIGN                                  */
+/*******************************************************************************/
+/************* DESKTOP *****************************/
 
 @media screen and (max-width: 1200px) {
 
@@ -454,6 +393,7 @@ nav {
     }
 }
 
+/************* MOBILE *****************************/
 @media screen and (max-width: 600px) {
 
     #menuicon {
