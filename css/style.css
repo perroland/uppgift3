@@ -144,14 +144,30 @@ aside #kalendariet>ul {
 #namn { grid-area: namn; } #address { grid-area: address;} #postnummer { grid-area: postnummer; } #postort { grid-area: postort; }
 
 /********************* historiesidan *********************************************/
-#historie_sida {
+#historie_startsida {
     grid-template-areas: "header header"
         "global_nav skane_oversikt"
         "global_nav area_nav"
         "global_nav tid_nav"
-        "global_nav main"
+        "global_nav historia_välkomst"
+        "global_nav skanes_historia"
         "footer     footer";
 }
+
+#historie_sida {
+    grid-template-areas: "header header"
+        "global_nav skane_oversikt"
+        "global_nav area_nav"
+        "global_nav tid_nav"     
+        "global_nav main"   
+        "footer     footer";
+}
+ 
+#historie_startsida>main {
+    display: contents;
+}
+
+#historia_välkomst { grid-area: historia_välkomst } #skanes_historia { grid-area: skanes_historia } 
 #skane_oversikt { grid-area: skane_oversikt; } #skane_area_nav { grid-area: area_nav; } #skane_tid_nav { grid-area: tid_nav; }
 
 
@@ -298,7 +314,7 @@ footer {
     color: #593B02;
 }
 
-a,
+ul>a,
 #global_nav>ul,
 #local_nav,
 #förenings_nav>ul,
