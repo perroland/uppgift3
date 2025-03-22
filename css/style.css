@@ -56,6 +56,8 @@ aside { grid-area: aside; }
 /* ordförande välkomnar */
 #ordförande_img {
     float: right;
+}
+#start_sida  #ordförande_img {
     width: 20vw;    
 }
 
@@ -156,10 +158,10 @@ aside #kalendariet>ul {
 
 #historie_sida {
     grid-template-areas: "header header"
-        "global_nav skane_oversikt"
-        "global_nav area_nav"
-        "global_nav tid_nav"     
-        "global_nav main"   
+        "global_nav     main"
+        "skane_oversikt main"
+        "area_nav       main"
+        "tid_nav        main"             
         "footer     footer";
 }
  
@@ -170,6 +172,12 @@ aside #kalendariet>ul {
 #historia_välkomst { grid-area: historia_välkomst } #skanes_historia { grid-area: skanes_historia } 
 #skane_oversikt { grid-area: skane_oversikt; } #skane_area_nav { grid-area: area_nav; } #skane_tid_nav { grid-area: tid_nav; }
 
+#skanska_stader, #skanska_epoker {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    gap: 10px;
+}
 
 /********************* föreningssidan *********************************************/
 #föreningsinformation {
@@ -203,11 +211,18 @@ aside #kalendariet>ul {
     display: none;
 }
 
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 /* alla navigerings-listor */
 #global_nav>ul,
 #förenings_nav>ul,
 #skane_area_nav,
-#skane_tid_nav {
+#skane_tid_nav,
+#skane_oversikt>a {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -223,7 +238,7 @@ aside #kalendariet>ul {
 /* historie lokal navigering */
 #skane_oversikt_vald,
 #skane_oversikt {
-    text-align: center;
+    text-align: left;
 }
 
 #skane_area_nav,
@@ -232,22 +247,20 @@ aside #kalendariet>ul {
 }
 
 #skane_area_nav,
-#skane_tid_nav {
-    flex-direction: row;
+#skane_tid_nav, 
+#förenings_nav {
+    flex-direction: column;
 }
 
-li>a,
-#skane_oversikt,
-#skane_oversikt_vald {
+li>a, #skane_oversikt>a {
     /*to get backrounds color the whole way on the line? */
     display: block;
     text-decoration: none;
 }
 
 /* förenings nav */
-#förenings_nav>ul {
-    display: flex;
-    flex-direction: row;
+#förenings_nav>ul {    
+    flex-direction: column;
 }
 
 /*******************************************************************************/
@@ -481,9 +494,8 @@ nav {
             "footer";
     }
 
-    #skane_area_nav,
-    #skane_tid_nav,
-    #förenings_nav>ul {
+    #skanska_stader, 
+    #skanska_epoker  {
         flex-direction: column;
     }
 
