@@ -111,18 +111,20 @@ aside #kalendariet>ul {
     grid-template-areas: "legend_produkt legend_produkt"
         "tshirt_produkt kopp_produkt"
         "badhandduk_produkt mössa_produkt"
-        "kunduppgifter_fieldset kunduppgifter_fieldset"
-        "kunduppgifter_button .";
+        "beställ_valda_produkter_button beställ_valda_produkter_button";
 
 }
 #legend_produkt { grid-area: legend_produkt; } #tshirt_produkt { grid-area: tshirt_produkt; } #kopp_produkt {    grid-area: kopp_produkt;}
 #badhandduk_produkt { grid-area: badhandduk_produkt; } #mössa_produkt { grid-area: mössa_produkt; } 
-#kunduppgifter_fieldset { grid-area: kunduppgifter_fieldset;} #kunduppgifter_button { grid-area: kunduppgifter_button; }
+#beställ_valda_produkter_button { grid-area: beställ_valda_produkter_button }
 
 #butik_form img {
     width: 20vw;
 }
 
+#beställ_valda_produkter_button {
+    height: 5vh;
+}
 /* produkter */
 #produkter_fieldset {
     display: contents;
@@ -357,7 +359,6 @@ header>h1 {
     mix-blend-mode: exclusion;
 }
 
-
 #vald_sida,
 #skane_oversikt_vald,
 #vald_stad,
@@ -384,12 +385,12 @@ ul>a,
     color: #F2D399;
 }
 
-#medlemskap_dialog, #feedback_dialog {
+#medlemskap_dialog, #feedback_dialog, #beställ_valda_produkter_dialog {
     background-color: #BFA450;
     color: #593B02;
 }
 
-#förenings_form, #feedback_dialog>form {
+#förenings_form, #feedback_dialog>form, #betala_form {
     background-color: #F2D399; 
 }
 

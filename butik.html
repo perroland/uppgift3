@@ -125,23 +125,38 @@
 
             </fieldset>
 
-            <fieldset id="kunduppgifter_fieldset">
-                <legend>
-                    Fyll i kunduppgifter
-                </legend>
-
-                <div id="fields">
-                    <div id="input_field">*Namn:<input type="text" id="namn" required></div>
-                    <div id="address_field">*Address:<input type="text" id="address" required></div>
-                    <div id="postnummer_field"> *Postnummer:<input type="text" maxlength="6" id="postnummer" required> </div>
-                    <div id="postort_field">*Postort:<input type="text" id="postort" required></div>
-                </div>
-
-            </fieldset>
-
-            <button id="kunduppgifter_button" type="submit">Betala</button>
+            <button id="beställ_valda_produkter_button" type="button" onclick="document.getElementById('beställ_valda_produkter_dialog').showModal()">Beställ valda produkter</button>
 
         </form>       
+
+        <dialog id="beställ_valda_produkter_dialog">
+            <form method="dialog" id="betala_form">
+
+                <p>Fyll i din personliga information tillsammans med leveransaddress och kontaktinformation:</p>
+
+                <fieldset id="förenings_form_fieldset">
+                    <div id="namn_field" class="field">Namn:<input type="text" value="Namn"></div>                    
+                    <div id="address_field" class="field">Adress:<input type="text" value="address"></div>
+                    <div id="postnummer_field" class="field"> Postnummer:<input type="text" value="postnummer"> </div>
+                    <div id="postort_field" class="field">Postort:<input type="text" value="postort"> </div>                    
+                    <div id="mailaddress_field" class="field">Mailaddress:<input type="email" value="namn@domän"></div>
+                </fieldset>
+
+                <div id="betala_form_buttons">
+                    <button id="betala_form_button" type="button" onclick="document.getElementById('betala_dialog').showModal()">Gå till betalning</button>
+                    <button type="submit">Avbryt</button>
+                </div>
+
+            </form>
+        </dialog>
+
+        <!-- Detta är bara för visa att längre så här kan jag inte gå i uppgift 3 -->
+        <dialog id="betala_dialog">
+            <form method="dialog">
+                <p>Kan ej betala då vi inte kommit till javascript ännu :) </p>
+                <button type="submit">Stäng</button>
+            </form>
+        </dialog>
 
     </main>
 
