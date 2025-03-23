@@ -429,7 +429,7 @@ body {
 }
 
 nav {
-    font-size: 150%;    
+    font-size: 80%;    
 }
 
 #courtesy_nav {
@@ -479,11 +479,16 @@ nav {
     }
 
     body#start_sida {
-        grid-template-columns: minmax(10vw, auto) auto minmax(auto, 20vw);
+        grid-template-columns: minmax(10vw, auto) auto;
         grid-template-areas: "header header"
             "global_nav    main"
-            "aside aside"
+            "global_nav aside"
             "footer footer";
+    }
+
+    aside {
+        border-top: solid;
+        border-left: none;
     }
 }
 
