@@ -164,18 +164,21 @@ aside #kalendariet>ul {
 }
 
 /********************* butiken *********************************************/
-
-#butik_form {
+#förenings_produkter_fieldset {
     display: grid;
-    grid-template-areas: "legend_produkt legend_produkt"
+    grid-template-areas:
+        "produkt_legend produkt_legend"
         "tshirt_produkt kopp_produkt"
         "badhandduk_produkt mössa_produkt"
+        "medlemmars_produkt_legend medlemmars_produkt_legend"
+        "stehag_bok_produkt söderlen_bok_produkt"
         "beställ_valda_produkter_button beställ_valda_produkter_button";
 
 }
 
-#legend_produkt {
-    grid-area: legend_produkt;
+
+#produkt_legend {
+    grid-area: produkt_legend;
 }
 
 #tshirt_produkt {
@@ -194,6 +197,26 @@ aside #kalendariet>ul {
     grid-area: mössa_produkt;
 }
 
+#medlemmars_produkt_legend {
+    grid-area: medlemmars_produkt_legend;
+}
+
+#medlemmars_produkter_fieldset {
+    display: grid;
+    grid-template-areas:        
+        "stehag_bok_produkt söderlen_bok_produkt";
+
+}
+
+#stehag_bok_produkt {
+    grid-area: stehag_bok_produkt;
+}
+
+#söderlen_bok_produkt {
+    grid-area: söderlen_bok_produkt;
+}
+
+
 #beställ_valda_produkter_button {
     grid-area: beställ_valda_produkter_button
 }
@@ -207,14 +230,14 @@ aside #kalendariet>ul {
 }
 
 /* produkter */
-#produkter_fieldset {
-    display: contents;
-}
+
 
 .produkt {
     display: flex;
     flex-direction: column;
 }
+
+
 
 /* betala */
 #kunduppgifter_button {

@@ -38,7 +38,7 @@
 
     <header>
         <h1>
-            Gyas Vänner - Historienördarnas förening 
+            Gyas Vänner - Historienördarnas förening
         </h1>
 
     </header>
@@ -49,11 +49,23 @@
             Välkommen till föreningens butik, hjälp föreningen genom att köpa någon eller några av dessa fina fantastiska produkter!
         </p>
 
+        <p>
+           Avkastningen på våra föreningsprodukter går oavkortat till föreningens verksamhet. Köp en föreningsprodukt och hjälp föreningen samtidigt som du kan skryta med dina vänner om att du är med!
+        </p>
+
+        <p>
+            Våra erbjuder också våra medlemmar som har någon produkt tex en bok att sälja dem genom vår butik. Vi tar bara en administrativ kostnad, avkastningen går till medlemmen.
+        </p>
+
+        <p>
+            Välj hur många du vill ha av våra produkter nedan och beställ via knappen längst ner!
+        </p>
+
         <form id="butik_form">
 
-            <fieldset id="produkter_fieldset">
+            <fieldset id="förenings_produkter_fieldset">
 
-                <legend id="produkt_legend">Välj produkt</legend>
+                <legend id="produkt_legend">Våra föreningsprodukter</legend>
 
                 <div id="tshirt_produkt" class="produkt">
 
@@ -125,9 +137,33 @@
 
             </fieldset>
 
+            <fieldset id="medlemmars_produkter_fieldset">
+                <legend id="medlemmars_produkt_legend">Medlemmars produkter</legend>
+                <div id="stehag_bok_produkt" class="produkt">
+                    <picture>                        
+                        <img id="stehag_bok_img" src="img/stehags_historia.webp" alt="stehag boken">
+                    </picture>
+
+                    <label>
+                        Läs den fantastiska historien om orten Stehag av vår medlem Ingrid Thorsell, 1000 SEK.                        
+                        <input id="stehag_checkbox" type="number" min="0" value="0">
+                    </label>
+                </div>
+                <div id="söderlen_bok_produkt" class="produkt">
+                    <picture>                        
+                        <img id="söderlen_bok_img" src="img/söderlen.webp" alt="söderlen boken">
+                    </picture>
+
+                    <label>
+                        Vår medlem Hjalmar Ek, som i hela livet bott på Söderlen, har skrivit denna bok om Söderlens historia och geografi, den är din för 1500 SEK.
+                        <input id="söderlen_checkbox" type="number" min="0" value="0">
+                    </label>
+                </div>
+            </fieldset>
+
             <button id="beställ_valda_produkter_button" type="button" onclick="document.getElementById('beställ_valda_produkter_dialog').showModal()">Beställ valda produkter</button>
 
-        </form>       
+        </form>
 
         <dialog id="beställ_valda_produkter_dialog">
             <form method="dialog" id="betala_form">
@@ -135,10 +171,10 @@
                 <p>Fyll i din personliga information tillsammans med leveransaddress och kontaktinformation:</p>
 
                 <fieldset id="förenings_form_fieldset">
-                    <div id="namn_field" class="field">Namn:<input type="text" value="Namn"></div>                    
+                    <div id="namn_field" class="field">Namn:<input type="text" value="Namn"></div>
                     <div id="address_field" class="field">Adress:<input type="text" value="address"></div>
                     <div id="postnummer_field" class="field"> Postnummer:<input type="text" value="postnummer"> </div>
-                    <div id="postort_field" class="field">Postort:<input type="text" value="postort"> </div>                    
+                    <div id="postort_field" class="field">Postort:<input type="text" value="postort"> </div>
                     <div id="mailaddress_field" class="field">Mailaddress:<input type="email" value="namn@domän"></div>
                 </fieldset>
 
