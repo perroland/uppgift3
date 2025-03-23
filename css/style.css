@@ -230,14 +230,10 @@ aside #kalendariet>ul {
 }
 
 /* produkter */
-
-
 .produkt {
     display: flex;
     flex-direction: column;
 }
-
-
 
 /* betala */
 #kunduppgifter_button {
@@ -316,6 +312,18 @@ aside #kalendariet>ul {
     flex-direction: row;
     list-style-type: none;
     gap: 10px;
+}
+
+
+/********************* aktiviteter *********************************************/
+#valda_aktiviteter img, #aktuella_aktiviteter img{
+    width: 30vw;
+}
+
+.posts li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 /********************* föreningssidan *********************************************/
@@ -514,7 +522,8 @@ html {
 }
 
 body {
-    background-image: linear-gradient(to bottom, #F2D399 20%, #BFA450 60%, #F2D399 80%)
+    background-color: #F2D399;
+   /* background-image: linear-gradient(to bottom, #F2D399 20%, #BFA450 60%, #F2D399 80%)*/
 }
 
 header {
@@ -566,6 +575,27 @@ ul>a,
 #betala_form {
     background-color: #F2D399;
 }
+
+.posts {
+    background-color: #BFA450;
+    background-image: linear-gradient(to right, #BFA450, #F2D399);
+    color: #593B02;
+}
+
+.posts li {
+    background-color: #F2D399;
+}
+
+.posts em {
+    color: #593B02;
+    font-weight: bold;
+}
+
+.filtrera {
+    background-color: #BFA450;
+}
+
+
 
 /*******************************************************************************/
 /*                          FONTS                                              */
