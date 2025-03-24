@@ -24,6 +24,8 @@ body {
         "global_nav    main"
         "footer footer";
     margin: 5% 10% 5% 10%;
+    padding: 20px;
+    border-radius: 2em;
 }
 
 main {
@@ -36,6 +38,7 @@ footer {
 
 header {
     grid-area: header;
+    border-radius: 2em 2em 0 0;
 }
 
 #global_nav {
@@ -62,7 +65,6 @@ footer #courtesy {
     justify-content: center;
 }
 
-
 #courtesy_nav {
     display: flex;
     flex-direction: row;
@@ -76,6 +78,8 @@ body#start_sida {
     grid-template-areas: "header header header"
         "global_nav    main   aside"
         "footer footer footer";
+
+ 
 }
 
 aside {
@@ -522,7 +526,7 @@ img {
 /*******************************************************************************/
 /*                          COLORS/IMAGES                                      */
 /*******************************************************************************/
-**
+
 html {
     background-color: #2484BF;
     background-image: linear-gradient(to right, #2484BF 1%, #55B3D9 10%);
