@@ -25,7 +25,7 @@ body {
         "footer footer";
     margin: 5% 10% 5% 10%;
     padding: 20px;
-    border-radius: 2em;
+    border-radius: 2vw;
 }
 
 main {
@@ -38,7 +38,7 @@ footer {
 
 header {
     grid-area: header;
-    border-radius: 2em 2em 0 0;
+    border-radius: 2vw 2vw 0 0;
 }
 
 #global_nav {
@@ -171,7 +171,7 @@ aside {
 aside #kalendariet>ul {
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 10px;
 }
 
 /********************* butiken *********************************************/
@@ -326,16 +326,37 @@ aside #kalendariet>ul {
 }
 
 
-/********************* aktiviteter *********************************************/
+/********************* aktiviteter  / medlemsforum ****************************/
+
+
 #valda_aktiviteter img, #aktuella_aktiviteter img{
     width: 30vw;
 }
 
+.posts {
+    padding: 0;
+    margin: 0;
+}
 .posts li {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
+
+.center_buttons {
+    text-align: center;
+}
+
+.filtrera {
+    margin: 10px;
+    padding: 10px;
+}
+
+.posts_container {
+    margin: 30px;    
+    padding: 20px;
+}
+
 
 /********************* föreningssidan *********************************************/
 #föreningsinformation {
@@ -427,7 +448,6 @@ aside #kalendariet>ul {
 .field {
     display: flex;
     flex-direction: column;
-
 }
 
 /********************* feedback *********************************************/
@@ -512,6 +532,9 @@ li>a,
 
 aside {
     border-left-style: solid;
+    border-style: solid;
+    border-radius: 2em;
+    margin: 20px;
 }
 
 #ordförande_img {
@@ -522,6 +545,24 @@ img {
     border-radius: 5%;
 }
 
+.posts_container {
+    border: solid;
+    border-radius: 2em;   
+}
+
+.posts {
+    border: solid;
+    border-radius: 2vw;
+    padding: 10px;
+}
+
+#fastnålade_inlägg {
+    border-width: 10px;
+}
+
+.filtrera {
+    border-radius: 2vw;
+}
 
 /*******************************************************************************/
 /*                          COLORS/IMAGES                                      */
@@ -543,6 +584,9 @@ header {
     background-size: 100% 100%;
 }
 
+aside {
+    background-color:  #BFA450;
+}
 header>h1 {
     color: #593B02;
     font-size: 100%;
@@ -587,26 +631,25 @@ ul>a,
     background-color: #F2D399;
 }
 
-.posts {
+.posts_container {
     background-color: #BFA450;
-    background-image: linear-gradient(to right, #BFA450, #F2D399);
     color: #593B02;
 }
 
-.posts li {
-    background-color: #F2D399;
-}
 
 .posts em {
-    color: #593B02;
-    font-weight: bold;
+    color: #593B02;    
 }
 
 .filtrera {
-    background-color: #BFA450;
+    background-color: gray;
 }
 
-
+#valda_aktiviteter, #aktuella_aktiviteter {
+    border: solid;
+    border-radius: 2vw;
+    border-color:#593B02;
+ }
 
 /*******************************************************************************/
 /*                          FONTS                                              */
@@ -643,7 +686,7 @@ header h1 a {
 body {
     font-family: "Aladint";
     font-style: normal;
-    font-size: 100%;
+    font-size: 1.5vw;
 }
 
 nav {
@@ -662,6 +705,23 @@ nav {
     font-family: "Fleur De Leaht";
     text-align: center;
     font-size: 200%;
+}
+
+.posts {
+    font-size: 0.75vw;
+}
+.posts em {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.posts>p {
+    text-align: center;
+    font-weight: bold;
+}
+
+.filtrera {
+    font-size: 0.5vw;
 }
 
 /*******************************************************************************/
@@ -827,5 +887,6 @@ nav {
             "postnummer"
             "postort";
     }
+    
 
 }

@@ -38,7 +38,7 @@
 
     <header>
         <h1>
-            <a href="index.html">Gyas Vänner - Historienördarnas förening</a> 
+            <a href="index.html">Gyas Vänner - Historienördarnas förening</a>
         </h1>
 
     </header>
@@ -60,83 +60,48 @@
             </p>
         </section>
 
-        <section id="aktuella_aktiviteter" class="posts">
-            <h2>Aktuella aktiviteter</h2>
+        <section class="posts_container" class="posts">
 
-            <ul>
-                <li>
-                    <p><em>20/3-25 16:00 på Malmöhus slott, Malmö</em></p>
+            <div class="posts">
+                <p>Aktuella aktiviteter</p>
+                <ul>
+                    <li>
+                        <p><em>20/3-25 16:00 på Malmöhus slott, Malmö</em></p>
 
-                    <p>Rundtur på Malmöhus slott. Vi träffas ute i foajen 10 minuter innan det börjar.</p>
-                </li>
-                <li>
-                    <p><em>3/4-25 12:00 Lunchföreläsning på Lunds stadsbibliotek</em></p>
+                        <p>Rundtur på Malmöhus slott. Vi träffas ute i foajen 10 minuter innan det börjar.</p>
+                    </li>
+                    <li>
+                        <p><em>3/4-25 12:00 Lunchföreläsning på Lunds stadsbibliotek</em></p>
 
-                    <p>Föreläsning om Lunds medeltid, Lunds stadsbibliotek.</p>
-                </li>
-                <li>
-                    <p><em>10/5-25 13:00 Glimmingehus</em></p>
+                        <p>Föreläsning om Lunds medeltid, Lunds stadsbibliotek.</p>
+                    </li>
+                    <li>
+                        <p><em>10/5-25 13:00 Glimmingehus</em></p>
 
-                    <p>Rundtur på Glimmingehus, vi samlas på gården 10 minuter innan.</p>
-                </li>
-                <li>
-                    <p><em>4/6-25 12:00</em></p>
+                        <p>Rundtur på Glimmingehus, vi samlas på gården 10 minuter innan.</p>
+                    </li>
+                    <li>
+                        <p><em>4/6-25 12:00</em></p>
 
-                    <p>Samling vid Ales stenar. Sten Markusson föreläser om Ale stenar. Tänk på vädret och välj bra kläder.</p>
-                </li>
-                <li>
-                    <p><em>20/7-25 08:00 Parkerering vid Höörs mitt</em></p>
+                        <p>Samling vid Ales stenar. Sten Markusson föreläser om Ale stenar. Tänk på vädret och välj bra kläder.</p>
+                    </li>
+                    <li>
+                        <p><em>20/7-25 08:00 Parkerering vid Höörs mitt</em></p>
 
-                    <p>Föreningens årliga utflykt. Detta året går turen till österlen. Turen går till Kungagraven, Kikvik och Simrishamn. Närmare beskrivningen kommer när det närmar sig</p>
-                </li>
-            </ul>
+                        <p>Föreningens årliga utflykt. Detta året går turen till österlen. Turen går till Kungagraven, Kikvik och Simrishamn. Närmare beskrivningen kommer när det närmar sig</p>
+                    </li>
+                </ul>
+            </div>
 
         </section>
 
-        <section id="sök_aktiviter" class="filtrera">
-            <h2>Sök på aktiviteter</h2>
 
-            <form>
-                <fieldset>
-                    <legend>Start och slut datum</legend>
-                    <label for="start_datum">Start datum</label>
-                    <input type="date" id="start_datum" name="start_datum" value="2022-01-01">
 
-                    <label for="slut_datum">Slut datum</label>
-                    <input type="date" id="slut_datum" name="slut_datum" value="2022-04-10">
-                </fieldset>
 
-                <fieldset>
-                    <legend>Ange kategorier du är intresserad av:</legend>
-                    <label><input type="checkbox" value="forelasningar" checked>Föreläsningar</label>
-                    <label><input type="checkbox" value="guidningar">Guidningar</label>
-                    <label><input type="checkbox" value="utflykter">Utflykter</label>
-                </fieldset>
 
-                <fieldset>
-                    <legend>Historiska kategorier</legend>
-                    <label><input type="checkbox" value="skansk_historia">Allmän skånsk historia</label>
-                    <label><input type="checkbox" value="stadshistoria" checked>Stadshistoria</label>
-                    <label><input type="checkbox" value="lokal_historia">Lokal historia</label>
-                    <label><input type="checkbox" value="militär_historia">Militär historia</label>
-                    <label><input type="checkbox">Teknik och industri-historia</label>
-                    <label><input type="checkbox">Arkeologi</label>
-                </fieldset>
-
-                <button type="button" onclick="document.getElementById('myDialog').showModal()">Filtrera</button>
-
-            </form>
-
-            <!-- Detta är bara för visa att längre så här kan jag inte gå i uppgift 3 -->
-            <dialog id="myDialog">
-                <form method="dialog">
-                    <p>Kan ej sortera då vi inte kommit till javascript ännu :) </p>
-                    <button type="submit">Stäng</button>
-                </form>
-            </dialog>
-
-            <section id="valda_aktiviteter" class="posts">
-                <h2>Valda aktiviteter</h2>
+        <div class="posts_container">
+            <div class="posts">
+                <p>Valda aktiviteter</>
                 <ul>
                     <li>
                         <p><em>3/4-2021 12:00 Lunchföreläsning på Lunds stadsbibliotek</em></p>
@@ -151,19 +116,70 @@
                     </li>
                 </ul>
 
+            </div>
+
+
+
+            <section id="aktiviteter_filter" class="filtrera">
+                <h2>Sök på aktiviteter</h2>
+
+                <form>
+                    <fieldset>
+                        <legend>Start och slut datum</legend>
+                        <label for="start_datum">Start datum</label>
+                        <input type="date" id="start_datum" name="start_datum" value="2022-01-01">
+
+                        <label for="slut_datum">Slut datum</label>
+                        <input type="date" id="slut_datum" name="slut_datum" value="2022-04-10">
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Ange kategorier du är intresserad av:</legend>
+                        <label><input type="checkbox" value="forelasningar" checked>Föreläsningar</label>
+                        <label><input type="checkbox" value="guidningar">Guidningar</label>
+                        <label><input type="checkbox" value="utflykter">Utflykter</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Historiska kategorier</legend>
+                        <label><input type="checkbox" value="skansk_historia">Allmän skånsk historia</label>
+                        <label><input type="checkbox" value="stadshistoria" checked>Stadshistoria</label>
+                        <label><input type="checkbox" value="lokal_historia">Lokal historia</label>
+                        <label><input type="checkbox" value="militär_historia">Militär historia</label>
+                        <label><input type="checkbox">Teknik och industri-historia</label>
+                        <label><input type="checkbox">Arkeologi</label>
+                    </fieldset>
+
+                    <div class="center_buttons">
+                        <button type="button" onclick="document.getElementById('myDialog').showModal()">Filtrera med ovan val</button>
+                        <button type="button" onclick="document.getElementById('myDialog').showModal()">Återställ val</button>
+                    </div>
+
+                </form>
+
             </section>
 
 
-        </section>
 
-        <p>
-            Aktiviteterna planeras av olika arbetsgrupper inom föreningen. Alla är välkommna att gå med i en arbetsgrupp och bidra till föreningens arbete!
-        </p>
+            <!-- Detta är bara för visa att längre så här kan jag inte gå i uppgift 3 -->
+            <dialog id="myDialog">
+                <form method="dialog">
+                    <p>Kan ej sortera då vi inte kommit till javascript ännu :) </p>
+                    <button type="submit">Stäng</button>
+                </form>
+            </dialog>
+
+        </div>
 
         <section id="arbetsgrupper">
             <h2>
                 Arbetsgrupper
             </h2>
+
+            <p>
+                Aktiviteterna planeras av olika arbetsgrupper inom föreningen. Alla är välkommna att gå med i en arbetsgrupp och bidra till föreningens arbete!
+            </p>
+
             <p> Hör av oss ifall du vill bli vara med i en arbetsgrupp,använd följande mail:<a href="mailto:info@gyasvänner.se">info@gyasvänner.se</a>.</p>
 
             <p>För tillfället finns det följande aktiva arbetsgrupper:</p>
@@ -187,6 +203,8 @@
                 Om Göinges och snapphanehistoria. Träffas varje torsdag på Hässleholms stadsbibliotek kl 19.00.
             </p>
         </section>
+
+
 
     </main>
 

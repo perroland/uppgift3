@@ -38,7 +38,7 @@
 
     <header>
         <h1>
-            <a href="index.html">Gyas Vänner - Historienördarnas förening</a> 
+            <a href="index.html">Gyas Vänner - Historienördarnas förening</a>
         </h1>
 
     </header>
@@ -56,11 +56,12 @@
         </p>
 
         <!--Det mesta av nedanstående, fastnålade_inlägg och senaste_inlägg är fastnålade_iägg en simulering av ett forum, behöver någon form av scripting"-->
-        <section id="fastnålade_inlägg">
-
-            <h2>Föreningens fastnålade inlägg</h2>
+        <section id="fastnålade_inlägg" class="posts_container">
 
             <div class="posts">
+
+                <p>Fastnålade inlägg</p>
+
                 <div class="inlägg">
                     <h3><em>Gyas vänner:</em> Vill någon hjälpa till med att underhålla vår hemsida? <span class="skapat">(skapat 13/3-2024)</span></h3>
 
@@ -72,21 +73,22 @@
                         <em>Jesper:</em> Vill gärna, men har inte så stor erfarenhet, skulle man kunna få vara med på ett litet hörn ändå, kanske lära sig lite? <span class="skapat">(skapat 14/3-2024)</span>
                     </p>
                 </div>
-                <div class="inlägg_val">
+                <div class="center_buttons">
                     <button onclick="document.getElementById('myDialog').showModal()" class="svara_inlägg_button">Svara inlägget</button>
                     <button onclick="document.getElementById('myDialog').showModal()" class="svara_inlägg_button">Anmäl inlägget</button>
-
                 </div>
 
             </div>
+
+
         </section>
 
         <!--"senaste_inlägg är en simulering av ett forum, behöver någon form av scripting"-->
-        <section id="valda_inlägg">
+        <section id="valda_inlägg" class="posts_container">
 
-            <h2>Inlägg:</h2>
 
             <div class="posts">
+                <p>Valda inlägg:</p>
                 <div class="inlägg">
                     <div>
                         <h3><em>Maria: </em>Böcker om Malmös historia <span class="skapat">(skapat 3/3-2025)</span></h3>
@@ -99,11 +101,10 @@
                         </p>
                     </div>
                 </div>
-            </div>
-
-            <div class="inlägg_val">
-                <button onclick="document.getElementById('myDialog').showModal()" class="svara_inlägg_button">Svara inlägget</button>
-                <button onclick="document.getElementById('myDialog').showModal()" class="svara_inlägg_button">Anmäl inlägget</button>
+                <div class="center_buttons">
+                    <button onclick="document.getElementById('myDialog').showModal()" class="svara_inlägg_button">Svara inlägget</button>
+                    <button onclick="document.getElementById('myDialog').showModal()" class="svara_inlägg_button">Anmäl inlägget</button>
+                </div>
             </div>
 
             <div class="posts">
@@ -116,14 +117,15 @@
                 <div class="svar">
                     <p><em>Tom: </em>Jättekul ide, har funderat på samma sak. Jag bor i Helsingborg så för mig vore det perfekt. <span class="skapat">11/3-2025</span></p>
                 </div>
+                <div class="center_buttons">
+                    <button onclick="document.getElementById('myDialog').showModal()" class="svara_inlägg_button">Svara inlägget</button>
+                    <button onclick="document.getElementById('myDialog').showModal()" class="svara_inlägg_button">Anmäl inlägget</button>
+                </div>
             </div>
 
             <div class="posts">
                 <div>
-                    <div class="inlägg_val">
-                        <button onclick="document.getElementById('myDialog').showModal()" class="svara_inlägg_button">Svara inlägget</button>
-                        <button onclick="document.getElementById('myDialog').showModal()" class="svara_inlägg_button">Anmäl inlägget</button>
-                    </div>
+
                     <div class="inlägg">
                         <h3><em>Bertil: </em>Släktforskning, släkten Wigfors <span class="skapat">(skapat 13/3-2025)</span></h3>
 
@@ -131,11 +133,11 @@
                         <p>
                     </div>
                 </div>
-            </div>
 
-            <div class="inlägg_val">
-                <button onclick="document.getElementById('myDialog').showModal()" class="svara_inlägg_button">Svara inlägget</button>
-                <button onclick="document.getElementById('myDialog').showModal()" class="svara_inlägg_button">Anmäl inlägget</button>
+                <div class="center_buttons">
+                    <button onclick="document.getElementById('myDialog').showModal()" class="svara_inlägg_button">Svara inlägget</button>
+                    <button onclick="document.getElementById('myDialog').showModal()" class="svara_inlägg_button">Anmäl inlägget</button>
+                </div>
             </div>
 
             <form id="filterar_inlägg" class="filtrera">
@@ -174,8 +176,10 @@
                         Filtrera
                     </legend>
 
-                    <button type="button" onclick="document.getElementById('myDialog').showModal()" class="filtrera">Filtrera med ovan val</button>
-                    <button type="button" onclick="document.getElementById('myDialog').showModal()" class="filtrera">Återställ val</button>
+                    <div class="center_buttons">
+                        <button type="button" onclick="document.getElementById('myDialog').showModal()">Filtrera med ovan val</button>
+                        <button type="button" onclick="document.getElementById('myDialog').showModal()">Återställ val</button>
+                    </div>
 
                 </fieldset>
 
