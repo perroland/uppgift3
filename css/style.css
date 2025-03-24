@@ -4,6 +4,12 @@
 /*                          LAYOUT                                             */
 /*******************************************************************************/
 
+#rapport {
+    position: absolute;
+    top:0;
+    left:0;
+
+}
 /* default storlek på bilder */
 img {
     width: 10vw;
@@ -74,6 +80,7 @@ body#start_sida {
 
 aside {
     grid-area: aside;
+    padding: 10px;
 }
 
 /* ordförande välkomnar */
@@ -515,7 +522,7 @@ img {
 /*******************************************************************************/
 /*                          COLORS/IMAGES                                      */
 /*******************************************************************************/
-
+**
 html {
     background-color: #2484BF;
     background-image: linear-gradient(to right, #2484BF 1%, #55B3D9 10%);
@@ -527,13 +534,13 @@ body {
 }
 
 header {
-    color: #F2D399;
+    
     background-image: url("../img/raps.jpg");
     background-size: 100% 100%;
 }
 
 header>h1 {
-    color: #F2D399;
+    color: #593B02;
     font-size: 100%;
     /*mix-blend-mode: exclusion;*/
 }
@@ -625,6 +632,10 @@ header>h1 {
     font-size: 200%;
 }
 
+header h1 a {
+    text-decoration: none;
+}
+
 body {
     font-family: "Aladint";
     font-style: normal;
@@ -632,7 +643,7 @@ body {
 }
 
 nav {
-    font-size: 80%;
+    font-size: 2vw;
 }
 
 #courtesy_nav {
@@ -722,6 +733,10 @@ nav {
             "global_nav"
             "main"
             "footer";
+    }
+
+    nav {
+        font-size: 6vw;
     }
 
     body#start_sida {
