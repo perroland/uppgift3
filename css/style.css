@@ -6,10 +6,11 @@
 
 #rapport {
     position: absolute;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
 
 }
+
 /* default storlek på bilder */
 img {
     width: 10vw;
@@ -79,7 +80,7 @@ body#start_sida {
         "global_nav    main   aside"
         "footer footer footer";
 
- 
+
 }
 
 aside {
@@ -181,9 +182,7 @@ aside #kalendariet>ul {
         "produkt_legend produkt_legend"
         "tshirt_produkt kopp_produkt"
         "badhandduk_produkt mössa_produkt"
-        "medlemmars_produkt_legend medlemmars_produkt_legend"
-        "stehag_bok_produkt söderlen_bok_produkt"
-        "beställ_valda_produkter_button beställ_valda_produkter_button";
+        "medlemmars_produkt_legend medlemmars_produkt_legend";
 
 }
 
@@ -214,7 +213,7 @@ aside #kalendariet>ul {
 
 #medlemmars_produkter_fieldset {
     display: grid;
-    grid-template-areas:        
+    grid-template-areas:
         "stehag_bok_produkt söderlen_bok_produkt";
 
 }
@@ -236,9 +235,6 @@ aside #kalendariet>ul {
     width: 20vw;
 }
 
-#beställ_valda_produkter_button {
-    height: 5vh;
-}
 
 /* produkter */
 .produkt {
@@ -329,7 +325,8 @@ aside #kalendariet>ul {
 /********************* aktiviteter  / medlemsforum ****************************/
 
 
-#valda_aktiviteter img, #aktuella_aktiviteter img{
+#valda_aktiviteter img,
+#aktuella_aktiviteter img {
     width: 30vw;
 }
 
@@ -337,6 +334,7 @@ aside #kalendariet>ul {
     padding: 0;
     margin: 0;
 }
+
 .posts li {
     list-style-type: none;
     padding: 0;
@@ -353,8 +351,8 @@ aside #kalendariet>ul {
 }
 
 .posts_container {
-    margin: 30px;    
-    padding: 20px;
+    margin: 30px 0 0 0;
+    padding: 15px;
 }
 
 
@@ -448,6 +446,16 @@ aside #kalendariet>ul {
 .field {
     display: flex;
     flex-direction: column;
+}
+
+form fieldset {
+    display: flex;
+    flex-direction: row;
+}
+
+#styrelsen, #ledamöter {
+    display: flex;
+    flex-direction: row;
 }
 
 /********************* feedback *********************************************/
@@ -547,13 +555,19 @@ img {
 
 .posts_container {
     border: solid;
-    border-radius: 2em;   
+    border-radius: 2em;
 }
 
 .posts {
     border: solid;
     border-radius: 2vw;
     padding: 10px;
+}
+
+.posts ul {
+    padding: 0;
+    margin: 0;
+
 }
 
 #fastnålade_inlägg {
@@ -579,18 +593,19 @@ html {
 
 body {
     background-color: #F2D399;
-   /* background-image: linear-gradient(to bottom, #F2D399 20%, #BFA450 60%, #F2D399 80%)*/
+    /* background-image: linear-gradient(to bottom, #F2D399 20%, #BFA450 60%, #F2D399 80%)*/
 }
 
 header {
-    
+
     background-image: url("../img/raps.jpg");
     background-size: 100% 100%;
 }
 
 aside {
-    background-color:  #BFA450;
+    background-color: #BFA450;
 }
+
 header>h1 {
     color: #593B02;
     font-size: 100%;
@@ -642,18 +657,19 @@ ul>a,
 
 
 .posts em {
-    color: #593B02;    
+    color: #593B02;
 }
 
 .filtrera {
     background-color: gray;
 }
 
-#valda_aktiviteter, #aktuella_aktiviteter {
+#valda_aktiviteter,
+#aktuella_aktiviteter {
     border: solid;
     border-radius: 2vw;
-    border-color:#593B02;
- }
+    border-color: #593B02;
+}
 
 /*******************************************************************************/
 /*                          FONTS                                              */
@@ -690,7 +706,7 @@ header h1 a {
 body {
     font-family: "Aladint";
     font-style: normal;
-    font-size: 1.5vw;
+    
 }
 
 nav {
@@ -711,9 +727,6 @@ nav {
     font-size: 200%;
 }
 
-.posts {
-    font-size: 0.75vw;
-}
 .posts em {
     font-weight: bold;
     text-decoration: underline;
@@ -724,9 +737,7 @@ nav {
     font-weight: bold;
 }
 
-.filtrera {
-    font-size: 0.5vw;
-}
+
 
 /*******************************************************************************/
 /*                          RESPONSIVE DESIGN                                  */
@@ -801,6 +812,16 @@ nav {
             "global_nav"
             "main"
             "footer";
+
+        font-size: 4vw;
+    }
+
+    .posts_container {
+        border-radius: 1.5vw;
+    }
+    .posts {
+        font-size: 2vw;
+        border-radius: 1.5vw;
     }
 
     nav {
@@ -837,8 +858,16 @@ nav {
 
     img,
     #lundagård_img {
-        width: 80vw;
+        width: 20vw;
     }
+
+    #utflykten img {
+        width: 60vw;
+    }
+    .posts img {
+        width: 40vw;
+    }
+
 
     #historie_sida {
         grid-template-areas:
@@ -873,14 +902,22 @@ nav {
         flex-direction: column;
     }
 
-    #butik_form {
-        grid-template-areas: "legend_produkt"
+    #förenings_produkter_fieldset {
+        grid-template-areas:
+            "legend_produkt"
             "tshirt_produkt"
             "kopp_produkt"
             "badhandduk_produkt"
             "mössa_produkt"
             "kunduppgifter_fieldset"
             "kunduppgifter_button";
+    }
+
+    #medlemmars_produkter_fieldset {
+        display: grid;
+        grid-template-areas:
+            "stehag_bok_produkt"
+            "söderlen_bok_produkt";
 
     }
 
@@ -891,6 +928,21 @@ nav {
             "postnummer"
             "postort";
     }
-    
 
-}
+    form fieldset, form fieldset input {
+        flex-direction: column;
+        font-size: 2vw;
+    }
+
+    #butik_form img {
+        width: 60vw;
+    }
+
+    #styrelse, #ledamöter {     
+        flex-direction: column;
+    }
+
+
+    #styrelse img, #ledamöter img {
+        width: 60vw;
+    }
