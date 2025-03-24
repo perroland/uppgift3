@@ -355,6 +355,10 @@ aside #kalendariet>ul {
     padding: 15px;
 }
 
+.posts img {
+    width: 50vw;
+}
+
 
 /********************* föreningssidan *********************************************/
 #föreningsinformation {
@@ -428,7 +432,6 @@ aside #kalendariet>ul {
 #mailaddress_field {
     grid-area: mailaddress_field
 }
-
 
 #förenings_form_buttons {
     display: flex;
@@ -578,6 +581,10 @@ img {
     border-radius: 2vw;
 }
 
+.section_divided section:nth-of-type(1)   {
+    border-top: solid;
+}
+
 .section_divided section {
     border-bottom: solid;
 }
@@ -694,8 +701,7 @@ ul>a,
 }
 
 header>h1 {
-    font-family: "Ballet";
-    font-size: larger;
+    font-family: "Ballet";    
     font-size: 200%;
 }
 
@@ -706,7 +712,7 @@ header h1 a {
 body {
     font-family: "Aladint";
     font-style: normal;
-    
+    font-size: 2vw;
 }
 
 nav {
@@ -736,6 +742,11 @@ nav {
     text-align: center;
     font-weight: bold;
 }
+
+aside h2 {
+  font-size: 2.5vw;    
+}
+
 
 
 
