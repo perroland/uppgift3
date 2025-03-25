@@ -16,6 +16,12 @@ img {
     width: 10vw;
 }
 
+.form_buttons, .feedback_buttons {
+    display: flex;
+    flex-direction: row;
+    
+}
+
 /********************* BODY layout *********************************************/
 body {
     display: grid;
@@ -155,7 +161,6 @@ aside {
     grid-area: efter_text;
 }
 
-
 #utflykten img {
     width: 20vw;
     clear: both;
@@ -185,7 +190,6 @@ aside #kalendariet>ul {
         "medlemmars_produkt_legend medlemmars_produkt_legend";
 
 }
-
 
 #produkt_legend {
     grid-area: produkt_legend;
@@ -226,25 +230,14 @@ aside #kalendariet>ul {
     grid-area: söderlen_bok_produkt;
 }
 
-
-#beställ_valda_produkter_button {
-    grid-area: beställ_valda_produkter_button
-}
-
 #butik_form img {
     width: 20vw;
 }
-
 
 /* produkter */
 .produkt {
     display: flex;
     flex-direction: column;
-}
-
-/* betala */
-#kunduppgifter_button {
-    width: 100px;
 }
 
 /* betala formulär */
@@ -341,9 +334,7 @@ aside #kalendariet>ul {
     margin: 0;
 }
 
-.center_buttons {
-    text-align: center;
-}
+
 
 .filtrera {
     margin: 10px;
@@ -433,19 +424,6 @@ aside #kalendariet>ul {
     grid-area: mailaddress_field
 }
 
-#förenings_form_buttons {
-    display: flex;
-    flex-direction: column;
-}
-
-#förenings_form_buttons>button {
-    width: 100%;
-}
-
-#förenings_form_button {
-    height: 5vh;
-}
-
 .field {
     display: flex;
     flex-direction: column;
@@ -466,8 +444,6 @@ form fieldset {
     display: flex;
     flex-direction: column;
 }
-
-
 
 /*******************************************************************************/
 /*                          NAVIGATION LAYOUT                                  */
@@ -589,6 +565,10 @@ img {
     border-bottom: solid;
 }
 
+.filtrera, #medlemskap_dialog {
+    border: solid;
+}
+
 /*******************************************************************************/
 /*                          COLORS/IMAGES                                      */
 /*******************************************************************************/
@@ -644,17 +624,10 @@ ul>a,
     color: #F2D399;
 }
 
-#medlemskap_dialog,
-#feedback_dialog,
+#medlemskap_dialog
 #beställ_valda_produkter_dialog {
     background-color: #BFA450;
     color: #593B02;
-}
-
-#förenings_form,
-#feedback_dialog>form,
-#betala_form {
-    background-color: #F2D399;
 }
 
 .posts_container {
@@ -662,12 +635,12 @@ ul>a,
     color: #593B02;
 }
 
-
 .posts em {
     color: #593B02;
 }
 
-.filtrera {
+.filtrera, #feedback_dialog, #medlemskap_dialog, #förenings_form,
+#betala_form, #beställ_valda_produkter_dialog  {
     background-color: gray;
 }
 
@@ -920,8 +893,7 @@ aside h2 {
             "kopp_produkt"
             "badhandduk_produkt"
             "mössa_produkt"
-            "kunduppgifter_fieldset"
-            "kunduppgifter_button";
+            "kunduppgifter_fieldset";
     }
 
     #medlemmars_produkter_fieldset {
