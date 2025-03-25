@@ -712,7 +712,7 @@ header h1 a {
 body {
     font-family: "Aladint";
     font-style: normal;
-    font-size: 2vw;
+    font-size: 1vw;
 }
 
 nav {
@@ -957,3 +957,4 @@ aside h2 {
     #styrelse img, #ledamöter img {
         width: 60vw;
     }
+}
