@@ -578,7 +578,7 @@
                     </p>
 
                     <p>
-                    Den globala navigeringen, dvs länkarna till huvud-kategorierna på webbplatsen, är med på varje sida (dvs "persistant"), dvs som pekar på tex startsidan och föreningsinformation.
+                        Den globala navigeringen, dvs länkarna till huvud-kategorierna på webbplatsen, är med på varje sida (dvs "persistant"), dvs som pekar på tex startsidan och föreningsinformation.
                     </p>
 
                     <p>
@@ -724,7 +724,7 @@
 
             Jag ville ha en inbjudande "snäll" framtoning, så många rundade hörnor!
 
-            Valde en grå färg för dialogrutorna som signalerar funktion.. 
+            Valde en grå färg för dialogrutorna som signalerar funktion..
 
             Vara konsekvent i färger
 
@@ -768,35 +768,141 @@
 
 
 
-            <p>Ideer för tester:</p>
 
-            Kommer på rätt många brister bara genom att hitta på tester :)
+
+            <p>
+                Här är en sammanställning på testerna och utfall.
+            </p>
+
+            <table border="1">
+                <tr>
+                    <th rowspan="2">
+                        Test
+                    </th>
+
+                    <th colspan="3">Utfall</th>
+                </tr>
+                <tr>
+                    <th>Person 1</th>
+                    <th>Person 2</th>
+                    <th>Person 3</th>
+                </tr>
+
+                <tr>
+                    <td>
+                        Hitta startsidan från medlemsforum.
+                    </td>
+                    <td>
+                        Hittade direkt.
+                    </td>
+                    <td>
+                        Hittade direkt, klickade på headern.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Försök bli medlem, hitta var och hur.
+                    </td>
+                    <td>
+                        Scrolla ner på startsida och hittar "bli medlem " i footern. Tycker det är för alltför lång startsida.
+                    </td>
+                    <td>
+                        Hade lite problem att hitta först. Gick först till medlemsforum, sedan föreningssidan och hitta kontaktmail. Sedan tillbaka till startsidan och återigen till föreningssidan och scrollade ner till footern och där hitta hon "att bli medlem".
+
+                        Tror att medlemsforum har med att bli medlem att göra. Hoppar runt på lite olika sidor tills hon hittar föreningssidan och hur man blir medlem.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Hitta information om Lund under renässansen.
+                    </td>
+                    <td>
+                        Tror först att "Historia" i menyn betyder "föreningens historia" men hittar snabbt sedan till Historia-Lund-Renässans och tidig modern tid
+                    </td>
+                    <td>
+                        Hittar snabbt Historia och klickar på Lund i texten (ej menyn till vänster). Efter ett tag hittar hon menyn till vänster och "Renässans och tidig modern tid"
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Hitta hur man ger feedback om en sida.
+                    </td>
+                    <td>
+                        Hittar rätt snabbt feedback längst ner, hon hade varit där innan.
+                    </td>
+                    <td>
+                        Scrollade ner på sidan hon var på tills hon hitta feedback.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Köp föreningens kopp.
+                    </td>
+                    <td>
+                        -
+                    </td>
+                    <td>
+                        Hittade jätte snabbt Butik och Kopp.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Hitta information om arbetsgrupper.
+                    </td>
+                    <td>
+                        Hittade snabbt föreningssidan och scrollade ner till arbetsgrupper.
+                    </td>
+                    <td>
+                        Gick först till medlemsforum. Klickade lite slumpmässigt runt lite på olika sidor. Fann till slut rätt ställe, tog lite tid.
+                    </td>
+                </tr>
+             
+
+                <tr>
+                    <td>
+                        Hitta föreningssidan från "mobilt läge". Ett test för att hitta den gömda menyn.
+                    </td>
+                    <td>
+                        Gick direkt på den gömda menyn och hittade föreningssidan direkt.
+                    </td>
+                    <td>
+                        Gick direkt på den gömda meny och hittade föreningssidan direkt.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Annan feedback
+                    </td>
+                    <td>
+                        Historia är det förenings historia eller vad? För långa sidor, måste scrolla jättemycket för att komma ner till footern.
+                    </td>
+                    <td>
+                        Ska kalendariet vara på hela sidan på startsidan? Hade svårt att förstå "Medlemsforum" inte hade att göra med att bli medlem.
+                    </td>
+                </tr>
+
+            </table>
+
+            <p> Några reflektioner på testerna: </p>
 
             <ul>
                 <li>
-                    Hitta till startsidan från medlemsforum
+                    Kommer på rätt många brister bara genom att hitta på tester :)
                 </li>
                 <li>
-                    Hitta information om Lund under renässansen.
+                    Inte ens huvudkategorierna hade bra namn alltid. 
                 </li>
                 <li>
-                    Hitta hur blir man medlem och hur betalar man?
+                    Vissa saker hittade de jättesnabbt, andra tänkte de helt annorlunda.
                 </li>
                 <li>
-                    Ge feedback om en sida.
+                    Vet inte om jag hinner fixa alla brister nu. En del hade brister hade varit enklare att fixa med scripting än med bara HTML+CSS, dvs både funktionellt men även praktiskt.
                 </li>
-                <li>
-                    Köp föreningsens kopp.
-                </li>
-                <li>
-                    I mobilt läge: hur hitta till föreningssidan.
-                </li>
-                <li>
-                    Hitta information om arbetsgrupperna
-                </li>
-
-
             </ul>
+                
+
+
         </section>
         <section>
             <h2>Källförteckning</h2>
