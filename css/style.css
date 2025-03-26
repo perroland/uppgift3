@@ -22,6 +22,10 @@ img {
     
 }
 
+input {
+    font-size: 1vw;
+}
+
 /********************* BODY layout *********************************************/
 body {
     display: grid;
@@ -370,6 +374,8 @@ aside #kalendariet>ul {
 .posts img {
     width: 50vw;
 }
+
+
 
 
 /********************* föreningssidan *********************************************/
