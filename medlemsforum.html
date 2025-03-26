@@ -86,6 +86,39 @@
         <!--"senaste_inlägg är en simulering av ett forum, behöver någon form av scripting"-->
         <section id="valda_inlägg" class="posts_container">
 
+            <dialog id="skriv_inlägg">
+                <form method=dialog id="skriv_inlägg" class="filtrera">
+
+                    <div>Namn: <input type="text" id="namn" value="namn"></div>
+
+                    <div>Inlägg: <textarea id="feedback_text"></textarea></div>
+
+                    <div>
+                        <label for="kategorier">Välj kategori</label>
+                        <select name="kategorier">
+                            <option value="allmäns_skånsk_historia" selected>Allmän skånsk historia</option>
+                            <option value="skånsk_medeltidshistoria">Skånsk medeltidshistoria </option>
+                            <option value="föreningsfrågor">Föreningsfrågor</option>
+                            <option value="släktforskning">Släktforskning</option>
+                            <option value="ny kategori" id="skapa_ny_kategori">Skapa en ny kategori</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        Ny kategori:<input type="text" id="ny_kategori" value="<ny kategori>">
+                    </div>
+                
+                    <div class="form_buttons">
+                        <button type="button" onclick="document.getElementById('myDialog').showModal()">Posta inlägget</button>
+                        <button id="avbryt_button" onclick="closeDialog()"> Avbryt </button>
+                    </div>                    
+
+                </form>
+            </dialog>
+
+            <div class="inlägg_button">
+                <button id="inlägg_button" type="button" onclick="document.getElementById('skriv_inlägg').showModal()">Skriv nytt inlägg</button>
+            </div>
 
             <div class="posts">
                 <p>Valda inlägg:</p>
@@ -101,7 +134,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="center_buttons">
+                <div class="form_buttons">
                     <button onclick="document.getElementById('myDialog').showModal()" class="svara_inlägg_button">Svara inlägget</button>
                     <button onclick="document.getElementById('myDialog').showModal()" class="svara_inlägg_button">Anmäl inlägget</button>
                 </div>
@@ -117,7 +150,7 @@
                 <div class="svar">
                     <p><em>Tom: </em>Jättekul ide, har funderat på samma sak. Jag bor i Helsingborg så för mig vore det perfekt. <span class="skapat">11/3-2025</span></p>
                 </div>
-                <div class="center_buttons">
+                <div class="form_buttons">
                     <button onclick="document.getElementById('myDialog').showModal()" class="svara_inlägg_button">Svara inlägget</button>
                     <button onclick="document.getElementById('myDialog').showModal()" class="svara_inlägg_button">Anmäl inlägget</button>
                 </div>
@@ -125,7 +158,6 @@
 
             <div class="posts">
                 <div>
-
                     <div class="inlägg">
                         <h3><em>Bertil: </em>Släktforskning, släkten Wigfors <span class="skapat">(skapat 13/3-2025)</span></h3>
 
@@ -134,7 +166,7 @@
                     </div>
                 </div>
 
-                <div class="center_buttons">
+                <div class="form_buttons">
                     <button onclick="document.getElementById('myDialog').showModal()" class="svara_inlägg_button">Svara inlägget</button>
                     <button onclick="document.getElementById('myDialog').showModal()" class="svara_inlägg_button">Anmäl inlägget</button>
                 </div>
@@ -176,7 +208,7 @@
                         Filtrera
                     </legend>
 
-                    <div class="center_buttons">
+                    <div class="form_buttons">
                         <button type="button" onclick="document.getElementById('myDialog').showModal()">Filtrera</button>
                         <button type="button" onclick="document.getElementById('myDialog').showModal()">Återställ val</button>
                     </div>

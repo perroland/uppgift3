@@ -315,6 +315,7 @@ aside #kalendariet>ul {
 }
 
 
+
 /********************* aktiviteter  / medlemsforum ****************************/
 
 
@@ -324,7 +325,7 @@ aside #kalendariet>ul {
 }
 
 .posts {
-    padding: 0;
+    padding: 20px;
     margin: 0;
 }
 
@@ -334,11 +335,31 @@ aside #kalendariet>ul {
     margin: 0;
 }
 
+#inlägg_button {
+    width:50%;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
 
+}
 
+#feedback_text {
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    min-height: 300px;
+
+    
+}
+
+#skapa_ny_kategori {
+    font-weight: bold;
+    background-color: darkgray;
+}
 .filtrera {
     margin: 10px;
-    padding: 10px;
+    padding: 20px;
 }
 
 .posts_container {
@@ -445,6 +466,12 @@ form fieldset {
     flex-direction: column;
 }
 
+#feedback_dialog form fieldset {
+
+    display: flex;
+    flex-direction: column;
+}
+
 /*******************************************************************************/
 /*                          NAVIGATION LAYOUT                                  */
 /*******************************************************************************/
@@ -528,7 +555,8 @@ aside {
     border-radius: 50%;
 }
 
-img {
+img,.filtrera, #feedback_dialog, #medlemskap_dialog, #förenings_form,
+#betala_form, #beställ_valda_produkter_dialog, #skriv_inlägg  {
     border-radius: 5%;
 }
 
@@ -539,8 +567,7 @@ img {
 
 .posts {
     border: solid;
-    border-radius: 2vw;
-    padding: 10px;
+    border-radius: 2vw;    
 }
 
 .posts ul {
@@ -640,7 +667,7 @@ ul>a,
 }
 
 .filtrera, #feedback_dialog, #medlemskap_dialog, #förenings_form,
-#betala_form, #beställ_valda_produkter_dialog  {
+#betala_form, #beställ_valda_produkter_dialog, #skriv_inlägg  {
     background-color: gray;
 }
 
