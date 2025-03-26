@@ -90,15 +90,44 @@
 
         </section>
 
+        
+        <section id="medlemskap">
+            <h2>Medlemskap:</h2>
+
+            <p>Att bli medlem kostar 200 kronor per år, det går att betala med både kort eller swisch. Använd vårt  <a href="#" onclick="document.getElementById('medlemskap_dialog').showModal()">medlemsformulär</a></p>
+
+            <dialog id="medlemskap_dialog">
+                <form method="dialog" id="förenings_form">
+
+                    <p>Fyll i din personliga information tillsammans med leveransaddress och kontaktinformation:</p>
+
+                    <fieldset id="förenings_form_fieldset">
+                        <div id="namn_field" class="field">Namn:<input type="text" value="Namn"></div>
+                        <div id="födelsedatum_field" class="field">Födelsedatum:<input type="date"></div>
+                        <div id="address_field" class="field">Adress:<input type="text" value="address"></div>
+                        <div id="postnummer_field" class="field"> Postnummer:<input type="text" value="postnummer"> </div>
+                        <div id="postort_field" class="field">Postort:<input type="text" value="postort"> </div>
+                        <div id="telefonnummer_field" class="field">Telefonnummer:<input type="text" value="telefonnummer"></div>
+                        <div id="mailaddress_field" class="field">Mailaddress:<input type="email" value="namn@domän"></div>
+                    </fieldset>
+
+                    <div id="förenings_form_buttons" class="form_buttons">
+                        <button id="förenings_form_button" type="button" onclick="document.getElementById('betalaMedlemskapDialog').showModal()">Gå till betalning</button>
+                        <button type="submit">Avbryt</button>
+                    </div>
+
+                </form>
+            </dialog>
+
         <section id="arbetsgrupper">
-            <h2>
+            <h3>
                 Arbetsgrupper
-            </h2>
+            </h3>
 
             <p>
-                Aktiviteterna planeras av olika arbetsgrupper inom föreningen. Alla är välkommna att gå med i en arbetsgrupp och bidra till föreningens arbete!
+                Som medlem är du välkommen till våra arbetsgrupper. Deras främsta syfte är att främja vänskap mellan medlemmar och möjlighet att fokusera på något som man gillar. Grupperna organiserar sig själva, föreningen hjälper dem med råd och hjälp. En av deras främsta uppgifter är att, tillsammans med styrelsen, planera våra aktiviteter. Alla är välkommna att gå med i en arbetsgrupp och bidra till föreningens arbete!
             </p>
-
+            
             <p> Hör av oss ifall du vill bli vara med i en arbetsgrupp,använd följande mail:<a href="mailto:info@gyasvänner.se">info@gyasvänner.se</a>.</p>
 
             <p>För tillfället finns det följande aktiva arbetsgrupper:</p>
@@ -220,33 +249,6 @@
             </div>
         </div>
 
-        <section id="medlemskap">
-            <h2>Medlemskap:</h2>
-
-            <p>Att bli medlem kostar 200 kronor per år, det är lätt bara gå vidare till vårt <a href="#" onclick="document.getElementById('medlemskap_dialog').showModal()">medlemsformulär</a></p>
-
-            <dialog id="medlemskap_dialog">
-                <form method="dialog" id="förenings_form">
-
-                    <p>Fyll i din personliga information tillsammans med leveransaddress och kontaktinformation:</p>
-
-                    <fieldset id="förenings_form_fieldset">
-                        <div id="namn_field" class="field">Namn:<input type="text" value="Namn"></div>
-                        <div id="födelsedatum_field" class="field">Födelsedatum:<input type="date"></div>
-                        <div id="address_field" class="field">Adress:<input type="text" value="address"></div>
-                        <div id="postnummer_field" class="field"> Postnummer:<input type="text" value="postnummer"> </div>
-                        <div id="postort_field" class="field">Postort:<input type="text" value="postort"> </div>
-                        <div id="telefonnummer_field" class="field">Telefonnummer:<input type="text" value="telefonnummer"></div>
-                        <div id="mailaddress_field" class="field">Mailaddress:<input type="email" value="namn@domän"></div>
-                    </fieldset>
-
-                    <div id="förenings_form_buttons" class="form_buttons">
-                        <button id="förenings_form_button" type="button" onclick="document.getElementById('betalaMedlemskapDialog').showModal()">Gå till betalning</button>
-                        <button type="submit">Avbryt</button>
-                    </div>
-
-                </form>
-            </dialog>
 
             <!-- Detta är bara för visa att längre så här kan jag inte gå i uppgift 3 -->
             <dialog id="betalaMedlemskapDialog">
