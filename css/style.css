@@ -268,23 +268,22 @@ aside #kalendariet>ul {
 
 /********************* historiesidan *********************************************/
 #historie_startsida {
-    grid-template-areas: "header header"
-        "global_nav skane_oversikt"
-        "global_nav area_nav"
-        "global_nav tid_nav"
-        "global_nav historia_välkomst"
-        "global_nav skanes_historia"
-        "footer     footer";
+    grid-template-areas: "header header header"        
+    "global_nav historia_välkomst historia_välkomst"        
+        "global_nav skane_oversikt skane_oversikt"
+        "global_nav area_nav tid_nav"        
+        "global_nav main main"
+        "footer     footer footer";
 }
 
 #historie_sida {
-    grid-template-areas: "header header"
-        "global_nav     main"
-        "skane_oversikt main"
-        "area_nav       main"
-        "tid_nav        main"
-        "footer     footer";
+    grid-template-areas: "header header header"
+        "global_nav     skane_oversikt skane_oversikt"
+        "global_nav     area_nav tid_nav"    
+        "global_nav        main main"
+        "footer     footer footer";
 }
+
 
 #historie_startsida>main {
     display: contents;
@@ -374,8 +373,6 @@ aside #kalendariet>ul {
 .posts img {
     width: 50vw;
 }
-
-
 
 
 /********************* föreningssidan *********************************************/
@@ -488,12 +485,16 @@ form fieldset {
     display: none;
 }
 
+
 nav {
-    display: flex;
+    /*display: flex;
     flex-direction: column;
+    */
     gap: 20px;
 }
+    
 
+    
 /* alla navigerings-listor */
 #global_nav>ul,
 #förenings_nav>ul,
