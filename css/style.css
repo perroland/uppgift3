@@ -725,7 +725,7 @@ body {
 }
 
 nav {
-    font-size: 2vw;
+    font-size: 1.5vw;
 }
 
 #förenings_nav, #skane_oversikt, #skane_area_nav, #skane_tid_nav {
@@ -858,6 +858,10 @@ footer {
         font-size: 6vw;
     }
 
+    #förenings_nav, #skane_oversikt, #skane_area_nav, #skane_tid_nav {
+        font-size: 4vw;
+    }
+
     body#start_sida {
         grid-template-columns: auto;
         grid-template-areas: "header"
@@ -885,7 +889,6 @@ footer {
     #ordförande_img {
         float: none;
     }
-
     img,
     #lundagård_img {
         width: 20vw;
@@ -897,7 +900,6 @@ footer {
     .posts img {
         width: 40vw;
     }
-
 
     #historie_sida {
         grid-template-areas:
@@ -915,7 +917,7 @@ footer {
         flex-direction: column;
     }
 
-    #föreningsinformation {
+    #föreningssidan {
         grid-template-columns: auto;
         grid-template-areas: "header"
             "global_nav"
@@ -923,6 +925,10 @@ footer {
             "main"
             "footer";
 
+    }
+    #förenings_nav>ul {
+        font-size: 3vw;
+        flex-direction: column;
     }
 
     /* butiken */
@@ -967,12 +973,12 @@ footer {
         width: 60vw;
     }
 
-    #styrelse, #ledamöter {     
+    #styrelsen, #ledamöter {     
         flex-direction: column;
     }
 
 
-    #styrelse img, #ledamöter img {
+    #styrelsen img, #ledamöter img {
         width: 60vw;
     }
 }
