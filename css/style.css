@@ -16,10 +16,11 @@ img {
     width: 10vw;
 }
 
-.form_buttons, .feedback_buttons {
+.form_buttons,
+.feedback_buttons {
     display: flex;
     flex-direction: row;
-    
+
 }
 
 input {
@@ -50,6 +51,14 @@ footer {
 header {
     grid-area: header;
     border-radius: 2vw 2vw 0 0;
+    position: relative;
+}
+
+header h1 {
+    display: inline;
+    vertical-align: 3vh;
+
+
 }
 
 #global_nav {
@@ -268,23 +277,23 @@ aside #kalendariet>ul {
 
 /********************* historiesidan *********************************************/
 #historie_startsida {
-    grid-template-areas: "header header header"            
+    grid-template-columns: 15vw auto 20vw;
+    grid-template-areas: "header header header"
         "global_nav skane_oversikt skane_oversikt"
-        "global_nav area_nav tid_nav"        
+        "global_nav area_nav tid_nav"
         "global_nav main main"
         "footer     footer footer";
+    
 }
 
 #historie_sida {
     grid-template-areas: "header header header"
         "global_nav     skane_oversikt skane_oversikt"
-        "global_nav     area_nav tid_nav"    
+        "global_nav     area_nav tid_nav"
         "global_nav        main main"
         "footer     footer footer";
-
-    grid-template-columns: auto 10vw auto;
+        
 }
-
 
 #historie_startsida>main {
     display: contents;
@@ -340,7 +349,7 @@ aside #kalendariet>ul {
 }
 
 #inlägg_button {
-    width:50%;
+    width: 50%;
     position: relative;
     left: 50%;
     right: 50%;
@@ -354,13 +363,14 @@ aside #kalendariet>ul {
     min-width: 100%;
     min-height: 300px;
 
-    
+
 }
 
 #skapa_ny_kategori {
     font-weight: bold;
     background-color: darkgray;
 }
+
 .filtrera {
     margin: 10px;
     padding: 20px;
@@ -459,7 +469,8 @@ form fieldset {
     flex-direction: row;
 }
 
-#styrelsen, #ledamöter {
+#styrelsen,
+#ledamöter {
     display: flex;
     flex-direction: row;
 }
@@ -493,9 +504,7 @@ nav {
     */
     gap: 20px;
 }
-    
 
-    
 /* alla navigerings-listor */
 #global_nav>ul,
 #förenings_nav>ul,
@@ -563,8 +572,14 @@ aside {
     border-radius: 50%;
 }
 
-img,.filtrera, #feedback_dialog, #medlemskap_dialog, #förenings_form,
-#betala_form, #beställ_valda_produkter_dialog, #skriv_inlägg  {
+img,
+.filtrera,
+#feedback_dialog,
+#medlemskap_dialog,
+#förenings_form,
+#betala_form,
+#beställ_valda_produkter_dialog,
+#skriv_inlägg {
     border-radius: 5%;
 }
 
@@ -575,7 +590,7 @@ img,.filtrera, #feedback_dialog, #medlemskap_dialog, #förenings_form,
 
 .posts {
     border: solid;
-    border-radius: 2vw;    
+    border-radius: 2vw;
 }
 
 .posts ul {
@@ -592,7 +607,7 @@ img,.filtrera, #feedback_dialog, #medlemskap_dialog, #förenings_form,
     border-radius: 2vw;
 }
 
-.section_divided section:nth-of-type(1)   {
+.section_divided section:nth-of-type(1) {
     border-top: solid;
 }
 
@@ -600,7 +615,8 @@ img,.filtrera, #feedback_dialog, #medlemskap_dialog, #förenings_form,
     border-bottom: solid;
 }
 
-.filtrera, #medlemskap_dialog {
+.filtrera,
+#medlemskap_dialog {
     border: solid;
 }
 
@@ -646,7 +662,7 @@ footer {
     background-color: #F2D399;
     background-image: none;
     color: #593B02;
-    
+
 }
 
 ul>a,
@@ -660,8 +676,7 @@ ul>a,
     color: #F2D399;
 }
 
-#medlemskap_dialog
-#beställ_valda_produkter_dialog {
+#medlemskap_dialog #beställ_valda_produkter_dialog {
     background-color: #BFA450;
     color: #593B02;
 }
@@ -675,8 +690,13 @@ ul>a,
     color: #593B02;
 }
 
-.filtrera, #feedback_dialog, #medlemskap_dialog, #förenings_form,
-#betala_form, #beställ_valda_produkter_dialog, #skriv_inlägg  {
+.filtrera,
+#feedback_dialog,
+#medlemskap_dialog,
+#förenings_form,
+#betala_form,
+#beställ_valda_produkter_dialog,
+#skriv_inlägg {
     background-color: gray;
 }
 
@@ -710,7 +730,7 @@ ul>a,
 }
 
 header>h1 {
-    font-family: "Ballet";    
+    font-family: "Ballet";
     font-size: 200%;
 }
 
@@ -728,9 +748,13 @@ nav {
     font-size: 1.5vw;
 }
 
-#förenings_nav, #skane_oversikt, #skane_area_nav, #skane_tid_nav {
+#förenings_nav,
+#skane_oversikt,
+#skane_area_nav,
+#skane_tid_nav {
     font-size: 1vw;
 }
+
 #courtesy_nav {
     font-style: italic;
 }
@@ -756,7 +780,7 @@ nav {
 }
 
 aside h2 {
-  font-size: 2.5vw;    
+    font-size: 2.5vw;
 }
 
 #vald_sida,
@@ -849,6 +873,7 @@ footer {
     .posts_container {
         border-radius: 1.5vw;
     }
+
     .posts {
         font-size: 2vw;
         border-radius: 1.5vw;
@@ -858,7 +883,10 @@ footer {
         font-size: 6vw;
     }
 
-    #förenings_nav, #skane_oversikt, #skane_area_nav, #skane_tid_nav {
+    #förenings_nav,
+    #skane_oversikt,
+    #skane_area_nav,
+    #skane_tid_nav {
         font-size: 4vw;
     }
 
@@ -889,6 +917,7 @@ footer {
     #ordförande_img {
         float: none;
     }
+
     img,
     #lundagård_img {
         width: 20vw;
@@ -897,6 +926,7 @@ footer {
     #utflykten img {
         width: 60vw;
     }
+
     .posts img {
         width: 40vw;
     }
@@ -926,6 +956,7 @@ footer {
             "footer";
 
     }
+
     #förenings_nav>ul {
         font-size: 3vw;
         flex-direction: column;
@@ -964,7 +995,8 @@ footer {
             "postort";
     }
 
-    form fieldset, form fieldset input {
+    form fieldset,
+    form fieldset input {
         flex-direction: column;
         font-size: 2vw;
     }
@@ -973,12 +1005,14 @@ footer {
         width: 60vw;
     }
 
-    #styrelsen, #ledamöter {     
+    #styrelsen,
+    #ledamöter {
         flex-direction: column;
     }
 
 
-    #styrelsen img, #ledamöter img {
+    #styrelsen img,
+    #ledamöter img {
         width: 60vw;
     }
 }
