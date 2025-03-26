@@ -268,8 +268,7 @@ aside #kalendariet>ul {
 
 /********************* historiesidan *********************************************/
 #historie_startsida {
-    grid-template-areas: "header header header"        
-    "global_nav historia_välkomst historia_välkomst"        
+    grid-template-areas: "header header header"            
         "global_nav skane_oversikt skane_oversikt"
         "global_nav area_nav tid_nav"        
         "global_nav main main"
@@ -529,8 +528,6 @@ nav {
     flex-direction: column;
 }
 
-
-
 li>a,
 #skane_oversikt>a {
     /*to get backrounds color the whole way on the line? */
@@ -727,7 +724,7 @@ nav {
     font-size: 2vw;
 }
 
-#förenings_nav {
+#förenings_nav, #skane_oversikt, #skane_area_nav, #skane_tid_nav {
     font-size: 1vw;
 }
 #courtesy_nav {
