@@ -57,8 +57,6 @@ header {
 header h1 {
     display: inline;
     vertical-align: 3vh;
-
-
 }
 
 #global_nav {
@@ -276,17 +274,8 @@ aside #kalendariet>ul {
 }
 
 /********************* historiesidan *********************************************/
-#historie_startsida {
-    grid-template-columns: 15vw auto 20vw;
-    grid-template-areas: "header header header"
-        "global_nav skane_oversikt skane_oversikt"
-        "global_nav area_nav tid_nav"
-        "global_nav main main"
-        "footer     footer footer";
-    
-}
-
 #historie_sida {
+    grid-template-columns: 15vw auto 55vw;
     grid-template-areas: "header header header"
         "global_nav     skane_oversikt skane_oversikt"
         "global_nav     area_nav tid_nav"
