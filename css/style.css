@@ -376,7 +376,7 @@ aside #kalendariet>ul {
 
 
 /********************* föreningssidan *********************************************/
-#föreningsinformation {
+#föreningssidan {
     grid-template-rows: min-content min-content auto min-content;
     grid-template-areas: "header header"
         "global_nav förenings_nav"
@@ -525,10 +525,11 @@ nav {
 }
 
 #skane_area_nav,
-#skane_tid_nav,
-#förenings_nav {
+#skane_tid_nav {
     flex-direction: column;
 }
+
+
 
 li>a,
 #skane_oversikt>a {
@@ -538,8 +539,8 @@ li>a,
 }
 
 /* förenings nav */
-#förenings_nav>ul {
-    flex-direction: column;
+#förenings_nav ul {
+    flex-direction: row;
 }
 
 /*******************************************************************************/
@@ -726,6 +727,9 @@ nav {
     font-size: 2vw;
 }
 
+#förenings_nav {
+    font-size: 1vw;
+}
 #courtesy_nav {
     font-style: italic;
 }
