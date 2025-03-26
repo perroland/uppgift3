@@ -707,11 +707,17 @@ ul>a,
     font-weight: normal;
     font-style: normal;
 
+}
+
+@font-face {
     font-family: "Ballet";
     src: url("../fonts/Ballet/Ballet-Regular-VariableFont_opsz.ttf");
     font-weight: normal;
     font-style: normal;
 
+}
+
+@font-face {
     font-family: "Fleur De Leaht";
     src: url("../fonts/Fleur_De_Leah/FleurDeLeah-Regular.ttf");
     font-weight: normal;
