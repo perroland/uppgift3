@@ -997,11 +997,16 @@ footer {
     #styrelsen,
     #ledamöter {
         flex-direction: column;
+        
+    }
+
+    .styrelseledamot {
+        border-bottom: solid;
     }
 
 
     #styrelsen img,
     #ledamöter img {
-        width: 60vw;
+        width: 60vw;        
     }
 }
