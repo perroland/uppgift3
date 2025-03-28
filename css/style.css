@@ -245,6 +245,11 @@ aside #kalendariet>ul {
     width: 20vw;
 }
 
+#beställ_valda_produkter_button {
+    width: 100%;
+    height: 10vh;
+}
+
 /* produkter */
 .produkt {
     display: flex;

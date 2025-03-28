@@ -48,8 +48,6 @@
     </header>
     <main>
 
-        <p><em>Notera att jag använt mig av chatgtp för att skapa innehåll och texter. Uppgiften är ju fokuserad på hur man organiserar informationen på bästa sätt, men eftersom detta är en fiktiv hemsida för en fiktiv förening och den ska göras som en uppgift i en kurs har jag låtit chat-gtp vara information/innehållskapare.</em></p>
-
         <section id="syfte_och_målgrupp">
             <h2>1. Syfte och målgrupp</h2>
             <h3>Syfte</h3>
@@ -92,10 +90,6 @@
                 <li> Historiska nybörjare, har precis förstått att historia är kul. </li>
 
                 <li> Proffs som kanske hållt på hela livet. Är kanske historiker eller åtminstone amatör-historiker. Kanske forskare eller författare.</li>
-
-                <li> Internet-vana människor som vet hur man navigerar på hemsidor och har förståelse för fenomenet. Ofta unga personer som har använt internet i hela sitt liv. </li>
-
-                <li> Internet-ovana människor som knappt vet hur man sätter på en dator. Ofta äldre som kanske också har tex sämre syn</li>
 
                 <li> Medlemmer i föreningen </li>
 
@@ -278,7 +272,7 @@
                             Ett antal varor till salu som är relaterade till Stehag, föreningen eller historia i allmänhet.
                         </li>
                         <li>
-                            Möjlighet för medlemmar att sälja produkter också, tex lokala författare.
+                            Möjlighet för medlemmar att sälja produkter också, tex historiker som har skrivit böcker (dvs "proffs").
                         </li>
 
                     </ul>
@@ -440,11 +434,13 @@
 
             <p>Se <a href="rapport.html#krav_specifikation">2. Kravspecifikation</a>, som är resultatet av Scope-planet. </p>
 
-            <p><em>Notera att jag använt mig av chatgtp för att skapa innehåll och texter. Uppgiften är ju fokuserad på hur man organiserar informationen på bästa sätt, men eftersom detta är en fiktiv hemsida för en fiktiv förening och den ska göras som en uppgift i en kurs har jag låtit chat-gtp vara information/innehållskapare.</em></p>
+            <p>Det mesta av innehållet, dvs text och bilder lät jag AI generera, vilket också tillåtes enligt uppgiftsbeskrivningen. I första hand är det artikeln på framsidan om utflykten och tillhörande bilder, de historiska sidorna - där bilderna är totalt fake men texten är nog någorlunda korrekt, samt bilderna på styrelsen och förenings produkter i butken som är genererade.</p>
 
             <h3>3.3 Structure</h3>
 
-            <p> Min struktur på hemsidan tänker jag mig så här: </p>
+            <p>Nu är det dags att fundera på strukturen av webbplatsen. Det handlar att om att strukturera webbplatsen så logiskt som möjligt så att användaren naturligt kommer rätt. Dvs både att informationen ligger logiskt men också att användaren kan följa ett naturligt flöde. Då behöver informationen på webbplatsen vara strukturerad så att användaren kan förstå och använda den (<a href="rapport.html#the_elements">Jesse James Garret, 2011, sida 88</a>)</p>
+
+            <p>Jag har försökt få min struktur så logisk som möjligt för att användaren ska hitta den, se nedan för strukturen.</p>
 
             <ul>
                 <li>
@@ -535,6 +531,7 @@
                 </li>
             </ul>
 
+
             <h3>3.3 Skeleton</h3>
 
             <h4>3.3.1 Navigation Design</h4>
@@ -557,19 +554,17 @@
                 Navigerings-designen på Gyas Vänner webbplats kan delas in lite olika punkter:
             </p>
 
-
-            <p>Lade en länk på "logon" till startsidan, känns logiskt.</p>
             <ul>
                 <li>
                     <p>
                         Den global navigeringen:
                     </p>
                     <p>
-                        Med den globala navigeringen kan man snabbt hitta till de olika huvud-delarna på webbplatsen.
-                    </p>
+                        Med den globala navigeringen kan man snabbt hitta till de olika huvud-delarna på webbplatsen, menyn med de huvud-kategorierna Startsida, Historia, Aktiviteter, Forum samt Föreningen. Startsidan nås även via "Gyas Vänners-texten" i headern.
+<                    </p>
 
                     <p>
-                        Den globala navigeringen, dvs länkarna till huvud-kategorierna på webbplatsen, är med på varje sida (dvs "persistant"), dvs som pekar på tex startsidan och föreningsinformation.
+                        Den globala navigeringen är med på varje sida (dvs "persistant"). 
                     </p>
 
                     <p>
@@ -577,8 +572,6 @@
                         2 scenarior ser jag framför mig: antingen har man via en google-sökning hamnat lite snett i hiearkin eller så behöver man "börja om" från någon sub-sida på webbplatsen, dvs man har kanske hittat (eller inte) vad man sökt efter men vill börja om med en ny sökning på webbplatsen (<a href="rapport.html#the_elements">Jesse James Garret, 2011, sidorna 120-121</a>)
                     </p>
                 </li>
-
-
 
                 <li>
                     <p>
@@ -591,11 +584,7 @@
                 </li>
 
                 <li>
-                    Jag länkar också i text där jag finner det logiskt. Användaren får en logisk väg till att finna djupare information till där de befinner sig, s.k. kontextuell navigation <a href="rapport.html#the_elements">Jesse James Garret, 2011, sidan 122</a>
-                    <ul>
-                        <li>till "hur man blir medlem" från footern på varje sida och från startsidan </li>
-                        <li>till aktiviteter i texten från startsidan</li>
-                    </ul>
+                    Jag länkar också i text där jag finner det logiskt. Användaren får en logisk väg till att finna djupare information till där de befinner sig, s.k. kontextuell navigation <a href="rapport.html#the_elements">Jesse James Garret, 2011, sidan 122</a>, tex i välkomstinfon på startsidan länkas det till olika sidor på webbplatsen.
 
                 </li>
 
@@ -625,7 +614,7 @@
                     Formulärer. <em>Notera att de flesta formulär inte leder någonstans då jag antar man behöver javascript.</em>
                     <ul>
                         <li>
-                            Filtrera aktiveter: datum-fält för start och stopp-datum och checkboxar för kategorier (man kan filterera fram flera olika kategorier). Och en knapp för att filtrera. Detta formulär ligger på sidan och är kvar när man filtrerat, på så sätt ser man vad man har filtrerat.
+                            Filtrera aktiviteter datum-fält för start och stopp-datum och checkboxar för kategorier (man kan filterera fram flera olika kategorier). Och en knapp för att filtrera. Detta formulär ligger på sidan och är kvar när man filtrerat, på så sätt ser man vad man har filtrerat.
                         </li>
                         <li>
                             Medlemsforum: Knappar för att svara och anmäla de olika inläggen. Filtreringfunktion likartad den som finns på aktiviteter, dvs datumfält för star och slut datum, checkboxar för kategorier, textfält för namn på författare av inlägg.
@@ -658,7 +647,7 @@
                 <li>
                     <p>Grund-layout</p>
 
-                    <img src="img/mobil_wireframe.jpg" width="200" alt="mobil wireframe">
+                    <img src="img/standard_wireframe.jpg" width="200" alt="mobil wireframe">
 
                 </li>
                 <li>
@@ -684,7 +673,7 @@
             </p>
 
             <p>
-                Den lokala navigeringen på historiesidan valde jag att lägga under den globala på vänstersidan.
+                Den lokala navigeringen på aktivetersidan samt de historiska sidorna ligger uppe under headern.
             <p>
 
             <p>
@@ -763,7 +752,6 @@
             <!-- Om du inte gjort VG-kravet, tar du bort nedanstående stycke. -->
             <p>Picture-elementet har jag använt på ordförande på startsidan.</p>
             <p>Picture-elementet har jag använt på utflyktsbilderna på startsidan.</p>
-            <p>Picture-elementet har jag använt på intervjubilden på Erik på startsidan.</p>
             <p>Picture-elementet har jag använt på alla bilderna på historiesidorna (21 bilder tror jag)</p>
             <p>Picture-elementet har jag använt på produktbilderna på butiksidan</p>
 
@@ -981,7 +969,7 @@
                         Köp föreningens kopp.
                     </td>
                     <td>
-                        -
+                        Hittade butiken och sedan koppen. Tyckte butiken inte liknade en vanlig butik, men visste hur man skulle göra. Tyckte också knapparna var lite väl små.
                     </td>
                     <td>
                         Hittade jättesnabbt Butik och Kopp.
@@ -1138,6 +1126,9 @@
                 <li>
                     Ändra färger på menyn, "invertera dem". Inverterade inte såsom testpersonen ville, men jag förstärkte vilken sida som är vald med bold och italic </li>
                 </li>
+                <li>
+                    Lite väl små knappar i butiken för att gå till beställning.
+                </li>
             </ul>
 
             <p>Saker som jag har inte hunnit/inte valt rättat till</p>
@@ -1146,7 +1137,7 @@
                     Butiken ej "tradionell" med kundvagn etc. <strong>Lite för stor ändring i detta skede</strong>
                 </li>
                 <li>
-                    Lägg till sökfunktion. <strong>Lite för stor ändring i detta skede.</strong>
+                    Lägg till sökfunktion. <strong>Lite tidsbrist, kunde inte riktigt bestämma mig var jag skulle lägga den. </strong>
                 </li>
 
             </ul>
