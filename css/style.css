@@ -388,7 +388,7 @@ aside #kalendariet>ul {
     grid-area: förenings_nav;
 }
 
-#styrelse,
+#styrelsen,
 #ledamöter {
     display: flex;
     flex-direction: row;

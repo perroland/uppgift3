@@ -141,7 +141,13 @@
                 <legend id="medlemmars_produkt_legend">Medlemmars produkter</legend>
                 <div id="stehag_bok_produkt" class="produkt">
                     <picture>
-                        <img id="stehag_bok_img" src="img/stehags_historia.webp" alt="stehag boken">
+
+                        <source media="(min-width:1900px)" srcset="img/600x600/stehags_historia.webp">
+                        <source media="(min-width:1200px)" srcset="img/500x500/stehags_historia.webp">
+                        <source media="(min-width:1000px)" srcset="img/400x400/stehags_historia.webp">
+                        <source media="(min-width:800px)" srcset="img/300x300/stehags_historia.webp">
+                        <source media="(min-width:600px)" srcset="img/200x200/stehags_historia.webp">
+                        <img id="stehags_historia_img" src="img/400x400/stehags_historia.webp" alt="Stehags historia bok">
                     </picture>
 
                     <label>
@@ -151,6 +157,12 @@
                 </div>
                 <div id="söderlen_bok_produkt" class="produkt">
                     <picture>
+                        <source media="(min-width:1900px)" srcset="img/600x600/söderlen.webp">
+                        <source media="(min-width:1200px)" srcset="img/500x500/söderlen.webp">
+                        <source media="(min-width:1000px)" srcset="img/400x400/söderlen.webp">
+                        <source media="(min-width:800px)" srcset="img/300x300/söderlen.webp">
+                        <source media="(min-width:600px)" srcset="img/200x200/söderlen.webp">
+                        >
                         <img id="söderlen_bok_img" src="img/söderlen.webp" alt="söderlen boken">
                     </picture>
 
